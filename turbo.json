@@ -1,7 +1,15 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalEnv": ["ALCHEMY_MAINNET_API_KEY"],
+  "globalDependencies": [".env"],
+
   "pipeline": {
+    "scrape-borrow-event": {
+      "env": [
+        "ALCHEMY_MAINNET_API_KEY",
+        "AWS_ACCESS_KEY_ID",
+        "AWS_SECRET_ACCESS_KEY"
+      ]
+    },
     "build": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**", ".next/**"]

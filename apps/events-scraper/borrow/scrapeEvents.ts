@@ -37,35 +37,36 @@ export async function scrapeLUSDBorrowingFeePaidEvents(
     `Requesting existing LUSDBorrowingFeePaid events (${blockRanges.length} requests)`
   );
 
-  debugger;
-
   const borrowerOperations = borrowerOperationsContract.connect(provider);
 
-  const feePaidEvents = (
-    await Promise.all(
-      blockRanges.map(async ([startBlock, endBlock = latestBlock]) => {
-        const rawEvents = await borrowerOperations.queryFilter(
-          borrowerOperations.filters["LUSDBorrowingFeePaid"](null, null),
-          startBlock,
-          endBlock
-        );
+  const feePaidEvents: Event[] = [];
+  let eventCounter = 1;
+  for (const [startBlock, endBlock = latestBlock] of blockRanges) {
+    console.log(`Request ${eventCounter} of ${blockRanges.length}`);
+    const rawEvents = await borrowerOperations.queryFilter(
+      borrowerOperations.filters["LUSDBorrowingFeePaid"](null, null),
+      startBlock,
+      endBlock
+    );
 
-        // We only care about events w/ real fee amounts attached to them
-        const eventsWithNonZeroFee = rawEvents.filter((event) =>
-          isNonZeroFeeEvent(event)
-        );
+    // We only care about events w/ real fee amounts attached to them
+    const eventsWithNonZeroFee = rawEvents.filter((event) =>
+      isNonZeroFeeEvent(event)
+    );
 
-        return eventsWithNonZeroFee;
-      })
-    )
-  ).flat();
+    feePaidEvents.push(...eventsWithNonZeroFee);
+    eventCounter++;
+  }
 
   // grab the event data we care about
-  const parsedEventData = await Promise.all(
-    feePaidEvents.map((event) =>
-      parseLUSDBorrowingFeePaidEvent(provider, event)
-    )
-  );
+  const parsedEventData: LUSDBorrowingFeePaidEventData[] = [];
+  let parseCounter = 1;
+  for (const event of feePaidEvents) {
+    console.log(`Request ${parseCounter} of ${feePaidEvents.length}`);
+    const eventData = await parseLUSDBorrowingFeePaidEvent(provider, event);
+    parsedEventData.push(eventData);
+    parseCounter++;
+  }
 
   console.log(
     `Scraped ${parsedEventData.length} existing LUSDBorrowingFeePaid events.`

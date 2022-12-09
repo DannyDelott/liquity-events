@@ -14,6 +14,7 @@
     "@types/lodash.range": "^3.2.7",
     "abitype": "^0.1.8",
     "alchemy-sdk": "^2.2.3",
+    "dotenv": "^16.0.3",
     "ethers": "^5.7.2",
     "lodash.chunk": "^4.2.0",
     "lodash.range": "^3.2.0",
