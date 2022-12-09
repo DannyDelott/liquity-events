@@ -1,41 +1,43 @@
 require("dotenv").config();
 
-import { S3Client } from "@aws-sdk/client-s3";
-import { Alchemy, Network } from "alchemy-sdk";
-
+import { fetchJson } from "../base/fetchJson";
 import { writeFile } from "../base/writeFile";
-import { pushToS3 } from "../base/pushToS3";
-import { makeLUSDBorrowingFeePaidFileData } from "./makeFileData";
-import { scrapeLUSDBorrowingFeePaidEvents } from "./scrapeEvents";
-
-const alchemy = new Alchemy({
-  apiKey: process.env.ALCHEMY_MAINNET_API_KEY as string,
-  network: Network.ETH_MAINNET,
-  batchRequests: true,
-});
-
-const s3 = new S3Client({
-  region: "us-east-1",
-  credentials: {
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID as string,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY as string,
-  },
-});
+import { alchemy } from "../provider/provider";
+import { pushToS3 } from "../s3/pushToS3";
+import { s3 } from "../s3/s3Client";
+import { scrapeBorrowEvents } from "./borrowEvents";
+import {
+  BorrowEventsFile,
+  makeBorrowEventsFileData as makeBorrowEventsJson,
+} from "./makeBorrowEventsFileData";
 
 const LUSD_BORROWING_FEE_PAID_OUTPUT_FILE = "LUSDBorrowingFeePaid.json";
+export const BORROW_EVENTS_S3_URL =
+  "https://lusd-borrowing-fee-paid-events.s3.amazonaws.com/LUSDBorrowingFeePaid.json";
 
 (async () => {
   const provider = await alchemy.config.getProvider();
-  const lusdBorrowingFeePaidEvents = await scrapeLUSDBorrowingFeePaidEvents(
+
+  const borrowEventsJson = await fetchJson<BorrowEventsFile>(
+    BORROW_EVENTS_S3_URL
+  );
+
+  // scrape the latest borrow events, starting where we left off
+  const newBorrowEvents = await scrapeBorrowEvents(
+    borrowEventsJson.events[borrowEventsJson.events.length - 1].block,
     provider
   );
 
-  const fileData = makeLUSDBorrowingFeePaidFileData(lusdBorrowingFeePaidEvents);
+  const json = makeBorrowEventsJson([
+    ...borrowEventsJson.events,
+    ...newBorrowEvents,
+  ]);
 
   // write a local file
-  writeFile(LUSD_BORROWING_FEE_PAID_OUTPUT_FILE, fileData);
+  writeFile(LUSD_BORROWING_FEE_PAID_OUTPUT_FILE, json);
 
   // Push the data up to s3
-  const data = await pushToS3(s3, fileData);
+  const data = await pushToS3(s3, json);
+
   console.log("Successfully uploaded object!", data);
 })();

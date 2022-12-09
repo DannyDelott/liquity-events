@@ -1,5 +1,5 @@
 {
-  "eventName": "LUSDBorrowingFeePaid",
+  "name": "BorrowEvent",
   "events": [
     {
       "block": 12178710,
@@ -68075,6 +68075,54 @@
       "timestamp": 1670549123,
       "borrower": "0xf7a7ae64Cf9E9dd26Fd2530a9B6fC571A31e75A1",
       "lusdFeePaid": "1.490359877914261732"
+    },
+    {
+      "block": 16143856,
+      "txHash": "0x20fb9e67280f9f5b1df268258c94a5930f666301f796215cd9cebd1cbd3810a6",
+      "timestamp": 1670549123,
+      "borrower": "0xf7a7ae64Cf9E9dd26Fd2530a9B6fC571A31e75A1",
+      "lusdFeePaid": "1.490359877914261732",
+      "totalLqtyStaked": "60466663.237515511378743161"
+    },
+    {
+      "block": 16145700,
+      "txHash": "0x445f8954b45f93af0221bf82aa36581eb461b104e8a9fe6e64973c163a92fb74",
+      "timestamp": 1670571359,
+      "borrower": "0xBA0212619fEbff76431A4826c957853b9f2CDf7f",
+      "lusdFeePaid": "49.751246875000352615",
+      "totalLqtyStaked": "60474997.763904174534880499"
+    },
+    {
+      "block": 16146143,
+      "txHash": "0xe64f1affcf0708c92c4fa3c4ca18dbf812a86add8c8803b1cd0585c7d9995ec1",
+      "timestamp": 1670576735,
+      "borrower": "0x6f32cC4bD6702230399f21F75279F4ad080714F0",
+      "lusdFeePaid": "5000.000000000083",
+      "totalLqtyStaked": "60474997.763904174534880499"
+    },
+    {
+      "block": 16146477,
+      "txHash": "0x6de22e7933287ebb161da6b7255ac3eeb10afab0c971ee7474d588c6f569638c",
+      "timestamp": 1670580815,
+      "borrower": "0x8926A39eF79Bcc251c5e7A6ccE1A4aa2aEe394CA",
+      "lusdFeePaid": "44.78639142595548487",
+      "totalLqtyStaked": "60474997.763904174534880499"
+    },
+    {
+      "block": 16146478,
+      "txHash": "0x8156f9b4d53d2a38a61bcdedcd3b7ee72c2ae734e0d85954a99ec04ea1f2bc49",
+      "timestamp": 1670580839,
+      "borrower": "0x3c94D66faFE8d7cf17061e56C1c9543A739A5922",
+      "lusdFeePaid": "39.999025397503819332",
+      "totalLqtyStaked": "60474997.763904174534880499"
+    },
+    {
+      "block": 16146903,
+      "txHash": "0x251f3c5886bf7acdbb3d0a79997e66902fa10f9225a2941ec8fe66602ec8dcb4",
+      "timestamp": 1670586011,
+      "borrower": "0x6B7eB82a3893ffE7B6F3C2d2Fc9D105D8ad56422",
+      "lusdFeePaid": "40.00000000000056",
+      "totalLqtyStaked": "60474997.763904174534880499"
     }
   ]
 }
