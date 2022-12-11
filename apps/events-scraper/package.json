@@ -12,14 +12,18 @@
     "@aws-sdk/client-s3": "^3.226.0",
     "@types/lodash.chunk": "^4.2.7",
     "@types/lodash.range": "^3.2.7",
+    "@types/lodash.uniqby": "^4.7.7",
     "@types/node-fetch": "^2.6.2",
+    "@types/node-gzip": "^1.1.0",
     "abitype": "^0.1.8",
     "alchemy-sdk": "^2.2.3",
     "dotenv": "^16.0.3",
     "ethers": "^5.7.2",
     "lodash.chunk": "^4.2.0",
     "lodash.range": "^3.2.0",
+    "lodash.uniqby": "^4.7.0",
     "node-fetch": "^2.0.0",
+    "node-gzip": "^1.1.2",
     "ts-node": "^10.9.1"
   },
   "devDependencies": {

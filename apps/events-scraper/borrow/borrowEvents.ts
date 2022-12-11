@@ -3,10 +3,7 @@ import { Event, utils } from "ethers";
 import range from "lodash.range";
 import chunk from "lodash.chunk";
 
-import {
-  borrowerOperationsContract,
-  BORROWER_OPERATIONS_DEPLOYMENT_BLOCK,
-} from "./borrowerOperations";
+import { borrowerOperationsContract } from "./borrowerOperations";
 import { lqtyStakingContract } from "../stake/lqtyStaking";
 import { formatEther } from "ethers/lib/utils";
 

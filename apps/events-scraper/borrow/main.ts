@@ -5,7 +5,8 @@ import { writeFile } from "../base/writeFile";
 import { alchemy } from "../provider/provider";
 import { pushToS3 } from "../s3/pushToS3";
 import { s3 } from "../s3/s3Client";
-import { scrapeBorrowEvents } from "./borrowEvents";
+import { BORROWER_OPERATIONS_DEPLOYMENT_BLOCK } from "./borrowerOperations";
+import { BorrowEventData, scrapeBorrowEvents } from "./borrowEvents";
 import {
   BorrowEventsFile,
   makeBorrowEventsFileData as makeBorrowEventsJson,
@@ -24,14 +25,16 @@ export const BORROW_EVENTS_S3_URL =
 
   // scrape the latest borrow events, starting where we left off
   const newBorrowEvents = await scrapeBorrowEvents(
-    borrowEventsJson.events[borrowEventsJson.events.length - 1].block,
+    borrowEventsJson.events[borrowEventsJson.events.length - 1].block + 1,
     provider
   );
 
-  const json = makeBorrowEventsJson([
+  const borrowEventData: BorrowEventData[] = [
     ...borrowEventsJson.events,
     ...newBorrowEvents,
-  ]);
+  ];
+
+  const json = makeBorrowEventsJson(borrowEventData);
 
   // write a local file
   writeFile(LUSD_BORROWING_FEE_PAID_OUTPUT_FILE, json);
