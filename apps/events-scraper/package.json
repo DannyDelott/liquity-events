@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "scrape-borrow-event": "ts-node borrow/main.ts"
+    "scrape-borrow-events": "ts-node borrow/main.ts"
   },
   "author": "",
   "license": "ISC",

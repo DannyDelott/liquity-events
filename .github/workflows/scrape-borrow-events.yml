@@ -1,0 +1,21 @@
+name: Scrape Borrow Events
+
+on:
+  # “Once a day at 00:00.”
+  # https://crontab.guru/once-a-day
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  update_routes:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          persist-credentials: false
+          node-version: "16"
+          cache: yarn
+      - run: npm install -g yarn
+      - run: yarn install --frozen-lockfile
+      - run: yarn workspace events-scraper run scrape-borrow-events
