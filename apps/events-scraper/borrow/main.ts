@@ -5,7 +5,6 @@ import { writeFile } from "../base/writeFile";
 import { alchemy } from "../provider/provider";
 import { pushToS3 } from "../s3/pushToS3";
 import { s3 } from "../s3/s3Client";
-import { BORROWER_OPERATIONS_DEPLOYMENT_BLOCK } from "./borrowerOperations";
 import { BorrowEventData, scrapeBorrowEvents } from "./borrowEvents";
 import {
   BorrowEventsFile,
