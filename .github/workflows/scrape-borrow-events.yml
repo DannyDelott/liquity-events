@@ -1,10 +1,6 @@
 name: Scrape Borrow Events
 
-on:
-  # “Once a day at 00:00.”
-  # https://crontab.guru/once-a-day
-  schedule:
-    - cron: "0 0 * * *"
+on: 'push'
 
 jobs:
   scrape_borrow_events:
