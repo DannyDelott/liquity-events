@@ -1,7 +1,11 @@
 name: Scrape Borrow Events
 
-on: 'push'
-
+on:
+  # “Once a day at 00:00.”
+  # https://crontab.guru/once-a-day
+  schedule:
+    - cron: "0 0 * * *"
+   
 jobs:
   scrape_borrow_events:
     runs-on: ubuntu-latest
