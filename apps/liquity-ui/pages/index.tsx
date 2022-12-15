@@ -1,4 +1,3 @@
-import { Button } from "component-library";
 import maxBy from "lodash.maxby";
 import { useEffect, useState } from "react";
 
@@ -40,7 +39,6 @@ export default function Web() {
           {largestFeeBorrower}
         </a>
       </p>
-      <Button />
     </div>
   );
 }
