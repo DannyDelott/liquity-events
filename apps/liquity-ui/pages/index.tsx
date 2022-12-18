@@ -1,13 +1,14 @@
+import { BorrowInfosFile, BORROW_INFOS_URL } from "liquity";
 import uniqBy from "lodash.uniqby";
 import { useEffect, useState } from "react";
 
-export const BORROW_EVENTS_S3_URL =
-  "https://lusd-borrowing-fee-paid-events.s3.amazonaws.com/LUSDBorrowingFeePaid.json";
-
 export default function Web() {
-  const [borrowEvents, setBorrowEvents] = useState<any>({ events: [] });
+  const [borrowEvents, setBorrowEvents] = useState<BorrowInfosFile>({
+    data: [],
+    name: "BorrowInfo",
+  });
   useEffect(() => {
-    fetch(BORROW_EVENTS_S3_URL)
+    fetch(BORROW_INFOS_URL)
       .then((response) => response.json())
       .then((data) => {
         setBorrowEvents(data);
@@ -15,7 +16,7 @@ export default function Web() {
       });
   }, []);
 
-  const totalFeesPaid: number = (borrowEvents.events as Array<any>).reduce(
+  const totalFeesPaid: number = borrowEvents.data.reduce(
     (sum, currentEvent) => {
       return sum + Number(currentEvent.lusdFeePaid);
     },
@@ -23,7 +24,7 @@ export default function Web() {
   );
 
   const uniqueBorrowers: number = uniqBy(
-    borrowEvents.events as Array<any>,
+    borrowEvents.data,
     (event) => event.borrower
   ).length;
 
