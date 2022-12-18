@@ -13,6 +13,7 @@
     "@types/lodash.uniq": "^4.5.7",
     "autoprefixer": "^10.4.13",
     "daisyui": "^2.43.2",
+    "liquity": "*",
     "lodash.maxby": "^4.6.0",
     "lodash.uniq": "^4.5.0",
     "next": "13.0.0",
