@@ -22,4 +22,4 @@ jobs:
           cache: yarn
       - run: npm install -g yarn
       - run: yarn install --frozen-lockfile
-      - run: yarn workspace events-scraper run scrape-borrow-events
+      - run: yarn workspace liquity run scrape-borrow-events
