@@ -5,7 +5,7 @@ on:
   # https://crontab.guru/once-a-day
   schedule:
     - cron: "0 0 * * *"
-   
+
 jobs:
   scrape_borrow_events:
     runs-on: ubuntu-latest
@@ -22,4 +22,4 @@ jobs:
           cache: yarn
       - run: npm install -g yarn
       - run: yarn install --frozen-lockfile
-      - run: yarn workspace liquity run scrape-borrow-events
+      - run: yarn workspace liquity run scrape-borrow-infos

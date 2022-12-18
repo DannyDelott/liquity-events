@@ -1,6 +1,6 @@
 {
-  "name": "BorrowEvent",
-  "events": [
+  "name": "BorrowInfo",
+  "data": [
     {
       "block": 12178710,
       "txHash": "0x4db907b5377b14ad5849f7bd4fa2ecb52c1ce07757df8887cf4df3394d01842d",
@@ -77928,6 +77928,974 @@
       "borrower": "0x3c62792F0dA07EA0680770B2F49fAff65889F88d",
       "lusdFeePaid": "35.000000000000049",
       "totalLqtyStaked": "60479516.292118991478992002"
+    },
+    {
+      "block": 16161154,
+      "txHash": "0x6d440dade2fbdebea5528697e33639ed948637d01f0ec325713e0d48af2e72ea",
+      "timestamp": 1670757935,
+      "borrower": "0x3c94D66faFE8d7cf17061e56C1c9543A739A5922",
+      "lusdFeePaid": "86.709068188931498728",
+      "totalLqtyStaked": "60481474.682607317135916743"
+    },
+    {
+      "block": 16161175,
+      "txHash": "0xd2c604c05e18efd9964bdce9d29833a9716c0a833e1cc26ef4268030fa338fc7",
+      "timestamp": 1670758187,
+      "borrower": "0xF46E701AB53E18d270Fb2c472F2EAe275C01bDDC",
+      "lusdFeePaid": "10.000000000000004",
+      "totalLqtyStaked": "60481474.682607317135916743"
+    },
+    {
+      "block": 16161541,
+      "txHash": "0x7dea053f0dcfc6c32c4c97613dc4fecfc2bfd97ddd00a8550ae9049b3ee1364e",
+      "timestamp": 1670762591,
+      "borrower": "0xEd1EdECca537a6C00C6bAFfb4e8F6a3acFe1592a",
+      "lusdFeePaid": "73.688409310273742927",
+      "totalLqtyStaked": "60481474.682607317135916743"
+    },
+    {
+      "block": 16162146,
+      "txHash": "0x0d157d2d854089e3b430b963a3d2f3ea438ed60ccf0209976fd4d2af232db670",
+      "timestamp": 1670769875,
+      "borrower": "0x11969fD497F65fAE17eF374e07A1B5dF1c61Cfe1",
+      "lusdFeePaid": "12.5",
+      "totalLqtyStaked": "60481474.682607317135916743"
+    },
+    {
+      "block": 16162440,
+      "txHash": "0x7b954573641bb43e48f95db0687456e16687c7971afc8cdfcd3b8004bc1de7c9",
+      "timestamp": 1670773403,
+      "borrower": "0xa7719B775F35Bef8d611a55516158C0467808705",
+      "lusdFeePaid": "0.954976361971205882",
+      "totalLqtyStaked": "60481474.682607317135916743"
+    },
+    {
+      "block": 16162979,
+      "txHash": "0xdd65358c3b36c1edaaaef568bc805c53a62cdad47bf0e639ce16ae9e978838d8",
+      "timestamp": 1670779919,
+      "borrower": "0xE20B4Ae00FfC6bD1b1FEBCc90fdDc0089B7E740d",
+      "lusdFeePaid": "375.0",
+      "totalLqtyStaked": "60481474.682607317135916743"
+    },
+    {
+      "block": 16163419,
+      "txHash": "0xc176e39f77d857893f9436b59c71df0856db342ceda8f467e45666ff724ac667",
+      "timestamp": 1670785259,
+      "borrower": "0xa7719B775F35Bef8d611a55516158C0467808705",
+      "lusdFeePaid": "4.995125114508150481",
+      "totalLqtyStaked": "60483139.993264322076371819"
+    },
+    {
+      "block": 16163448,
+      "txHash": "0x0da7b106c4bb66af23c77d219a8e60f059f4bca2752af2e458f387452f8e2b9c",
+      "timestamp": 1670785607,
+      "borrower": "0x9d8d542B35734D56e607EcF13B2db8Fc480779f6",
+      "lusdFeePaid": "9.5",
+      "totalLqtyStaked": "60483139.993264322076371819"
+    },
+    {
+      "block": 16163595,
+      "txHash": "0xc2e851f149818909e8082ca8f92b7509a1e774be6d9d8c6972c96cf98afaebc6",
+      "timestamp": 1670787383,
+      "borrower": "0xB20481b1b8895D5EbC03B8b9F23877D7608cd5b8",
+      "lusdFeePaid": "136.25",
+      "totalLqtyStaked": "60483139.993264322076371819"
+    },
+    {
+      "block": 16163631,
+      "txHash": "0x913c5bb86925b54aa69e1b7108c0a92a2080a4f101f630c1fcab10fe1a871a2d",
+      "timestamp": 1670787827,
+      "borrower": "0x63D44fbE420EFB4f498C3acA170570547B8BCDe0",
+      "lusdFeePaid": "100.0",
+      "totalLqtyStaked": "60483139.993264322076371819"
+    },
+    {
+      "block": 16164138,
+      "txHash": "0x402793b85e6fdffc616180873c30f9fb55f2a366b752ff485a1e0f883124b9dc",
+      "timestamp": 1670793923,
+      "borrower": "0x28b148fdE5468aD0d425C28158D9F63AaAC0A317",
+      "lusdFeePaid": "4.962685956070674895",
+      "totalLqtyStaked": "60483139.993264322076371819"
+    },
+    {
+      "block": 16164278,
+      "txHash": "0x14bac1ee161ec0e2420f1a4b9db2514af51d1710349aed5000d338a8b71d25a4",
+      "timestamp": 1670795627,
+      "borrower": "0xE553fD08d7c6017522ddf74D4ffF8Dbd0aFcB453",
+      "lusdFeePaid": "12.5",
+      "totalLqtyStaked": "60483139.993264322076371819"
+    },
+    {
+      "block": 16164343,
+      "txHash": "0x2508111f7be6b4e9bcc768557c174220337da20e33f1618330f9ff83f06535b0",
+      "timestamp": 1670796407,
+      "borrower": "0x63D44fbE420EFB4f498C3acA170570547B8BCDe0",
+      "lusdFeePaid": "50.0",
+      "totalLqtyStaked": "60483139.993264322076371819"
+    },
+    {
+      "block": 16164679,
+      "txHash": "0xda824fb0c9f2b5861bc8412e777eab66dc983fc831cbf50193aac4bb6f16d636",
+      "timestamp": 1670800451,
+      "borrower": "0x26bb5D5c90C9427f506EBf16fBfDDb060478685F",
+      "lusdFeePaid": "10.5",
+      "totalLqtyStaked": "60483139.993264322076371819"
+    },
+    {
+      "block": 16165742,
+      "txHash": "0x5caa2e926ebf87483929af69c815d4b84f9e6417cb84a132cbf222d936ac0dd4",
+      "timestamp": 1670813279,
+      "borrower": "0xa5A8C343EAEbDF2D6170e0A1e56089aA18B29CEB",
+      "lusdFeePaid": "9.0",
+      "totalLqtyStaked": "60483301.950454476873237398"
+    },
+    {
+      "block": 16167527,
+      "txHash": "0x4c4bf0803eac6c9a9d39049317a4e88892f9cc423f2b0753f44b29da99776b7d",
+      "timestamp": 1670834783,
+      "borrower": "0xC1ec41B320075FF4FF4D16bbda7b2714894fabE0",
+      "lusdFeePaid": "5.5",
+      "totalLqtyStaked": "60483301.950454476873237398"
+    },
+    {
+      "block": 16167612,
+      "txHash": "0x38d722bf456465b6f30346cbc99864fed3d8c023a898acff25430a0b588e7096",
+      "timestamp": 1670835803,
+      "borrower": "0x84E546441FAA3699B2bd5d006901fA99428f20Cc",
+      "lusdFeePaid": "2500.0",
+      "totalLqtyStaked": "60483301.950454476873237398"
+    },
+    {
+      "block": 16168140,
+      "txHash": "0xb8e8c62971040ef3e280a15d0683d9240c7a9a55cbbe97cf1832a3508634bdbb",
+      "timestamp": 1670842235,
+      "borrower": "0x12478d1a60a910C9CbFFb90648766a2bDD5918f5",
+      "lusdFeePaid": "1500.0",
+      "totalLqtyStaked": "60482974.089434406873237398"
+    },
+    {
+      "block": 16169032,
+      "txHash": "0x8c36007e8a6ec41d309c8329e915fc7a7a1d6aa051d3e5ee6ad0bf2a297891d3",
+      "timestamp": 1670852999,
+      "borrower": "0x990E9F9B13e511AD06a3Dd6D464ADc82Ae91e8dF",
+      "lusdFeePaid": "17.5",
+      "totalLqtyStaked": "60482974.089434406873237398"
+    },
+    {
+      "block": 16170449,
+      "txHash": "0x9478cd851c58e2d7e7d93b0494704cb9aa06dcd239455dda66fc502cb464e2c8",
+      "timestamp": 1670870159,
+      "borrower": "0x9d65dbc87880F3FD4d53681ac3769E924B69de53",
+      "lusdFeePaid": "80.0",
+      "totalLqtyStaked": "60482974.089434406873237398"
+    },
+    {
+      "block": 16170617,
+      "txHash": "0x0ccf17e805de475867385be5bc734b181100afd2b1b4fe663d953074a01feedb",
+      "timestamp": 1670872175,
+      "borrower": "0x9d65dbc87880F3FD4d53681ac3769E924B69de53",
+      "lusdFeePaid": "43.385",
+      "totalLqtyStaked": "60482974.089434406873237398"
+    },
+    {
+      "block": 16171268,
+      "txHash": "0x87bc5e66a443ddd5e7a10922a7dd32051a7927c9101251269754322c89172547",
+      "timestamp": 1670880023,
+      "borrower": "0xb673698428799A37a9358A278b330DfcEb0B0C38",
+      "lusdFeePaid": "14.954639245197851471",
+      "totalLqtyStaked": "60489696.996841073964209007"
+    },
+    {
+      "block": 16171619,
+      "txHash": "0x43b5b091312114b78c2c59ed96c54aff3144b51ad02c4efeaa8aebfd03718e42",
+      "timestamp": 1670884259,
+      "borrower": "0x23A57Babae6093c9168a37dBe23555876ea42777",
+      "lusdFeePaid": "5.004831462876504142",
+      "totalLqtyStaked": "60489696.996841073964209007"
+    },
+    {
+      "block": 16172976,
+      "txHash": "0xee275d347a2e5e8977b14b58b8e974b16e573fb229de7e9c1b6aee56e54a30f7",
+      "timestamp": 1670900639,
+      "borrower": "0x6c5Bd522C7337eff55ca16D29C791E3872bEE1A5",
+      "lusdFeePaid": "2.5",
+      "totalLqtyStaked": "60491139.313293925838308443"
+    },
+    {
+      "block": 16173168,
+      "txHash": "0xbb5a958f801002018c8a1bc275cf5f18b2a3b08a3042624784daeadb0485dd63",
+      "timestamp": 1670902955,
+      "borrower": "0x7C5b1fE715C5bc4567D938B8bA0BDC75EaCCA09e",
+      "lusdFeePaid": "10.0",
+      "totalLqtyStaked": "60491139.313293925838308443"
+    },
+    {
+      "block": 16174017,
+      "txHash": "0xb259117713091556ca9b62d64239d42fdbf2e2d851dad82aca070a5731654e21",
+      "timestamp": 1670913191,
+      "borrower": "0x584BaA4b71b0A3fA522658128f36a6A4AbeAC2ae",
+      "lusdFeePaid": "12.5",
+      "totalLqtyStaked": "60491927.995755452948468034"
+    },
+    {
+      "block": 16174397,
+      "txHash": "0x90443940f33e15d5ea7655a2b1ddcf636e7ba0c8e5f0f5cf9c01ae809d8458b4",
+      "timestamp": 1670917763,
+      "borrower": "0x7c46713490E379f515A182d8a5a36deC9d99Be6A",
+      "lusdFeePaid": "49.950007394773010815",
+      "totalLqtyStaked": "60491927.995755452948468034"
+    },
+    {
+      "block": 16174778,
+      "txHash": "0x537cdaaac68284823eed8cb4e412c044c478d0c9248ce448c8c1e9ad910be108",
+      "timestamp": 1670922359,
+      "borrower": "0x32ae635F5136AdB181A442Cc890be39263bC13c8",
+      "lusdFeePaid": "175.0",
+      "totalLqtyStaked": "60491927.995755452948468034"
+    },
+    {
+      "block": 16175135,
+      "txHash": "0xe4bfd747b6df15f96c8dea7bc57b00e641783ab60017b4998818a6b20082cbf2",
+      "timestamp": 1670926655,
+      "borrower": "0x9cDf071ED0f1D54366635C541C62fE3786f532a0",
+      "lusdFeePaid": "9.0",
+      "totalLqtyStaked": "60491927.995755452948468034"
+    },
+    {
+      "block": 16175155,
+      "txHash": "0x29840552907b9b1e9fcd8b5757172bd9dbf8fb608707d5e9b4c70551f7525b19",
+      "timestamp": 1670926895,
+      "borrower": "0x9cDf071ED0f1D54366635C541C62fE3786f532a0",
+      "lusdFeePaid": "3.999900992549689364",
+      "totalLqtyStaked": "60491927.995755452948468034"
+    },
+    {
+      "block": 16175167,
+      "txHash": "0xb354d74c0f15f1feee9b66ea014bd9554a4cc37280a9540be0ef3bf3c9d1bf9e",
+      "timestamp": 1670927051,
+      "borrower": "0x9cDf071ED0f1D54366635C541C62fE3786f532a0",
+      "lusdFeePaid": "8.999777233236801069",
+      "totalLqtyStaked": "60491927.995755452948468034"
+    },
+    {
+      "block": 16175177,
+      "txHash": "0x4249a7d5b0f2ab689fa43d16ff3a62d217ce9316bf1ba824f3fbad40d96fd1ff",
+      "timestamp": 1670927171,
+      "borrower": "0x9cDf071ED0f1D54366635C541C62fE3786f532a0",
+      "lusdFeePaid": "7.999801985099378728",
+      "totalLqtyStaked": "60491927.995755452948468034"
+    },
+    {
+      "block": 16175196,
+      "txHash": "0x76bf217f642ec49074fbe49099644471f2c98d4121a63642249b4e8dfb6bf844",
+      "timestamp": 1670927399,
+      "borrower": "0x9cDf071ED0f1D54366635C541C62fE3786f532a0",
+      "lusdFeePaid": "6.999826736961956387",
+      "totalLqtyStaked": "60491927.995755452948468034"
+    },
+    {
+      "block": 16175275,
+      "txHash": "0x77f4ae945e4c4784711f92c5543591e2783107a54eabed93038846ea0cd9dcdc",
+      "timestamp": 1670928347,
+      "borrower": "0x9cDf071ED0f1D54366635C541C62fE3786f532a0",
+      "lusdFeePaid": "4.999876240687111705",
+      "totalLqtyStaked": "60491927.995755452948468034"
+    },
+    {
+      "block": 16175381,
+      "txHash": "0x7ac6f9d06cdf7d3458c0299c97c04272d79ce432fbdba08ff48ccfccfc4764b9",
+      "timestamp": 1670929631,
+      "borrower": "0x0489c3c7a21EC09D744a1C2412A85692f5F42842",
+      "lusdFeePaid": "15.0",
+      "totalLqtyStaked": "60491927.995755452948468034"
+    },
+    {
+      "block": 16175471,
+      "txHash": "0x91091e2654f1ada9bd66b31d89175f4e50503e1671098b3678d259cf1f6af05a",
+      "timestamp": 1670930723,
+      "borrower": "0x1A153320942631087eFFaC4129bb761e8Bd995E4",
+      "lusdFeePaid": "9.999763433161292394",
+      "totalLqtyStaked": "60491927.995755452948468034"
+    },
+    {
+      "block": 16175599,
+      "txHash": "0xb238f6564b0c384d3761736a4dc08435c9b726e1ac81e3f7e8b6845c575529a5",
+      "timestamp": 1670932259,
+      "borrower": "0xB71Ddd9c9EDaF9fF760Ff8990aECFd04B0bf105e",
+      "lusdFeePaid": "200.0",
+      "totalLqtyStaked": "60491927.995755452948468034"
+    },
+    {
+      "block": 16175635,
+      "txHash": "0x5458f3f46e87fb573ce1526184fb90626b7f32cce10edaf38c3d31bb3332b5af",
+      "timestamp": 1670932691,
+      "borrower": "0x36D4582Fd13b5fE337C088Ae659723251A0A68dc",
+      "lusdFeePaid": "50.0",
+      "totalLqtyStaked": "60491927.995755452948468034"
+    },
+    {
+      "block": 16175690,
+      "txHash": "0x3bdaf62ab6f66cffdb2b29b90fe65cfebd4070044e26802bb6c04330c53bc3bb",
+      "timestamp": 1670933351,
+      "borrower": "0xB71Ddd9c9EDaF9fF760Ff8990aECFd04B0bf105e",
+      "lusdFeePaid": "98.997549565604811762",
+      "totalLqtyStaked": "60491927.995755452948468034"
+    },
+    {
+      "block": 16175917,
+      "txHash": "0x9a41b2c8389a21988770f3e6c0e557d9eece8d5077214aa7ada0c309754b7470",
+      "timestamp": 1670936099,
+      "borrower": "0x85884Af45Ed75ade8818cc45FeFeEA7C553A3767",
+      "lusdFeePaid": "6.506574616952948872",
+      "totalLqtyStaked": "60491927.995755452948468034"
+    },
+    {
+      "block": 16176387,
+      "txHash": "0xb988daa94f9ebf581f96b44fc8ae3431d29b5af18f8e420dde87e5dee61cb99b",
+      "timestamp": 1670941895,
+      "borrower": "0x295bdafd8D7B7C3289f13C3f98dee7b569B7980F",
+      "lusdFeePaid": "9.0",
+      "totalLqtyStaked": "60487717.8010844545331131"
+    },
+    {
+      "block": 16176425,
+      "txHash": "0xe6ca0c0c7c451f12b4667471f616b862ba51dfb2e9e85496eb1880fbacc75845",
+      "timestamp": 1670942351,
+      "borrower": "0x6f32cC4bD6702230399f21F75279F4ad080714F0",
+      "lusdFeePaid": "3000.0",
+      "totalLqtyStaked": "60487717.8010844545331131"
+    },
+    {
+      "block": 16176804,
+      "txHash": "0x2695e741ffbd9519ea0c989c6a15e6d5ac11554b8ba362f79ec8f8f7f9ea7560",
+      "timestamp": 1670946935,
+      "borrower": "0x5A5005833F3bBAd1c12f0a1998CBD9A67393ae41",
+      "lusdFeePaid": "250.0",
+      "totalLqtyStaked": "60487717.8010844545331131"
+    },
+    {
+      "block": 16177055,
+      "txHash": "0x27d06003bd699f4c54d1c972ec32d72215ba1f7ca1cbf681a377ab63cbbcdd7f",
+      "timestamp": 1670949983,
+      "borrower": "0xa7719B775F35Bef8d611a55516158C0467808705",
+      "lusdFeePaid": "2.499938120343555852",
+      "totalLqtyStaked": "60487717.8010844545331131"
+    },
+    {
+      "block": 16177178,
+      "txHash": "0xc94e9ac6a810b00ec2ac6af1d098135555d36108dd494ce1bc9fddde5c4d0546",
+      "timestamp": 1670951459,
+      "borrower": "0x00B9F8A76467ad8347De70b2EB27789D7430cEA0",
+      "lusdFeePaid": "9.0",
+      "totalLqtyStaked": "60487717.8010844545331131"
+    },
+    {
+      "block": 16177201,
+      "txHash": "0x88ebc42f11ab416ff8f0283d1af66aec1339919881adf77e31081d04090bdd14",
+      "timestamp": 1670951735,
+      "borrower": "0xa7719B775F35Bef8d611a55516158C0467808705",
+      "lusdFeePaid": "2.499950309096580413",
+      "totalLqtyStaked": "60487717.8010844545331131"
+    },
+    {
+      "block": 16177798,
+      "txHash": "0x3c8524b4ab2421e486ee03907c6a0e40909da43af4950e42e0785ff3b2539ce1",
+      "timestamp": 1670958923,
+      "borrower": "0xD4bD37BA73ABABCf515eF1E860d3C73172ac82fc",
+      "lusdFeePaid": "5.005476757586745",
+      "totalLqtyStaked": "60487717.8010844545331131"
+    },
+    {
+      "block": 16177948,
+      "txHash": "0x631c1b16c6b99d227955f63fe69a4f39cc3bbab1fac7c2dbab5d2f23aba4e7ee",
+      "timestamp": 1670960723,
+      "borrower": "0xB20481b1b8895D5EbC03B8b9F23877D7608cd5b8",
+      "lusdFeePaid": "27.774525368513673422",
+      "totalLqtyStaked": "60487717.8010844545331131"
+    },
+    {
+      "block": 16178773,
+      "txHash": "0xa9ed0cef734dc841d50f66f064fed34afe7ba8931987078969ce73833e7b30e0",
+      "timestamp": 1670970683,
+      "borrower": "0x5ade40e345817B739b91c6B4615eFCE87F9D7c57",
+      "lusdFeePaid": "2.307029688224146052",
+      "totalLqtyStaked": "60485639.869484002779434539"
+    },
+    {
+      "block": 16178834,
+      "txHash": "0x1772096fed2d0c1a247440486352e65454a02ebf832901f551564ccf194d093c",
+      "timestamp": 1670971439,
+      "borrower": "0x742EF0B73b7bc871f13975B8f9a0c39a299dEb11",
+      "lusdFeePaid": "24.912315888860567312",
+      "totalLqtyStaked": "60485639.869484002779434539"
+    },
+    {
+      "block": 16180307,
+      "txHash": "0x08e826550b514a5b78f1580f21d668f7df5674937ce5ccce2941616b6427f238",
+      "timestamp": 1670989163,
+      "borrower": "0x9B68e6946fC86bb716e99E75C3Ab52C819504FA3",
+      "lusdFeePaid": "18.76265470094824875",
+      "totalLqtyStaked": "60491807.792297660109825875"
+    },
+    {
+      "block": 16180930,
+      "txHash": "0x30175ba43e0cc54db6e6144153b037be31b30f80c83a0b88776c9cb4f4c9ccca",
+      "timestamp": 1670996651,
+      "borrower": "0xB2043c543bb60Fb7AA7265CdcA359A35C4Bc09fa",
+      "lusdFeePaid": "34.698492545014833141",
+      "totalLqtyStaked": "60491807.792297660109825875"
+    },
+    {
+      "block": 16181463,
+      "txHash": "0x76469c97aebf11de2ba22015f0bda4c1b2438092dd179159ddcfff995618e505",
+      "timestamp": 1671003119,
+      "borrower": "0x3Fdb50F723Ceb370470D314Ed05C22D7359BE529",
+      "lusdFeePaid": "9.0048630940302798",
+      "totalLqtyStaked": "60491807.792297660109825875"
+    },
+    {
+      "block": 16181658,
+      "txHash": "0x0cca57f9d59eb1c1ca9306b997a78596cc53c02f93c243450fe09a007aab0cfd",
+      "timestamp": 1671005471,
+      "borrower": "0xc33683f17D92F084d73dfdd2F547ed9aA828be3E",
+      "lusdFeePaid": "10.00520432447858",
+      "totalLqtyStaked": "60491807.792297660109825875"
+    },
+    {
+      "block": 16181785,
+      "txHash": "0x7db6b3499a7bed3283dcdc16f050d1f4e884531aac53735262e6a9456e500a27",
+      "timestamp": 1671007019,
+      "borrower": "0xd1CA6E78B881A7F7100acBF364e8b485169AAb35",
+      "lusdFeePaid": "1400.71127897492568",
+      "totalLqtyStaked": "60491807.792297660109825875"
+    },
+    {
+      "block": 16182591,
+      "txHash": "0xd82c53b4da6eaae6517e5e3235b7111893be574386d960ac4bf7da310ab69d3a",
+      "timestamp": 1671016763,
+      "borrower": "0x14bd2d5304d1B25f3D22FE9bd459E88C3DC92920",
+      "lusdFeePaid": "10.456180600480287852",
+      "totalLqtyStaked": "60491815.890029387727492165"
+    },
+    {
+      "block": 16182604,
+      "txHash": "0x62b8f9acec039d503d40eb2d87809edf4dc8eb3473fac200e3d00759586b2f20",
+      "timestamp": 1671016919,
+      "borrower": "0xF44c9a020F1EbeCd1E8FF0B8E180B51Fa7efD9EA",
+      "lusdFeePaid": "5.002169271929756",
+      "totalLqtyStaked": "60491815.890029387727492165"
+    },
+    {
+      "block": 16182881,
+      "txHash": "0x4c2f8c4b14a062d3340ecffc74ccb32bbfd66dceab0367b956c9bfbfa53f8453",
+      "timestamp": 1671020267,
+      "borrower": "0x6ED9bd24AeD7E33F86982C7e459FE3a36bf14fE9",
+      "lusdFeePaid": "100.04114799186662",
+      "totalLqtyStaked": "60491815.890029387727492165"
+    },
+    {
+      "block": 16183010,
+      "txHash": "0x5a604f0f5a513b31018666552b8b2da61d2701f8558f2d50b79d91d3d851da4b",
+      "timestamp": 1671021815,
+      "borrower": "0xf7a7ae64Cf9E9dd26Fd2530a9B6fC571A31e75A1",
+      "lusdFeePaid": "16.796078278419400932",
+      "totalLqtyStaked": "60491815.890029387727492165"
+    },
+    {
+      "block": 16183201,
+      "txHash": "0xb351c056008cc3772b0a1d639efdbc8f8d2640e53550cd76b4bd3cc6285cd143",
+      "timestamp": 1671024131,
+      "borrower": "0x6e0a36305f19DFC0A96e6b43502381c330d63Af1",
+      "lusdFeePaid": "20.00774530485698",
+      "totalLqtyStaked": "60491815.890029387727492165"
+    },
+    {
+      "block": 16184094,
+      "txHash": "0x42c7ab3ffa346c8a0c084c03b1239e5afee734981258cd0f0f14b4c83a453f41",
+      "timestamp": 1671034895,
+      "borrower": "0x975Cb8d7256c14105Cd3b6b9BA9FAf3D0442AE21",
+      "lusdFeePaid": "25.008149090251705",
+      "totalLqtyStaked": "60493134.894367232203409925"
+    },
+    {
+      "block": 16184715,
+      "txHash": "0x13740f0c3d4179e09d5d80c65797ddeb34ae1d0da0a74ee0d90a013afec3b375",
+      "timestamp": 1671042383,
+      "borrower": "0x2F686f1cF743bD2D274a61Dd12cA6eB8AF65c745",
+      "lusdFeePaid": "134.38886536359200969",
+      "totalLqtyStaked": "60488134.894367232203409925"
+    },
+    {
+      "block": 16184769,
+      "txHash": "0xc873f6f11052781d852740fd83fb76d3045e33e366efa921008ab8239602ac08",
+      "timestamp": 1671043043,
+      "borrower": "0x00B9F8A76467ad8347De70b2EB27789D7430cEA0",
+      "lusdFeePaid": "9.457472142883887432",
+      "totalLqtyStaked": "60488134.894367232203409925"
+    },
+    {
+      "block": 16184813,
+      "txHash": "0xe9ae09862675b39bade76954e1fc41531f18389e8bfa128c34ae2f6d390a4840",
+      "timestamp": 1671043571,
+      "borrower": "0xAd2B08F878C0Be4C4162A72bbF7c0f547F93bD9f",
+      "lusdFeePaid": "74.848022380440822826",
+      "totalLqtyStaked": "60488134.894367232203409925"
+    },
+    {
+      "block": 16184836,
+      "txHash": "0xecd98b29842d413aab1feb9ea1c81b5096e6ce03aa918a768d4f699f2da0d2cb",
+      "timestamp": 1671043847,
+      "borrower": "0x00B9F8A76467ad8347De70b2EB27789D7430cEA0",
+      "lusdFeePaid": "7.454870978244978617",
+      "totalLqtyStaked": "60488134.894367232203409925"
+    },
+    {
+      "block": 16184959,
+      "txHash": "0x944e66c3ec04a0e5657971c5c0139d5dd4414b76d4f7d021ad1181e5f4a9d4cb",
+      "timestamp": 1671045323,
+      "borrower": "0x5A03c210cCA2bfF3641dAf585339ded8E810A177",
+      "lusdFeePaid": "25.006912171479015",
+      "totalLqtyStaked": "60488134.894367232203409925"
+    },
+    {
+      "block": 16184971,
+      "txHash": "0xb3788240b72498bd4c73fa7b1713a8660750b50a94b3570effb91316b1c3978b",
+      "timestamp": 1671045467,
+      "borrower": "0x19B40109c306e70eBeE101cA6756b86f044BD7C9",
+      "lusdFeePaid": "40.011038200843456",
+      "totalLqtyStaked": "60488134.894367232203409925"
+    },
+    {
+      "block": 16185279,
+      "txHash": "0x85ff385a138c426e114f0459db83b6a9ff0b2a4ad3e2ef4ef73d508fff3fd9fc",
+      "timestamp": 1671049175,
+      "borrower": "0x63D44fbE420EFB4f498C3acA170570547B8BCDe0",
+      "lusdFeePaid": "125.032527027990975",
+      "totalLqtyStaked": "60504183.684367232203409925"
+    },
+    {
+      "block": 16185463,
+      "txHash": "0x1f0faaac03c7aedf10eb3c42a2e46995ca4ce78a8d5642168b4cdf0a08381727",
+      "timestamp": 1671051383,
+      "borrower": "0x54eD7637D3f88f4B3A0f86c75Ad3B903626A3354",
+      "lusdFeePaid": "5.001132909172181956",
+      "totalLqtyStaked": "60504183.684367232203409925"
+    },
+    {
+      "block": 16185839,
+      "txHash": "0x2e3fc36e96e8edbc4f0125ef481d5e9bcdc64790d49c66e42da0cd66d5e89815",
+      "timestamp": 1671055919,
+      "borrower": "0xE54966Ce482a3d27734F624Ea8594EB94Bd8C2BB",
+      "lusdFeePaid": "74.893739992676554317",
+      "totalLqtyStaked": "60502668.444244980963575488"
+    },
+    {
+      "block": 16185949,
+      "txHash": "0x588c377bfe1bd004c01444190afcd6d14e6b3a457092aeb64acee5493ddff6d1",
+      "timestamp": 1671057239,
+      "borrower": "0xCF0AFA96743819D52515BfF99635A7978f2a856f",
+      "lusdFeePaid": "139.971288116970155671",
+      "totalLqtyStaked": "60502668.444244980963575488"
+    },
+    {
+      "block": 16185968,
+      "txHash": "0xf688910d85b287d3da7c5267ac4fd6aad41124f5be3814ca3d309ab26a27601b",
+      "timestamp": 1671057467,
+      "borrower": "0xCF0AFA96743819D52515BfF99635A7978f2a856f",
+      "lusdFeePaid": "71.187678301910778262",
+      "totalLqtyStaked": "60502668.444244980963575488"
+    },
+    {
+      "block": 16185987,
+      "txHash": "0x446ff0305636836869bfabff529ad37af2d61f11b377713a10acac5be2c7a6df",
+      "timestamp": 1671057695,
+      "borrower": "0xCF0AFA96743819D52515BfF99635A7978f2a856f",
+      "lusdFeePaid": "36.255027125663111134",
+      "totalLqtyStaked": "60502739.462850102917765389"
+    },
+    {
+      "block": 16186377,
+      "txHash": "0xcb279417a45e36fe787c9d07312dc22ce6098caeb0666dca9b17dabf72400e07",
+      "timestamp": 1671062399,
+      "borrower": "0xCbc21Fbf92519f6D90C05a6FDA1a7cb72FA6E02b",
+      "lusdFeePaid": "565.386860681822090425",
+      "totalLqtyStaked": "60502805.132793835182028495"
+    },
+    {
+      "block": 16186398,
+      "txHash": "0x9b957922c8740421cc59ff849e65ed68c42ea8d1609ae7a886b387b865a1a24a",
+      "timestamp": 1671062651,
+      "borrower": "0xCbc21Fbf92519f6D90C05a6FDA1a7cb72FA6E02b",
+      "lusdFeePaid": "288.817854240030180081",
+      "totalLqtyStaked": "60502805.132793835182028495"
+    },
+    {
+      "block": 16186414,
+      "txHash": "0xb1fca56617aafc2dba4ece66b9a491e2e138ec6b46cb11e8dda68ec2fc2f3f93",
+      "timestamp": 1671062843,
+      "borrower": "0xCbc21Fbf92519f6D90C05a6FDA1a7cb72FA6E02b",
+      "lusdFeePaid": "147.064058920515210208",
+      "totalLqtyStaked": "60502805.132793835182028495"
+    },
+    {
+      "block": 16186636,
+      "txHash": "0x2254ac5616e749227f5d76d1e732170f924bc315edeb875baf6b01e7cf24c585",
+      "timestamp": 1671065531,
+      "borrower": "0x05a5713767312f3481831bDc20d47997D71C0501",
+      "lusdFeePaid": "50.01005204260831",
+      "totalLqtyStaked": "60581718.119460338451723663"
+    },
+    {
+      "block": 16187224,
+      "txHash": "0x988e46ace5807ad34379306a58a29b387e60aaddadb72cdae352ec03a608afe2",
+      "timestamp": 1671072635,
+      "borrower": "0xdecb6cB58Bd18438B7b694F17beb2d1093E928ee",
+      "lusdFeePaid": "15.002691783359502",
+      "totalLqtyStaked": "60570732.791523945090311834"
+    },
+    {
+      "block": 16187448,
+      "txHash": "0x1910a865b9f332ffe1a4f5bdb58b1aaa2061594f1208632fe0c50b5e600915b1",
+      "timestamp": 1671075323,
+      "borrower": "0xf82cB560a6fd9e7E62ceedB39e64Ea59367938Cb",
+      "lusdFeePaid": "375.064503582402075",
+      "totalLqtyStaked": "60570732.791523945090311834"
+    },
+    {
+      "block": 16187606,
+      "txHash": "0x59e03930f7778accf248d6357ec0fbaa0f5337d49d1ed43904374cbcda47dc1d",
+      "timestamp": 1671077231,
+      "borrower": "0xf82cB560a6fd9e7E62ceedB39e64Ea59367938Cb",
+      "lusdFeePaid": "250.0417379930504",
+      "totalLqtyStaked": "60571351.675214931143140782"
+    },
+    {
+      "block": 16187654,
+      "txHash": "0x87272b6e10991ee32895324b8e94bd1a18c0deeab0e16119dc20e5311e7a3c22",
+      "timestamp": 1671077819,
+      "borrower": "0xB2043c543bb60Fb7AA7265CdcA359A35C4Bc09fa",
+      "lusdFeePaid": "14.829453836181801371",
+      "totalLqtyStaked": "60571017.10648848291401127"
+    },
+    {
+      "block": 16187806,
+      "txHash": "0xbaba12a474ea83636536799b7be7624a10050f3fdb9e1401424859f6f4911fdd",
+      "timestamp": 1671079655,
+      "borrower": "0x23A57Babae6093c9168a37dBe23555876ea42777",
+      "lusdFeePaid": "53.507277657182188608",
+      "totalLqtyStaked": "60571017.10648848291401127"
+    },
+    {
+      "block": 16187983,
+      "txHash": "0x75663c5c1474218931bfed409a57c0d176c18d2ea1e710642ba01723c9fc4b81",
+      "timestamp": 1671081803,
+      "borrower": "0xBF2EC61BBB67B6A5B822C8884dFa77CED5E0F901",
+      "lusdFeePaid": "125.019434007801925",
+      "totalLqtyStaked": "60571017.10648848291401127"
+    },
+    {
+      "block": 16188006,
+      "txHash": "0xde71acab4cedf6ad1010e469deb5ca3962268e9756fb3a48f899bfa54a528719",
+      "timestamp": 1671082079,
+      "borrower": "0xBF2EC61BBB67B6A5B822C8884dFa77CED5E0F901",
+      "lusdFeePaid": "50.032747597818167595",
+      "totalLqtyStaked": "60571017.10648848291401127"
+    },
+    {
+      "block": 16188103,
+      "txHash": "0xa49adb4245f90c6b3a277625e77d2e1e23709851ef4ce8ed1952b329b28ac4a4",
+      "timestamp": 1671083255,
+      "borrower": "0x2e291e566165604d6ccfBFC099014d1b02c50396",
+      "lusdFeePaid": "30.004562022033462",
+      "totalLqtyStaked": "60571017.10648848291401127"
+    },
+    {
+      "block": 16188115,
+      "txHash": "0xf3a16869d25bf3598296f64ded6e88680a2e82c8f61c48c27eea27d67f4c66dd",
+      "timestamp": 1671083399,
+      "borrower": "0x2e291e566165604d6ccfBFC099014d1b02c50396",
+      "lusdFeePaid": "23.5035667099358915",
+      "totalLqtyStaked": "60571017.10648848291401127"
+    },
+    {
+      "block": 16189292,
+      "txHash": "0xcdeb65c24101896a93270f853fd9b76c668e85c712d36b661834966106ba2d0b",
+      "timestamp": 1671097619,
+      "borrower": "0x319964dFd4599332e376275646c38632CbA2DF5a",
+      "lusdFeePaid": "1093.759123513101953721",
+      "totalLqtyStaked": "57241018.10648848291401127"
+    },
+    {
+      "block": 16189961,
+      "txHash": "0x213fc571e92db0400958f04e4242fb13bc251659ecbc4f1a3e756b6116fbbe0e",
+      "timestamp": 1671105707,
+      "borrower": "0x74864D1780F09d829340c846B3009351A650ADc5",
+      "lusdFeePaid": "51.0054157179495096",
+      "totalLqtyStaked": "57251018.10648848291401127"
+    },
+    {
+      "block": 16190361,
+      "txHash": "0x06ea4644d55085443e8d6a7a4bb2c0596c7af724d14305b874ded8c37bc703ac",
+      "timestamp": 1671110519,
+      "borrower": "0xb86B721a167630d94a54a0899a1eD75d4135D2Ca",
+      "lusdFeePaid": "105.010323510025962",
+      "totalLqtyStaked": "57251018.10648848291401127"
+    },
+    {
+      "block": 16190625,
+      "txHash": "0x2f4124f2d5af0e868fcf9a8e3f007265be604b5a84d60301d1929ed3fdb4b85a",
+      "timestamp": 1671113699,
+      "borrower": "0xBA0212619fEbff76431A4826c957853b9f2CDf7f",
+      "lusdFeePaid": "49.755891715813389058",
+      "totalLqtyStaked": "57251018.10648848291401127"
+    },
+    {
+      "block": 16190704,
+      "txHash": "0xb0f833813f3f07af99d4178de8ee697f1515505257a1151ccdce50f862e7a8e9",
+      "timestamp": 1671114647,
+      "borrower": "0xA60B57183494973D6f5Dad9D967ca90982167455",
+      "lusdFeePaid": "250.0230222350062",
+      "totalLqtyStaked": "57251018.10648848291401127"
+    },
+    {
+      "block": 16190963,
+      "txHash": "0x7404c627c4817148ca5254c5e544f9aa1cc73c740c1f5dfd70112a2d999aa3a0",
+      "timestamp": 1671117779,
+      "borrower": "0x6FbE6EaB3053fEF0DA871807346B0B40E989840f",
+      "lusdFeePaid": "1250.10949049820025",
+      "totalLqtyStaked": "57251018.10648848291401127"
+    },
+    {
+      "block": 16191056,
+      "txHash": "0x8f441ee7fb8498bef1c2868866161b5d80f8c8d13e6aea20d01b5a993b3e13fe",
+      "timestamp": 1671118907,
+      "borrower": "0x46d5E1aD1dc8C222b615c249989388E19DFe758E",
+      "lusdFeePaid": "15.001291314203712",
+      "totalLqtyStaked": "57251018.10648848291401127"
+    },
+    {
+      "block": 16191225,
+      "txHash": "0x0c1e8a7981dbced5f0f845788bfb39d3835edcf45baf594a64f557bee5aaea29",
+      "timestamp": 1671120935,
+      "borrower": "0x8Ea74Ba39d9e83d339543c987e5c2d59DF279DEA",
+      "lusdFeePaid": "22.224928308052847376",
+      "totalLqtyStaked": "57251018.10648848291401127"
+    },
+    {
+      "block": 16192043,
+      "txHash": "0x7a208ed2c42837505add97c7f21313b652410c2601e2013f5d240a0a1af6c227",
+      "timestamp": 1671130823,
+      "borrower": "0x357dfdC34F93388059D2eb09996d80F233037cBa",
+      "lusdFeePaid": "248.773835133939444136",
+      "totalLqtyStaked": "57115391.69648848291401127"
+    },
+    {
+      "block": 16192154,
+      "txHash": "0x9adb1472e3799c53d79253143484687d5ee9a6d37ac26c884334f7c0cb56977a",
+      "timestamp": 1671132155,
+      "borrower": "0x74864D1780F09d829340c846B3009351A650ADc5",
+      "lusdFeePaid": "10.5007320937137192",
+      "totalLqtyStaked": "57015382.31771576281457437"
+    },
+    {
+      "block": 16192270,
+      "txHash": "0xc0f1a90072dea333d00393d987aaf21b0f60a7819eb0fdf5361721b3f5b09974",
+      "timestamp": 1671133547,
+      "borrower": "0xd94C214F7CF6C162e4eC9d622Fe6fc432e89406F",
+      "lusdFeePaid": "100.00681963518312",
+      "totalLqtyStaked": "57015382.31771576281457437"
+    },
+    {
+      "block": 16193163,
+      "txHash": "0x530f658bc57fed86765a084b324e5708e8eb774cec2605cc6efdd7fc7ca0e55e",
+      "timestamp": 1671144335,
+      "borrower": "0x6c1ec24536d6ab61C58748f83ef4f84BE10BBb6E",
+      "lusdFeePaid": "31.636315861478109844",
+      "totalLqtyStaked": "57015382.31771576281457437"
+    },
+    {
+      "block": 16194750,
+      "txHash": "0x0e4c5fe0dce97b22df6f0efbe40c25ffff3fe2c2f99b67d60882781bf70177e6",
+      "timestamp": 1671163439,
+      "borrower": "0x4738CBd2e7Ee262CAF8dF656cAB85C1C5596a5C8",
+      "lusdFeePaid": "1.500007357154617887",
+      "totalLqtyStaked": "57026777.783648442577417474"
+    },
+    {
+      "block": 16195369,
+      "txHash": "0x7bf9867bdd6eb06a39a3db5fb78edaeda037501ac64261d18e6216726b253240",
+      "timestamp": 1671170927,
+      "borrower": "0xdB6c1bA31B7257B0fc22252B3BFCc173a567C4E2",
+      "lusdFeePaid": "40.661685077292298739",
+      "totalLqtyStaked": "57026633.949341462577417474"
+    },
+    {
+      "block": 16195372,
+      "txHash": "0x8ad7b81c4cb8d84563e17ec82759893d2b17deb4536f9e7dc3d2d3ee1d1a85d9",
+      "timestamp": 1671170963,
+      "borrower": "0x1064f84BaFE6F238b6b7a130b33160560d681ef2",
+      "lusdFeePaid": "12.5004688487736825",
+      "totalLqtyStaked": "57026633.949341462577417474"
+    },
+    {
+      "block": 16195754,
+      "txHash": "0xbef53ae69728211b898b554314d46136823da5a62964f52e4d2208f4a14d0240",
+      "timestamp": 1671175583,
+      "borrower": "0x4738CBd2e7Ee262CAF8dF656cAB85C1C5596a5C8",
+      "lusdFeePaid": "1.500002203963200018",
+      "totalLqtyStaked": "57176089.888574503518851043"
+    },
+    {
+      "block": 16195880,
+      "txHash": "0xbe5c929efddcbded6db41412e62110241a998fe3b49de0b94780129496ada15a",
+      "timestamp": 1671177095,
+      "borrower": "0x54eD7637D3f88f4B3A0f86c75Ad3B903626A3354",
+      "lusdFeePaid": "2.500023113645035777",
+      "totalLqtyStaked": "57176794.989304677261689859"
+    },
+    {
+      "block": 16196262,
+      "txHash": "0x28ecd64708c601e00533e6e7bf97ff534521329bbcb4de5cbb7c72f40ee62129",
+      "timestamp": 1671181691,
+      "borrower": "0xf7a7ae64Cf9E9dd26Fd2530a9B6fC571A31e75A1",
+      "lusdFeePaid": "2.500002635478158498",
+      "totalLqtyStaked": "57176794.989304677261689859"
+    },
+    {
+      "block": 16196711,
+      "txHash": "0x13d3ff58e5ffb7775d011da5a392223eb560b767d208d9fcdf8dcae37bba4738",
+      "timestamp": 1671187103,
+      "borrower": "0x3B6Fa03Bd5c463EC5C0438E8BA74A3Ee12549608",
+      "lusdFeePaid": "13.500073137090941283",
+      "totalLqtyStaked": "57164669.644530580318451292"
+    },
+    {
+      "block": 16196900,
+      "txHash": "0xa394ab19192bdc0e88c76760f01ac61cfcb9c8c6e0b81ab46d225df8b5b5f057",
+      "timestamp": 1671189371,
+      "borrower": "0x9d65dbc87880F3FD4d53681ac3769E924B69de53",
+      "lusdFeePaid": "65.001817676017248",
+      "totalLqtyStaked": "57164669.644530580318451292"
+    },
+    {
+      "block": 16198577,
+      "txHash": "0x2fb7e849b1fb79899e872af23725ab487a89e47a4ce476935b2bc174b325038a",
+      "timestamp": 1671209603,
+      "borrower": "0xF5568989A40836539809761784C939a133970C36",
+      "lusdFeePaid": "12.089089393228066361",
+      "totalLqtyStaked": "57181199.15565446676570839"
+    },
+    {
+      "block": 16199347,
+      "txHash": "0x57fcee0f071169760ace88351bca9514f6c68bce472206efa794f45524a8cc16",
+      "timestamp": 1671218879,
+      "borrower": "0x9a285D90b567cEa64dD82737340E224Fd4202959",
+      "lusdFeePaid": "85.001481618230095",
+      "totalLqtyStaked": "57181199.15565446676570839"
+    },
+    {
+      "block": 16199402,
+      "txHash": "0x3984f6b0f73c3d4101057b7187a53784c42d8ed1e408847862b16a64063a7b5f",
+      "timestamp": 1671219539,
+      "borrower": "0x9a285D90b567cEa64dD82737340E224Fd4202959",
+      "lusdFeePaid": "39.569695581481271311",
+      "totalLqtyStaked": "57181199.15565446676570839"
+    },
+    {
+      "block": 16200232,
+      "txHash": "0xc5991d0f1925de1ef94ac9ed74cfcc8ea415f75fc629cd877d2ef099d431e7f2",
+      "timestamp": 1671229643,
+      "borrower": "0xA16bF084A6Ef18EA28b2D05617752b2Cffac1E1E",
+      "lusdFeePaid": "5.000073358085725",
+      "totalLqtyStaked": "57181199.15565446676570839"
+    },
+    {
+      "block": 16200434,
+      "txHash": "0x9d31f22e98ac22829f952a9c491a4c4b56e5d5254c66cc3bb4cd0573db01e3dd",
+      "timestamp": 1671232067,
+      "borrower": "0x54eD7637D3f88f4B3A0f86c75Ad3B903626A3354",
+      "lusdFeePaid": "2.499973411180832221",
+      "totalLqtyStaked": "57181199.15565446676570839"
+    },
+    {
+      "block": 16200603,
+      "txHash": "0xdc0c97110c297a250bde9bf370c166b94453ef3086976c456edc54932f108db8",
+      "timestamp": 1671234119,
+      "borrower": "0x28b148fdE5468aD0d425C28158D9F63AaAC0A317",
+      "lusdFeePaid": "29.974976979701997291",
+      "totalLqtyStaked": "57181199.15565446676570839"
+    },
+    {
+      "block": 16200648,
+      "txHash": "0x6caef49b85755f247b7c55f68d5f2b7e49271c9bf71f40de4af84a1ee6a00b24",
+      "timestamp": 1671234659,
+      "borrower": "0xa64C898B4E65D28590d18A67161A30076C41E790",
+      "lusdFeePaid": "22.45518147771254967",
+      "totalLqtyStaked": "57181199.15565446676570839"
+    },
+    {
+      "block": 16200686,
+      "txHash": "0xd086bbb71bd8bad9549046857eaab6c08d42e9c5cbd0a908ac1045ca0bf36af0",
+      "timestamp": 1671235115,
+      "borrower": "0x9d65dbc87880F3FD4d53681ac3769E924B69de53",
+      "lusdFeePaid": "9.62512949409782925",
+      "totalLqtyStaked": "57181199.15565446676570839"
+    },
+    {
+      "block": 16200773,
+      "txHash": "0x972c2483da906ff6af551fdfe9fe055f68987ff07c4f48a286d5316b71bcd6e4",
+      "timestamp": 1671236171,
+      "borrower": "0x46d5E1aD1dc8C222b615c249989388E19DFe758E",
+      "lusdFeePaid": "25.000330888437945",
+      "totalLqtyStaked": "57181199.15565446676570839"
+    },
+    {
+      "block": 16201701,
+      "txHash": "0x0affb1fdf8ac54cf23cfa318f27426ace6634a8a0492402de41a185d03e893d5",
+      "timestamp": 1671247355,
+      "borrower": "0x12F12AB17830ed0F4B786EB1e47E90501e0C8703",
+      "lusdFeePaid": "439.5048633371793975",
+      "totalLqtyStaked": "57181199.15565446676570839"
+    },
+    {
+      "block": 16201731,
+      "txHash": "0x9bf324d539ef790f794ca82ca3928dc8e3c47a142492aa79d42d183c6bfb5ecb",
+      "timestamp": 1671247715,
+      "borrower": "0x12F12AB17830ed0F4B786EB1e47E90501e0C8703",
+      "lusdFeePaid": "223.143207244178195647",
+      "totalLqtyStaked": "57181199.15565446676570839"
+    },
+    {
+      "block": 16201752,
+      "txHash": "0x91fad13d986e72168855a60897aaddfc142076c78a1f95aacff346d35a0152b3",
+      "timestamp": 1671247967,
+      "borrower": "0x12F12AB17830ed0F4B786EB1e47E90501e0C8703",
+      "lusdFeePaid": "113.385443414867296359",
+      "totalLqtyStaked": "57181199.15565446676570839"
+    },
+    {
+      "block": 16201950,
+      "txHash": "0xe31817c561d73976811c9c490cb2cc59fb8347273d81838e16c7ff97816e0d6c",
+      "timestamp": 1671250355,
+      "borrower": "0xbDfA4f4492dD7b7Cf211209C4791AF8d52BF5c50",
+      "lusdFeePaid": "300.00316672238724",
+      "totalLqtyStaked": "57181199.15565446676570839"
+    },
+    {
+      "block": 16207175,
+      "txHash": "0x45c241c670a5dc8098ab5f2ef01f81972f940e6fe8df9fb57caf543cee7be8ba",
+      "timestamp": 1671313391,
+      "borrower": "0xb88ef0b91438D782B6338105FF3e44169EfD4FdA",
+      "lusdFeePaid": "9.5000364930587171",
+      "totalLqtyStaked": "57198496.48883315456051535"
+    },
+    {
+      "block": 16208348,
+      "txHash": "0x4551d750935c2fcbf10502a1c2918798c1bc9f6f333d32ac8c227eaa3cabe1b2",
+      "timestamp": 1671327539,
+      "borrower": "0xf91Ac22DAb2F220737398BF129194cF0bc7815b0",
+      "lusdFeePaid": "2000.0061272247452",
+      "totalLqtyStaked": "57198952.42883315456051535"
     }
   ]
 }

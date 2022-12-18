@@ -1,4 +1,8 @@
 {
+  "include": [
+    "src",
+    "scripts",
+  ],
   "compilerOptions": {
     "target": "es2020",
     "module": "commonjs",
@@ -8,6 +12,7 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "rootDir": ".",
+    "baseUrl": ".",
     "paths": {
       "src/*": [
         "./src/*"

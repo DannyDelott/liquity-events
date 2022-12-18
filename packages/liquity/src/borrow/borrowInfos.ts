@@ -7,7 +7,10 @@ import { borrowerOperationsContract } from "src/contracts/borrowerOperations";
 import { lqtyStakingContract } from "src/contracts/lqtyStaking";
 import { formatEther } from "ethers/lib/utils";
 
-export interface BorrowEventData {
+export const BORROW_INFOS_URL =
+  "https://liquity.s3.amazonaws.com/borrowInfos.json";
+
+export interface BorrowInfo {
   block: number;
   txHash: string;
   timestamp: number;
@@ -16,17 +19,18 @@ export interface BorrowEventData {
   totalLqtyStaked: string;
 }
 
-export async function scrapeBorrowEvents(
+export async function fetchBorrowInfos(
   startBlock: number,
   provider: AlchemyProvider
-) {
+): Promise<BorrowInfo[]> {
+  // Grab the raw events
   const lusdBorrowingFeePaidEvents = await queryLUSDBorrowingFeePaidEvents(
     startBlock,
     provider
   );
 
-  // grab the event data we care about
-  return makeBorrowEvents(lusdBorrowingFeePaidEvents, provider);
+  // map the events to their borrow infos
+  return makeBorrowInfos(lusdBorrowingFeePaidEvents, provider);
 }
 
 async function queryLUSDBorrowingFeePaidEvents(
@@ -34,7 +38,6 @@ async function queryLUSDBorrowingFeePaidEvents(
   provider: AlchemyProvider
 ) {
   const latestBlock = await provider.getBlockNumber();
-  console.log("The latest block number is", latestBlock);
 
   // creates a list of block intervals
   const blockRanges = chunk(range(startBlock, latestBlock + 1, 50_000), 2);
@@ -44,18 +47,10 @@ async function queryLUSDBorrowingFeePaidEvents(
     blockRanges.push([lastBlockRangeEnd, latestBlock]);
   }
 
-  console.log(
-    `Requesting LUSDBorrowingFeePaid events (${blockRanges.length} requests)`
-  );
-
   const borrowerOperations = borrowerOperationsContract.connect(provider);
 
   const feePaidEvents: Event[] = [];
-  let requestCounter = 1;
   for (const [startBlock, endBlock = latestBlock] of blockRanges) {
-    console.log(
-      `LUSDBorrowingFeePaid request:  ${requestCounter} of ${blockRanges.length}`
-    );
     const rawEvents = await borrowerOperations.queryFilter(
       borrowerOperations.filters["LUSDBorrowingFeePaid"](null, null),
       startBlock,
@@ -68,40 +63,45 @@ async function queryLUSDBorrowingFeePaidEvents(
     );
 
     feePaidEvents.push(...eventsWithNonZeroFee);
-    requestCounter++;
   }
+  console.log(
+    `LUSDBorrowingFeePaid: ${feePaidEvents.length} events (startBlock #${startBlock}, endBlock #${latestBlock})`
+  );
 
   return feePaidEvents;
 }
 
-async function makeBorrowEvents(
+async function makeBorrowInfos(
   lusdBorrowingFeePaidEvents: Event[],
   provider: AlchemyProvider
 ) {
-  const borrowEvents: BorrowEventData[] = [];
-  let requestCounter = 1;
-  for (const event of lusdBorrowingFeePaidEvents) {
-    console.log(
-      `getBorrowEventData request: ${requestCounter} of ${lusdBorrowingFeePaidEvents.length}`
+  const numEvents = lusdBorrowingFeePaidEvents.length;
+  const borrowInfos: BorrowInfo[] = [];
+  let counter = 1;
+  for (const lusdBorrowingFeePaidEvent of lusdBorrowingFeePaidEvents) {
+    const borrowInfo = await fetchBorrowInfoForEvent(
+      provider,
+      lusdBorrowingFeePaidEvent
     );
-    const eventData = await getBorrowEventData(provider, event);
-    borrowEvents.push(eventData);
-    requestCounter++;
+    console.log(`(${counter} of ${numEvents}): Fee $${borrowInfo.lusdFeePaid}`);
+
+    borrowInfos.push(borrowInfo);
+
+    counter++;
   }
 
-  console.log(`${borrowEvents.length} borrow events created!`);
-
-  return borrowEvents;
+  return borrowInfos;
 }
 
-async function getBorrowEventData(
+async function fetchBorrowInfoForEvent(
   provider: AlchemyProvider,
-  event: Event
-): Promise<BorrowEventData> {
-  const { blockNumber, transactionHash } = event;
+  lusdBorrowingFeePaidEvent: Event
+): Promise<BorrowInfo> {
+  const { blockNumber, transactionHash } = lusdBorrowingFeePaidEvent;
   const { timestamp } = await provider.getBlock(blockNumber);
 
-  // useful for calculating your % of the staking pool at the time of the event
+  // the totalLQTYStaked is useful for calculating your pool share at the time
+  // of the event
   const lqtyStaking = lqtyStakingContract.connect(provider);
   const totalLQTYStaked = await lqtyStaking["totalLQTYStaked"]({
     blockTag: blockNumber,
@@ -111,8 +111,8 @@ async function getBorrowEventData(
     block: blockNumber,
     txHash: transactionHash,
     timestamp,
-    borrower: event.args?.[0],
-    lusdFeePaid: formatEther(event.args?.[1]),
+    borrower: lusdBorrowingFeePaidEvent.args?.[0],
+    lusdFeePaid: formatEther(lusdBorrowingFeePaidEvent.args?.[1]),
     totalLqtyStaked: formatEther(totalLQTYStaked),
   };
 }

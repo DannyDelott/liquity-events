@@ -4,9 +4,13 @@
   "description": "",
   "source": "src/index.ts",
   "main": "dist/index.js",
+  "types": "dist/types.d.ts",
+  "alias": {
+    "src": "./src"
+  },
   "scripts": {
     "build": "parcel build",
-    "scrape-borrow-events": "ts-node -r tsconfig-paths/register scripts/scrape-borrow-data.ts"
+    "scrape-borrow-infos": "ts-node -r tsconfig-paths/register scripts/scrape-borrow-infos.ts"
   },
   "author": "",
   "license": "ISC",
