@@ -54,36 +54,36 @@ async function fetchExistingStakeChangedEvents(provider: AlchemyProvider) {
   return stakeChangedEvents;
 }
 
-export function useRealtimeTotalLQTYStakedUpdatedEvents(
-  listener: (totalLQTYStaked: BigNumber, event: Event) => void
-) {
-  return useContractEvent({
-    address: LIQUITY_STAKING_ADDRESS,
-    abi: lqtyStakingABI,
-    eventName: "TotalLQTYStakedUpdated",
-    listener,
-    chainId: 1,
-  });
-}
+// export function useRealtimeTotalLQTYStakedUpdatedEvents(
+//   listener: (totalLQTYStaked: BigNumber, event: Event) => void
+// ) {
+//   return useContractEvent({
+//     address: LIQUITY_STAKING_ADDRESS,
+//     abi: lqtyStakingABI,
+//     eventName: "TotalLQTYStakedUpdated",
+//     listener,
+//     chainId: 1,
+//   });
+// }
 /**
  * Grabs every time the system's total staked LQTY amount changes. This gets
  * emitted in the same transaction as StakeChanged and can be used in
  * combination with StakeChanged to calculate historical pool share.
  */
 
-export function useTotalLQTYStakedUpdatedEvents(
-  fromBlockOrBlockhash?: string | number,
-  toBlock?: string | number,
-  options?: { enabled: boolean }
-) {
-  const liquityStaking = useLiquityStaking();
-  return useQuery(["TotalLQTYStakedUpdated", fromBlockOrBlockhash, toBlock], {
-    queryFn: async () =>
-      liquityStaking?.queryFilter(
-        liquityStaking.filters["TotalLQTYStakedUpdated"](null),
-        fromBlockOrBlockhash,
-        toBlock
-      ),
-    enabled: options?.enabled || true,
-  });
-}
+// export function useTotalLQTYStakedUpdatedEvents(
+//   fromBlockOrBlockhash?: string | number,
+//   toBlock?: string | number,
+//   options?: { enabled: boolean }
+// ) {
+//   const liquityStaking = useLiquityStaking();
+//   return useQuery(["TotalLQTYStakedUpdated", fromBlockOrBlockhash, toBlock], {
+//     queryFn: async () =>
+//       liquityStaking?.queryFilter(
+//         liquityStaking.filters["TotalLQTYStakedUpdated"](null),
+//         fromBlockOrBlockhash,
+//         toBlock
+//       ),
+//     enabled: options?.enabled || true,
+//   });
+// }

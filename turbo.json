@@ -3,7 +3,12 @@
   "globalDependencies": [".env"],
 
   "pipeline": {
-    "scrape-borrow-event": {
+    "liquity-ui#build": {
+      "dependsOn": ["^build"],
+      "outputs": [".next/**"],
+      "env": ["NEXT_PUBLIC_MAINNET_ALCHEMY_KEY"]
+    },
+    "liquity#scrape-borrow-event": {
       "env": [
         "ALCHEMY_MAINNET_API_KEY",
         "AWS_ACCESS_KEY_ID",
