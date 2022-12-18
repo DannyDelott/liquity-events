@@ -1,10 +1,10 @@
 import { AlchemyProvider } from "alchemy-sdk";
-import { Event, utils } from "ethers";
+import { Event } from "ethers";
 import range from "lodash.range";
 import chunk from "lodash.chunk";
 
-import { borrowerOperationsContract } from "./borrowerOperations";
-import { lqtyStakingContract } from "../stake/lqtyStaking";
+import { borrowerOperationsContract } from "src/contracts/borrowerOperations";
+import { lqtyStakingContract } from "src/contracts/lqtyStaking";
 import { formatEther } from "ethers/lib/utils";
 
 export interface BorrowEventData {

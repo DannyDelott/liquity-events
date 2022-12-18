@@ -1,15 +1,15 @@
 require("dotenv").config();
 
-import { fetchJson } from "../base/fetchJson";
-import { writeFile } from "../base/writeFile";
-import { alchemy } from "../provider/provider";
-import { pushToS3 } from "../s3/pushToS3";
-import { s3 } from "../s3/s3Client";
-import { BorrowEventData, scrapeBorrowEvents } from "./borrowEvents";
+import { fetchJson } from "src/base/fetchJson";
+import { writeFile } from "src/base/writeFile";
+import { alchemy } from "src/provider/provider";
+import { pushToS3 } from "src/s3/pushToS3";
+import { s3 } from "src/s3/s3Client";
+import { BorrowEventData, scrapeBorrowEvents } from "src/borrow/borrowEvents";
 import {
   BorrowEventsFile,
-  makeBorrowEventsFileData as makeBorrowEventsJson,
-} from "./makeBorrowEventsFileData";
+  makeBorrowDataFile as makeBorrowEventsJson,
+} from "src/borrow/makeBorrowEventsFileData";
 
 const LUSD_BORROWING_FEE_PAID_OUTPUT_FILE = "LUSDBorrowingFeePaid.json";
 export const BORROW_EVENTS_S3_URL =

@@ -6,6 +6,12 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "resolveJsonModule": true,
-    "skipLibCheck": true
-  }
+    "skipLibCheck": true,
+    "rootDir": ".",
+    "paths": {
+      "src/*": [
+        "./src/*"
+      ]
+    },
+  },
 }

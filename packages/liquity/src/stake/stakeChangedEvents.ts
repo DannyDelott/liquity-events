@@ -7,7 +7,7 @@ import {
   LIQUITY_STAKING_DEPLOYMENT_BLOCK,
   LIQUITY_STAKING_ADDRESS,
   lqtyStakingABI,
-} from "./lqtyStaking";
+} from "../contracts/lqtyStaking";
 
 interface StakeChangedEventData {
   block: number;

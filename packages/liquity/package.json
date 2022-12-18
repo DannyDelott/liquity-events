@@ -2,10 +2,11 @@
   "name": "liquity",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
   "scripts": {
     "build": "parcel build",
-    "scrape-borrow-events": "ts-node borrow/main.ts"
+    "scrape-borrow-events": "ts-node -r tsconfig-paths/register scripts/scrape-borrow-data.ts"
   },
   "author": "",
   "license": "ISC",
@@ -31,6 +32,7 @@
   "devDependencies": {
     "@types/node": "^16.0.12",
     "parcel": "^2.8.2",
+    "tsconfig-paths": "^4.1.1",
     "typescript": "^4.5.3"
   }
 }
