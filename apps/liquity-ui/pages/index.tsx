@@ -1,7 +1,6 @@
-import { Fragment, ReactElement } from "react";
-import { BorrowView } from "src/ui/borrow/BorrowView/BorrowView";
-import { Navigation } from "src/ui/navigation/Navigation";
+import { ReactElement } from "react";
+import { HomeView } from "src/ui/home/HomeView/HomeView";
 
 export default function IndexPage(): ReactElement {
-  return <BorrowView />;
+  return <HomeView />;
 }

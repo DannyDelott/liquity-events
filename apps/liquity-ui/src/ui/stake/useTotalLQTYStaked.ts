@@ -7,6 +7,5 @@ export function useTotalLQTYStaked() {
     abi: lqtyStakingABI,
     address: LIQUITY_STAKING_ADDRESS,
     functionName: "totalLQTYStaked",
-    select: (data) => (+(+formatEther(data)).toFixed()).toLocaleString(),
   });
 }

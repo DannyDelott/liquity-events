@@ -1,6 +1,7 @@
+import { RainbowKitProvider } from "@rainbow-me/rainbowkit";
 import { ReactElement, ReactNode } from "react";
-import { WagmiConfig } from "wagmi";
-import { useWagmiClient } from "./useWagmiClient";
+import { mainnet, WagmiConfig } from "wagmi";
+import { useWagmiClientWithRainbowKit } from "./useWagmiClient";
 
 interface PageWithWagmiProps {
   children: ReactNode;
@@ -9,9 +10,15 @@ interface PageWithWagmiProps {
 export function WagmiConfigWithAlchemyPromiseProvider({
   children,
 }: PageWithWagmiProps): ReactElement | null {
-  const { data: client, status } = useWagmiClient();
+  const { data: client, status } = useWagmiClientWithRainbowKit();
   if (status === "success") {
-    return <WagmiConfig client={client}>{children}</WagmiConfig>;
+    return (
+      <WagmiConfig client={client}>
+        <RainbowKitProvider chains={[mainnet]} modalSize="compact">
+          {children}
+        </RainbowKitProvider>
+      </WagmiConfig>
+    );
   }
 
   return null;

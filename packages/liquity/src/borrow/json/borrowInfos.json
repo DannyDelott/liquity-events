@@ -78896,6 +78896,22 @@
       "borrower": "0xf91Ac22DAb2F220737398BF129194cF0bc7815b0",
       "lusdFeePaid": "2000.0061272247452",
       "totalLqtyStaked": "57198952.42883315456051535"
+    },
+    {
+      "block": 16208599,
+      "txHash": "0x11536c584cd8fa29b4a5b778f06ee5b4a672b00ee3dfe9309f87e0edf5d3f02c",
+      "timestamp": 1671330563,
+      "borrower": "0xf7a7ae64Cf9E9dd26Fd2530a9B6fC571A31e75A1",
+      "lusdFeePaid": "9.999793545346523536",
+      "totalLqtyStaked": "57198952.42883315456051535"
+    },
+    {
+      "block": 16208984,
+      "txHash": "0xf3c1638091850c6d6be4fceb8954b3f6f2bd74704ed2621cf242f120c4051f7a",
+      "timestamp": 1671335243,
+      "borrower": "0xf7a7ae64Cf9E9dd26Fd2530a9B6fC571A31e75A1",
+      "lusdFeePaid": "44.853259801962015787",
+      "totalLqtyStaked": "57198952.42883315456051535"
     }
   ]
 }

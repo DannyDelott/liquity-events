@@ -5,5 +5,3 @@ export const alchemy = new Alchemy({
   network: Network.ETH_MAINNET,
   batchRequests: true,
 });
-
-export const alchemyProvider = alchemy.config.getProvider();
