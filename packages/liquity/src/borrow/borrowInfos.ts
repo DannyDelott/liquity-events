@@ -41,6 +41,7 @@ async function queryLUSDBorrowingFeePaidEvents(
 
   // creates a list of block intervals
   const blockRanges = chunk(range(startBlock, latestBlock + 1, 50_000), 2);
+  // Add an additional interval that extends to the latest block
   const lastBlockRange = blockRanges[blockRanges.length - 1];
   const lastBlockRangeEnd = lastBlockRange[1];
   if (lastBlockRangeEnd && lastBlockRangeEnd < latestBlock) {

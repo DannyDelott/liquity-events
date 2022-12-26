@@ -1,0 +1,25 @@
+name: Scrape Stake Changed Infos 
+
+on:
+  # “Once a day at 00:00.”
+  # https://crontab.guru/once-a-day
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  scrape_borrow_events:
+    runs-on: ubuntu-latest
+    env:
+      ALCHEMY_MAINNET_API_KEY: ${{ secrets.ALCHEMY_MAINNET_API_KEY }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          persist-credentials: false
+          node-version: "16"
+          cache: yarn
+      - run: npm install -g yarn
+      - run: yarn install --frozen-lockfile
+      - run: yarn workspace liquity run scrape-stake-changed-infos
