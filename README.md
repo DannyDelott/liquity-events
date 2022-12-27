@@ -1,6 +1,6 @@
 # Liquity Events
 
-[![Scrape Borrow Events](https://github.com/DannyDelott/liquity-events/actions/workflows/scrape-borrow-events.yml/badge.svg)](https://github.com/DannyDelott/liquity-events/actions/workflows/scrape-borrow-events.yml)
+[![Scrape Borrow Events](https://github.com/DannyDelott/liquity-events/actions/workflows/scrape-borrow-infos.yml/badge.svg)](https://github.com/DannyDelott/liquity-events/actions/workflows/scrape-borrow-infos.yml) [![Scrape Stake Changed Infos](https://github.com/DannyDelott/liquity-events/actions/workflows/scrape-stake-changed-infos.yml/badge.svg)](https://github.com/DannyDelott/liquity-events/actions/workflows/scrape-stake-changed-infos.yml)
 
 A frontend that shows realtime and historical information about the LQTY Staking Pool.
 
