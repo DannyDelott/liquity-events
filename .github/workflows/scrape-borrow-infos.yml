@@ -7,7 +7,7 @@ on:
     - cron: "0 0 * * *"
 
 jobs:
-  scrape_borrow_events:
+  scrape_borrow_infos:
     runs-on: ubuntu-latest
     env:
       ALCHEMY_MAINNET_API_KEY: ${{ secrets.ALCHEMY_MAINNET_API_KEY }}
