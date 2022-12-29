@@ -7,15 +7,10 @@ import { useTokenBalance } from "src/wallet/useTokenBalance";
 import { useAccount } from "wagmi";
 import { formatLQTYLabel } from "src/ui/base/format";
 import { PriceWidget } from "src/ui/price/PriceWidget";
-import {
-  useIsTailwindLargeScreen,
-  useIsTailwindSmallScreen,
-} from "src/ui/base/tailwindBreakpoints";
+import { useIsTailwindSmallScreen } from "src/ui/base/tailwindBreakpoints";
 import { Navigation } from "src/ui/navigation/Navigation";
-import { MenuIcon } from "src/ui/base/icons";
 
 export function Header(): ReactElement {
-  const { pathname } = useRouter();
   const { address } = useAccount();
   const { data: lusdBalance } = useTokenBalance(address, LUSD_TOKEN_ADDRESS);
   const { data: lqtyBalance } = useTokenBalance(address, LQTY_TOKEN_ADDRESS);
@@ -27,7 +22,14 @@ export function Header(): ReactElement {
       <Fragment>
         <div className="daisy-navbar px-4 bg-white border-b-[1px]">
           <div className="flex w-full justify-between">
-            <span className="font-bold flex-shrink-0">Liquity Events</span>
+            <span className="font-bold flex-shrink-0 ">
+              <span className="underline underline-offset-8 decoration-liquity-blue">
+                Liquity
+              </span>{" "}
+              <span className="underline underline-offset-8 decoration-liquity-purple">
+                Events
+              </span>
+            </span>
             <Navigation />
           </div>
         </div>
@@ -43,7 +45,14 @@ export function Header(): ReactElement {
   return (
     <div className="daisy-navbar px-8 bg-white shadow">
       <div className="daisy-navbar-start lg:gap-14">
-        <span className="text-sm lg:text-2xl font-bold">Liquity Events</span>
+        <span className="text-sm lg:text-2xl font-bold">
+          <span className="underline underline-offset-8 decoration-liquity-blue">
+            Liquity
+          </span>{" "}
+          <span className="underline underline-offset-8 decoration-liquity-purple">
+            Events
+          </span>
+        </span>
         <div className="flex gap-8">
           <PriceWidget tokenAddress={LUSD_TOKEN_ADDRESS} />
           <PriceWidget tokenAddress={LQTY_TOKEN_ADDRESS} />
