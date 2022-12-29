@@ -7,10 +7,11 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import classNames from "classnames";
-import { CryptoIcon, IconName, IconSize } from "src/ui/base/Page/CryptoIcon";
+import { CryptoIcon, IconName, IconSize } from "src/ui/crypto/CryptoIcon";
 import { useTokenBalance } from "src/wallet/useTokenBalance";
 import { useAccount } from "wagmi";
 import { formatLQTYLabel } from "src/ui/base/format";
+import { PriceWidget } from "src/ui/price/PriceWidget";
 
 export function Navigation(): ReactElement {
   const { pathname } = useRouter();
@@ -22,16 +23,10 @@ export function Navigation(): ReactElement {
   return (
     <div className="daisy-navbar px-8 bg-white shadow">
       <div className="daisy-navbar-start gap-14">
-        <span className="text-2xl font-bold">Liquity Events</span>
+        <span className="text-sm lg:text-2xl font-bold">Liquity Events</span>
         <div className="flex gap-8">
-          <div className="flex gap-1.5 items-center text-lg">
-            <CryptoIcon icon={IconName.LUSD} size={IconSize.SMALL} />
-            <span>${lusdPrice?.price.toFixed(2)}</span>
-          </div>
-          <div className="flex gap-1.5 items-center text-lg">
-            <CryptoIcon icon={IconName.LQTY} size={IconSize.SMALL} />
-            <span>${lqtyPrice?.price.toFixed(2)}</span>
-          </div>
+          <PriceWidget tokenAddress={LUSD_TOKEN_ADDRESS} />
+          <PriceWidget tokenAddress={LQTY_TOKEN_ADDRESS} />
         </div>
       </div>
       <div className="daisy-navbar-center">

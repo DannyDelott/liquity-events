@@ -4,7 +4,7 @@ import { commify, formatEther, parseEther } from "ethers/lib/utils.js";
 import { useTotalLQTYStaked } from "src/ui/stake/useTotalLQTYStaked";
 import { usePendingLUSDGain } from "src/ui/stake/usePendingLUSDGain";
 import { usePendingETHGain } from "src/ui/stake/usePendingETHGain";
-import { CryptoIcon, IconName, IconSize } from "src/ui/base/Page/CryptoIcon";
+import { CryptoIcon, IconName, IconSize } from "src/ui/crypto/CryptoIcon";
 import { useBlockNumber } from "wagmi";
 import { BLOCKS_PER_DAY } from "src/base/ethereum";
 import classNames from "classnames";

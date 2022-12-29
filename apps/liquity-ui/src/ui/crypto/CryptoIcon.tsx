@@ -1,10 +1,15 @@
 import Image from "next/image";
+import { LQTY_TOKEN_ADDRESS, LUSD_TOKEN_ADDRESS } from "liquity";
 
 export enum IconName {
   LUSD = "LUSD",
   LQTY = "LQTY",
   ETH = "ETH",
 }
+export const IconNameByTokenAddress: Record<string, IconName> = {
+  [LQTY_TOKEN_ADDRESS]: IconName.LQTY,
+  [LUSD_TOKEN_ADDRESS]: IconName.LUSD,
+};
 export enum IconSize {
   EXTRA_SMALL = "x-small",
   SMALL = "small",
