@@ -8,8 +8,8 @@ import "react-loading-skeleton/dist/skeleton.css";
 
 import "src/globals.css";
 import { WagmiConfigWithAlchemyPromiseProvider } from "src/ui/wagmi/WagmiConfigWithAlchemyPromiseProvider";
-import { Header } from "src/ui/navigation/Header";
-import { Footer } from "../src/ui/navigation/Footer";
+import { Header } from "src/ui/navigation/Header/Header";
+import { Footer } from "src/ui/navigation/Footer";
 
 function App({ Component, pageProps }: AppProps): ReactElement {
   return (

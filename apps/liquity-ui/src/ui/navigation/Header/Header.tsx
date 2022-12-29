@@ -9,6 +9,7 @@ import { formatLQTYLabel } from "src/ui/base/format";
 import { PriceWidget } from "src/ui/price/PriceWidget";
 import { useIsTailwindSmallScreen } from "src/ui/base/tailwindBreakpoints";
 import { Navigation } from "src/ui/navigation/Navigation";
+import { HeaderTitle } from "./HeaderTitle";
 
 export function Header(): ReactElement {
   const { address } = useAccount();
@@ -22,14 +23,7 @@ export function Header(): ReactElement {
       <Fragment>
         <div className="daisy-navbar px-4 bg-white border-b-[1px]">
           <div className="flex w-full justify-between">
-            <span className="font-bold flex-shrink-0 ">
-              <span className="underline underline-offset-8 decoration-liquity-blue">
-                Liquity
-              </span>{" "}
-              <span className="underline underline-offset-8 decoration-liquity-purple">
-                Events
-              </span>
-            </span>
+            <HeaderTitle />
             <Navigation />
           </div>
         </div>
@@ -45,14 +39,7 @@ export function Header(): ReactElement {
   return (
     <div className="daisy-navbar px-8 bg-white shadow">
       <div className="daisy-navbar-start lg:gap-14">
-        <span className="text-sm lg:text-2xl font-bold">
-          <span className="underline underline-offset-8 decoration-liquity-blue">
-            Liquity
-          </span>{" "}
-          <span className="underline underline-offset-8 decoration-liquity-purple">
-            Events
-          </span>
-        </span>
+        <HeaderTitle />
         <div className="flex gap-8">
           <PriceWidget tokenAddress={LUSD_TOKEN_ADDRESS} />
           <PriceWidget tokenAddress={LQTY_TOKEN_ADDRESS} />
