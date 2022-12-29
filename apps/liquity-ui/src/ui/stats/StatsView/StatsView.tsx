@@ -1,7 +1,7 @@
 import { ReactElement, useState } from "react";
 import { Page } from "src/ui/base/Page/Page";
 import TopBorrowersTable from "src/ui/borrow/TopBorrowersTable/TopBorrowersTable";
-import { BorrowStats } from "src/ui/borrow/BorrowStats/BorrowStats";
+import { ProtocolBorrowStats } from "src/ui/borrow/ProtocolBorrowStats/ProtocolBorrowStats";
 import classNames from "classnames";
 
 type ActiveTab = "borrow" | "stake";
@@ -31,7 +31,7 @@ export function StatsView(): ReactElement {
         </a>
       </div>
       <div>
-        <BorrowStats />
+        <ProtocolBorrowStats />
       </div>
       <div className="daisy-card bg-base-100">
         <TopBorrowersTable limit={25} />

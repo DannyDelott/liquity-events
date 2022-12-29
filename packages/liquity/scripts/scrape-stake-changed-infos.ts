@@ -24,18 +24,18 @@ const STAKE_CHANGED_INFOS_FILE_PATH = "src/stake/json/stakeChangedInfos.json";
     STAKE_CHANGED_INFOS_URL
   );
 
-  // scrape the latest borrow events, starting where we left off
-  const newBorrowInfos = await fetchStakeChangedInfos(
+  // scrape the latest stakeChanged events, starting where we left off
+  const newStakeChangedInfos = await fetchStakeChangedInfos(
     stakeChangedInfosJson.data[stakeChangedInfosJson.data.length - 1].block + 1,
     provider
   );
 
-  const borrowInfos: StakeChangedInfo[] = [
+  const stakeChangedInfos: StakeChangedInfo[] = [
     ...stakeChangedInfosJson.data,
-    ...newBorrowInfos,
+    ...newStakeChangedInfos,
   ];
 
-  const json = makeStakeChangedInfosFile(borrowInfos);
+  const json = makeStakeChangedInfosFile(stakeChangedInfos);
 
   // write a local file
   writeFile(STAKE_CHANGED_INFOS_FILE_PATH, json);

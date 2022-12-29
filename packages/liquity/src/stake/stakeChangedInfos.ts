@@ -23,12 +23,14 @@ export interface StakeChangedInfo {
 
 export async function fetchStakeChangedInfos(
   startBlock: number,
-  provider: AlchemyProvider
+  provider: AlchemyProvider,
+  address?: string
 ): Promise<StakeChangedInfo[]> {
   // // Grab the raw events
   const stakeChangedEvents = await queryStakeChangedEvents(
     startBlock,
-    provider
+    provider,
+    address
   );
 
   // // map the events to their borrow infos
@@ -37,7 +39,8 @@ export async function fetchStakeChangedInfos(
 
 async function queryStakeChangedEvents(
   startBlock: number,
-  provider: AlchemyProvider
+  provider: AlchemyProvider,
+  address?: string
 ) {
   const latestBlock = await provider.getBlockNumber();
 
@@ -54,7 +57,7 @@ async function queryStakeChangedEvents(
   const stakeChangedEvents: Event[] = [];
   for (const [startBlock, endBlock = latestBlock] of blockRanges) {
     const rawEvents = await lqtyStaking.queryFilter(
-      lqtyStakingContract.filters["StakeChanged"](null, null),
+      lqtyStakingContract.filters["StakeChanged"](address || null, null),
       startBlock,
       endBlock
     );

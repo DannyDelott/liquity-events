@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export enum CryptoName {
+export enum IconName {
   LUSD = "LUSD",
   LQTY = "LQTY",
   ETH = "ETH",
@@ -12,14 +12,14 @@ export enum IconSize {
   LARGE = "large",
 }
 
-const CryptoImgSrc: Record<CryptoName, string> = {
+const CryptoImgSrc: Record<IconName, string> = {
   ETH: "/svg/eth.svg",
   LQTY: "/svg/lqty.svg",
   LUSD: "/svg/lusd.svg",
 };
 
 const CryptoIconSize: Record<
-  CryptoName,
+  IconName,
   Record<IconSize, { height: number; width: number }>
 > = {
   ETH: {
@@ -30,7 +30,9 @@ const CryptoIconSize: Record<
   },
   LQTY: {
     "x-small": { height: 18, width: 18 },
-    small: { height: 24, width: 24 },
+    // lqty icon isn't a perfect square, so we bump up the size to be consistent
+    // with the other logos
+    small: { height: 28, width: 28 },
     medium: { height: 24, width: 24 },
     large: { height: 42, width: 42 },
   },
@@ -43,7 +45,7 @@ const CryptoIconSize: Record<
 };
 
 interface CryptoIconProps {
-  icon: CryptoName;
+  icon: IconName;
   size: IconSize;
   className?: string;
 }
@@ -52,7 +54,7 @@ export function CryptoIcon({ icon, size, className }: CryptoIconProps) {
   return (
     <Image
       src={CryptoImgSrc[icon]}
-      alt={CryptoName[icon]}
+      alt={IconName[icon]}
       width={CryptoIconSize[icon][size].width}
       height={CryptoIconSize[icon][size].height}
       className={className}

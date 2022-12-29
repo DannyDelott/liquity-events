@@ -4,7 +4,7 @@ import { commify, formatEther, parseEther } from "ethers/lib/utils.js";
 import { useTotalLQTYStaked } from "src/ui/stake/useTotalLQTYStaked";
 import { usePendingLUSDGain } from "src/ui/stake/usePendingLUSDGain";
 import { usePendingETHGain } from "src/ui/stake/usePendingETHGain";
-import { CryptoIcon, CryptoName, IconSize } from "src/ui/base/Page/CryptoIcon";
+import { CryptoIcon, IconName, IconSize } from "src/ui/base/Page/CryptoIcon";
 import { useBlockNumber } from "wagmi";
 import { BLOCKS_PER_DAY } from "src/base/ethereum";
 import classNames from "classnames";
@@ -47,7 +47,7 @@ export function StakeCard({ account }: StakeCardProps): ReactElement {
     (+formatEther(totalLQTYStaked || 0)).toFixed()
   );
   return (
-    <div className="daisy-card bg-base-100 shadow-xl min-w-[400px]">
+    <div className="daisy-card bg-base-100 shadow-xl min-w-[400px] max-w-[500px]">
       <figure className="bg-[#D2D6DC14] border-b-2 flex w-full">
         <div className="mt-8 flex flex-col gap-8 w-full">
           <div className="px-12 flex flex-col justify-center items-center w-96 text-center m-auto">
@@ -66,7 +66,7 @@ export function StakeCard({ account }: StakeCardProps): ReactElement {
               Total LQTY Staked
               <div className="font-bold flex gap-1">
                 <CryptoIcon
-                  icon={CryptoName.LQTY}
+                  icon={IconName.LQTY}
                   size={IconSize.EXTRA_SMALL}
                   className={"flex-shrink-0"}
                 />
@@ -86,7 +86,7 @@ export function StakeCard({ account }: StakeCardProps): ReactElement {
               </div>
               <div className="daisy-stat-value flex gap-2 justify-center">
                 <CryptoIcon
-                  icon={CryptoName.LQTY}
+                  icon={IconName.LQTY}
                   size={IconSize.SMALL}
                   className={"flex-shrink-0"}
                 />
@@ -117,7 +117,7 @@ export function StakeCard({ account }: StakeCardProps): ReactElement {
                 </div>
                 <div className="daisy-stat-value flex gap-2 items-center">
                   <CryptoIcon
-                    icon={CryptoName.LUSD}
+                    icon={IconName.LUSD}
                     size={IconSize.SMALL}
                     className={"flex-shrink-0"}
                   />
@@ -144,7 +144,7 @@ export function StakeCard({ account }: StakeCardProps): ReactElement {
                 </div>
                 <div className="daisy-stat-value flex gap-2 items-center">
                   <CryptoIcon
-                    icon={CryptoName.ETH}
+                    icon={IconName.ETH}
                     size={IconSize.SMALL}
                     className={"flex-shrink-0"}
                   />

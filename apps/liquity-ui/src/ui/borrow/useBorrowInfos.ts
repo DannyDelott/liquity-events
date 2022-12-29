@@ -3,7 +3,7 @@ import { alchemy } from "src/provider";
 import { BORROW_INFOS_URL, BorrowInfosFile, fetchBorrowInfos } from "liquity";
 import { ONE_DAY_IN_MILLISECONDS } from "src/base/time";
 
-export function useBorrowInfosJson() {
+export function useBorrowInfos() {
   return useQuery({
     queryKey: ["borrow-infos"],
     queryFn: async () => {

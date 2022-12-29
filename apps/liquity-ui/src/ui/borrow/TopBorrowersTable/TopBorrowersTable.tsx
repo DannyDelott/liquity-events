@@ -5,7 +5,7 @@ import mapValues from "lodash.mapvalues";
 import { ReactElement } from "react";
 import Skeleton from "react-loading-skeleton";
 import { makeEtherscanAddressUrl } from "src/etherscan";
-import { useBorrowInfosJson } from "src/ui/borrow/useBorrowInfos";
+import { useBorrowInfos } from "src/ui/borrow/useBorrowInfos";
 
 interface TopBorrowerTableProps {
   limit: number;
@@ -14,7 +14,7 @@ interface TopBorrowerTableProps {
 export default function TopBorrowersTable({
   limit,
 }: TopBorrowerTableProps): ReactElement {
-  const { data: borrowInfos, status } = useBorrowInfosJson();
+  const { data: borrowInfos, status } = useBorrowInfos();
   const borrowInfosByBorrower = groupBy(borrowInfos?.data, "borrower");
   const totalFeesPaidByBorrower = mapValues(
     borrowInfosByBorrower,

@@ -1,5 +1,4 @@
 import { ReactElement } from "react";
-import Image from "next/image";
 import { HOME_ROUTE } from "src/ui/home/routes";
 import { STATS_ROUTE } from "src/ui/stats/routes";
 import { useTokenPrice } from "src/ui/price/useTokenPrice";
@@ -8,22 +7,29 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import classNames from "classnames";
+import { CryptoIcon, IconName, IconSize } from "src/ui/base/Page/CryptoIcon";
+import { useTokenBalance } from "src/wallet/useTokenBalance";
+import { useAccount } from "wagmi";
+import { formatLQTYLabel } from "src/ui/base/format";
 
 export function Navigation(): ReactElement {
   const { pathname } = useRouter();
+  const { address } = useAccount();
   const { data: lqtyPrice } = useTokenPrice(LQTY_TOKEN_ADDRESS);
   const { data: lusdPrice } = useTokenPrice(LUSD_TOKEN_ADDRESS);
+  const { data: lusdBalance } = useTokenBalance(address, LUSD_TOKEN_ADDRESS);
+  const { data: lqtyBalance } = useTokenBalance(address, LQTY_TOKEN_ADDRESS);
   return (
     <div className="daisy-navbar px-8 bg-white shadow">
       <div className="daisy-navbar-start gap-14">
         <span className="text-2xl font-bold">Liquity Events</span>
         <div className="flex gap-8">
           <div className="flex gap-1.5 items-center text-lg">
-            <Image src="/svg/lusd.svg" alt="lusd logo" width="24" height="24" />
+            <CryptoIcon icon={IconName.LUSD} size={IconSize.SMALL} />
             <span>${lusdPrice?.price.toFixed(2)}</span>
           </div>
           <div className="flex gap-1.5 items-center text-lg">
-            <Image src="/svg/lqty.svg" alt="lqty logo" width="28" height="28" />
+            <CryptoIcon icon={IconName.LQTY} size={IconSize.SMALL} />
             <span>${lqtyPrice?.price.toFixed(2)}</span>
           </div>
         </div>
@@ -77,6 +83,21 @@ export function Navigation(): ReactElement {
         </div>
       </div>
       <div className="daisy-navbar-end gap-4">
+        <div className="flex gap-8">
+          {lusdBalance ? (
+            <div className="flex gap-1.5 items-center text-lg">
+              <CryptoIcon icon={IconName.LUSD} size={IconSize.SMALL} />
+              <span>{lusdBalance.formatted}</span>
+            </div>
+          ) : null}
+          {lqtyBalance ? (
+            <div className="flex gap-1.5 items-center text-lg">
+              <CryptoIcon icon={IconName.LQTY} size={IconSize.SMALL} />
+              <span>{formatLQTYLabel(lqtyBalance.formatted)}</span>
+            </div>
+          ) : null}
+        </div>
+
         <ConnectButton accountStatus={"full"} showBalance={false} />
       </div>
     </div>
