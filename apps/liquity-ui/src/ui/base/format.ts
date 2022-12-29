@@ -1,6 +1,12 @@
 import { BigNumber } from "ethers";
 import { commify, formatEther, parseEther } from "ethers/lib/utils.js";
 
+export function formatAddress(address: string): string {
+  const first4 = address.slice(0, 5);
+  const last4 = address.slice(-4);
+  return `${first4}...${last4}`;
+}
+
 export function formatPoolShare(poolShare?: number) {
   if (!poolShare) {
     return `0%`;

@@ -8,7 +8,7 @@ import "react-loading-skeleton/dist/skeleton.css";
 
 import "src/globals.css";
 import { WagmiConfigWithAlchemyPromiseProvider } from "src/ui/wagmi/WagmiConfigWithAlchemyPromiseProvider";
-import { Navigation } from "src/ui/navigation/Navigation";
+import { Header } from "src/ui/navigation/Header";
 import { Footer } from "../src/ui/navigation/Footer";
 
 function App({ Component, pageProps }: AppProps): ReactElement {
@@ -16,7 +16,7 @@ function App({ Component, pageProps }: AppProps): ReactElement {
     <QueryClientProvider client={queryClient}>
       <WagmiConfigWithAlchemyPromiseProvider>
         <main className="h-full w-full absolute flex flex-col justify-between">
-          <Navigation />
+          <Header />
           <Component {...pageProps} />
           <Footer />
         </main>

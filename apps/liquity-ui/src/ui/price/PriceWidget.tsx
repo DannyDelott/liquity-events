@@ -1,4 +1,5 @@
 import { ReactElement } from "react";
+import { useIsTailwindSmallScreen } from "src/ui/base/tailwindBreakpoints";
 import {
   CryptoIcon,
   IconNameByTokenAddress,
@@ -13,9 +14,13 @@ interface PriceWidgetProps {
 export function PriceWidget({ tokenAddress }: PriceWidgetProps): ReactElement {
   const { data: price } = useTokenPrice(tokenAddress);
   const iconName = IconNameByTokenAddress[tokenAddress];
+  const isSmallScreen = useIsTailwindSmallScreen();
   return (
-    <div className="flex gap-1.5 items-center lg:text-lg">
-      <CryptoIcon icon={iconName} size={IconSize.SMALL} />
+    <div className="flex gap-1.5 items-center text-sm lg:text-lg flex-shrink-0">
+      <CryptoIcon
+        icon={iconName}
+        size={isSmallScreen ? IconSize.EXTRA_SMALL : IconSize.SMALL}
+      />
       <span>${price?.price.toFixed(2)}</span>
     </div>
   );
