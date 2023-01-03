@@ -1,0 +1,2365 @@
+{
+  "name": "RedemptionInfo",
+  "data": [
+    {
+      "block": 12279743,
+      "txHash": "0x82d71a53bffe89fee9cbeedb775eb61567529b1f774529c8dfb992fb4c203fd3",
+      "timestamp": 1618957120,
+      "redeemer": "0x7D411873898aB53EE8260273eE9232213524ad62",
+      "ethSent": "359.045358756373925565",
+      "ethFee": "1.951440723334955673"
+    },
+    {
+      "block": 12280610,
+      "txHash": "0x201a023ddbbd1fe41ec6820a5f7ea4d3b53dc2394d3d9352e9af32a626564eb0",
+      "timestamp": 1618969120,
+      "redeemer": "0x504473504B89672D8BCFD97C75Fd2b49A55E9BC0",
+      "ethSent": "128.933185639749399046",
+      "ethFee": "0.707150158375961802"
+    },
+    {
+      "block": 12280998,
+      "txHash": "0xfc0420de6ed37ab64e913a59e70198ed458717b8648a7adc01181deea4a5b1df",
+      "timestamp": 1618974252,
+      "redeemer": "0x8ff35eF72f745F79684b4AafeF21FbDEB0e33cED",
+      "ethSent": "0.795926319214893726",
+      "ethFee": "0.004335662364150804"
+    },
+    {
+      "block": 12282222,
+      "txHash": "0xd1b6ebe2f82c78a233a0b834f7a0acdb806bd686a5f59c1cb895a2a6f9b76e7e",
+      "timestamp": 1618989934,
+      "redeemer": "0xbBdd228811ac506F1Bfb4d07fbB40a421Abc8a07",
+      "ethSent": "133.031372564328092328",
+      "ethFee": "0.728934474656184273"
+    },
+    {
+      "block": 12283315,
+      "txHash": "0x49b330b38f6c0846991add006cbb03c14278b356770837e5c500aa375b5cb77d",
+      "timestamp": 1619004562,
+      "redeemer": "0xBB4946EeA34a98b2C0e497Cb7F8F3af83311B2AF",
+      "ethSent": "44.142899393917991321",
+      "ethFee": "0.239408309059396919"
+    },
+    {
+      "block": 12283328,
+      "txHash": "0xcda4b27f53a01beb2a6d8fcd22abbaa4e0b22f8c374007450a39464544bfec8a",
+      "timestamp": 1619004708,
+      "redeemer": "0x0279431a5E11D234DCf1D4493494DB9F06Ea42cd",
+      "ethSent": "79.190373021184765182",
+      "ethFee": "0.435288091498080757"
+    },
+    {
+      "block": 12283338,
+      "txHash": "0xe1e451da758737ba9f477f60e97c5503ee093ee908a4a4ae2e6d96515cfec35f",
+      "timestamp": 1619004859,
+      "redeemer": "0x0279431a5E11D234DCf1D4493494DB9F06Ea42cd",
+      "ethSent": "79.960666232786141229",
+      "ethFee": "0.44542619880526587"
+    },
+    {
+      "block": 12283346,
+      "txHash": "0xe39cd1a729b3a8aea8c7459423ac81e578fa0a54247add5730efc8a6f8245dc3",
+      "timestamp": 1619004952,
+      "redeemer": "0xBB4946EeA34a98b2C0e497Cb7F8F3af83311B2AF",
+      "ethSent": "44.389824242021547164",
+      "ethFee": "0.249095453064465221"
+    },
+    {
+      "block": 12283348,
+      "txHash": "0x198e38534c6e97e0a682acd3fcf7c0f35081ad996368d0edd3eab6a2291e8a22",
+      "timestamp": 1619004980,
+      "redeemer": "0x0279431a5E11D234DCf1D4493494DB9F06Ea42cd",
+      "ethSent": "80.723046456670773485",
+      "ethFee": "0.459077350899396994"
+    },
+    {
+      "block": 12287103,
+      "txHash": "0xe98a5f776ddab2a0477ccdcf8de5e348fe508bb333b706ef51d9d4b137477cdc",
+      "timestamp": 1619055049,
+      "redeemer": "0x13BbD9D13e804783744a1A91b7b8D6A3002A0a16",
+      "ethSent": "4.839935854510265183",
+      "ethFee": "0.025750839754467506"
+    },
+    {
+      "block": 12289420,
+      "txHash": "0xd96ce21579b05b1245137add1cdfc49c467b875a8e33ccdfee74040f94bb02aa",
+      "timestamp": 1619086879,
+      "redeemer": "0xF42c8153e7d41D0B0Ce9cbB1Fb0fE779Dab90e16",
+      "ethSent": "2.41196312844664493",
+      "ethFee": "0.012535757792085767"
+    },
+    {
+      "block": 12289895,
+      "txHash": "0x755fa9bdb55f098131c426d8d4b0443f5be9cbe4df3341d4a6811897665ceef9",
+      "timestamp": 1619093126,
+      "redeemer": "0x5ade40e345817B739b91c6B4615eFCE87F9D7c57",
+      "ethSent": "0.896933402170188789",
+      "ethFee": "0.004646445423477346"
+    },
+    {
+      "block": 12290699,
+      "txHash": "0x943e63b93cf9b586becdd6deba97f0336f7c872e6d0e8457091b3c330e2e07f7",
+      "timestamp": 1619103338,
+      "redeemer": "0x464D876a94De8CBC957a81b15A5dA34f2b66107a",
+      "ethSent": "158.020901780474300112",
+      "ethFee": "0.837381859526617411"
+    },
+    {
+      "block": 12290726,
+      "txHash": "0xa00951d7b74154b0b0f38935b87ecd6a0e9ac00ca8d1e0400eef1959e1caa485",
+      "timestamp": 1619103698,
+      "redeemer": "0x464D876a94De8CBC957a81b15A5dA34f2b66107a",
+      "ethSent": "251.833987375291951066",
+      "ethFee": "1.392247701422309652"
+    },
+    {
+      "block": 12291793,
+      "txHash": "0xb181423a520f6b9c16d66fbe17c9d22a84c3f43194e8c283cac63ce28808b56e",
+      "timestamp": 1619118465,
+      "redeemer": "0xED5Bd59aE895B737CDC797bF9F23Ee57D62B8ee1",
+      "ethSent": "0.637868819923473532",
+      "ethFee": "0.003457501126257967"
+    },
+    {
+      "block": 12293187,
+      "txHash": "0x6806c3c9112673674b8df17bf874e2ee5b40634e8fba3dac0f3adcff3a49342e",
+      "timestamp": 1619136755,
+      "redeemer": "0xde7e71a5e2ff01824f213b841f3Ca450Dcabc9BD",
+      "ethSent": "169.817793211343454542",
+      "ethFee": "0.927215866098583916"
+    },
+    {
+      "block": 12296481,
+      "txHash": "0xf0c1de15f27e3bc3beeb025a4a554c334f61cd6bcb26c5bbd338737e38b5a0f7",
+      "timestamp": 1619181527,
+      "redeemer": "0xA42830eE059c77cAF8c8200B44AA9813CB0720c5",
+      "ethSent": "2.885724031872181365",
+      "ethFee": "0.015099099673875852"
+    },
+    {
+      "block": 12308754,
+      "txHash": "0xaf27e21decc5fd44578044364e5381b2bb61c2d38cd9ad57cafcafabc0fc80c1",
+      "timestamp": 1619344465,
+      "redeemer": "0x83faB3353DA89d881613D596E61c46420799ce36",
+      "ethSent": "2.648416252670461046",
+      "ethFee": "0.013297464757013014"
+    },
+    {
+      "block": 12311428,
+      "txHash": "0xfe48a6171c886251749e7651fa8f9c476563604266787e1435c4ea8d66459742",
+      "timestamp": 1619380004,
+      "redeemer": "0x32B0d0449c0E93F9A9E2a6f86F0915608a588bE1",
+      "ethSent": "5.325907300450019588",
+      "ethFee": "0.026716438664229003"
+    },
+    {
+      "block": 12313667,
+      "txHash": "0x64da0e9d7237452d851f3382bd21f6342af9a75d67351945c4c1a958624743ed",
+      "timestamp": 1619409916,
+      "redeemer": "0x68f45af53cDF3BEE49aFc507B363bff30651e5Dd",
+      "ethSent": "0.081666986529030572",
+      "ethFee": "0.000409185672692052"
+    },
+    {
+      "block": 12316866,
+      "txHash": "0xdfcaa9bd7a254c7efd1d5d3082a112ca9ee13f2b62d6e451f89af93fe8e66488",
+      "timestamp": 1619452054,
+      "redeemer": "0x5D45BDe82E5Ce502D5bFeF2b25945E21142e8cb2",
+      "ethSent": "0.052012459817499028",
+      "ethFee": "0.000260348059289154"
+    },
+    {
+      "block": 12317375,
+      "txHash": "0xc8c09ad4314d2ed95a24c491e010772150c96486567dfb61b8949636654504d9",
+      "timestamp": 1619459175,
+      "redeemer": "0x013Fa4c98BF29853d9fb7095117cba910AbD75E4",
+      "ethSent": "3.97447849377844842",
+      "ethFee": "0.019905553904577674"
+    },
+    {
+      "block": 12324319,
+      "txHash": "0xb5f263079859ac1a12bdddb1ad5914c1c153fff193c195fd6301570cf2407ccc",
+      "timestamp": 1619551548,
+      "redeemer": "0x4f9993D3DF99aFffc6a0a13B93387006a1971C7e",
+      "ethSent": "2.190694563577440924",
+      "ethFee": "0.010962207248380314"
+    },
+    {
+      "block": 12325120,
+      "txHash": "0xdb5c6d6c9126d11327529988d4bcc67f1efb50511a9fd0629e4c796224c75e49",
+      "timestamp": 1619562086,
+      "redeemer": "0x99C515BC95E43697B38f419d5359A3876B68E538",
+      "ethSent": "9.413404250484968744",
+      "ethFee": "0.047179562841508645"
+    },
+    {
+      "block": 12380635,
+      "txHash": "0x68a78fb1d03fa522e0a027c87db7ae95bf719da808b2e83d051f52658bd81f4b",
+      "timestamp": 1620302644,
+      "redeemer": "0xF56981F23FC1B9Af95C58d089B0Df041f45Af3D5",
+      "ethSent": "5.905474432843754529",
+      "ethFee": "0.029962787148059042"
+    },
+    {
+      "block": 12381499,
+      "txHash": "0xede61208c9c8b5fa66ce90247fc5ae59b5fd93da12d145c2c5b855dc1a1bdbc9",
+      "timestamp": 1620314593,
+      "redeemer": "0xFcB2229Fb2Da163b50f09de04cc1980DE76f343C",
+      "ethSent": "16.982387449711649169",
+      "ethFee": "0.086289827572703729"
+    },
+    {
+      "block": 12381619,
+      "txHash": "0x0d45a8dbb08e7c2aabea7d49d6df130816c0a6c391e85a1f4fe22417c51b5781",
+      "timestamp": 1620316057,
+      "redeemer": "0x1488E2DdB866863f0D04350d10615E7eE2DDFbd9",
+      "ethSent": "1.002875020490365355",
+      "ethFee": "0.00509516080277872"
+    },
+    {
+      "block": 12382240,
+      "txHash": "0xd4c16fdb52ef53572fd1059e028638177e260e36b178ce58c17819bddb8b7b5f",
+      "timestamp": 1620324238,
+      "redeemer": "0xC45649936CCA104CeB16457405516cc7d7e57330",
+      "ethSent": "0.601017826049059844",
+      "ethFee": "0.003048317605225391"
+    },
+    {
+      "block": 12384383,
+      "txHash": "0x8dfeaef0870f519b7ae7965bb136d7b5fc5bce5a7609c3f79dbb90105065f51d",
+      "timestamp": 1620353219,
+      "redeemer": "0xd0A8b9B78eEB93f932a4dCc9b9bcdC83A9255B31",
+      "ethSent": "46.335576146429808068",
+      "ethFee": "0.236271867269039445"
+    },
+    {
+      "block": 12384557,
+      "txHash": "0x04e3b6e6317c018b32cba0c29b13199c108748f68cd3b2bd95a97cbaf98ac06a",
+      "timestamp": 1620355656,
+      "redeemer": "0xd0A8b9B78eEB93f932a4dCc9b9bcdC83A9255B31",
+      "ethSent": "46.396512190487864044",
+      "ethFee": "0.238864327530777314"
+    },
+    {
+      "block": 12387156,
+      "txHash": "0x2077a7bafcba241c89c9c4466c5312781371df17d13151b5985385e93f76edf2",
+      "timestamp": 1620390701,
+      "redeemer": "0xA9c8dDbF790bDbFfe798c93B95B0bC263BF0C827",
+      "ethSent": "10.359433878188568896",
+      "ethFee": "0.052810601266410457"
+    },
+    {
+      "block": 12393262,
+      "txHash": "0x00b4d643289db85e402a540bf1114a34dd2623129fe296f0c546659b86448b23",
+      "timestamp": 1620471540,
+      "redeemer": "0xC45649936CCA104CeB16457405516cc7d7e57330",
+      "ethSent": "4.23848586146581857",
+      "ethFee": "0.021331069271479413"
+    },
+    {
+      "block": 12393696,
+      "txHash": "0x5fb50a2b938162c5ba68eb2a5a02b03440f334eff84e3ed7b38d3096382bbad1",
+      "timestamp": 1620477299,
+      "redeemer": "0x9fcEc17116E7A7B024680b6737f3d2368B2aF31c",
+      "ethSent": "6.304314654207257543",
+      "ethFee": "0.031756667898261792"
+    },
+    {
+      "block": 12396035,
+      "txHash": "0x1a44fc0586c628fe1b97a674ca55bc1520979ff60f3b983735f94239aced1603",
+      "timestamp": 1620508363,
+      "redeemer": "0x1FE9Fd1156688699F4ca017E72ee0D9873f9d758",
+      "ethSent": "117.901348250271712164",
+      "ethFee": "0.609737288145866466"
+    },
+    {
+      "block": 12398837,
+      "txHash": "0xad2c51266a04b05c3e49792164e261e1b2ad195300e6e95eab4f1e9e2bef8dbc",
+      "timestamp": 1620545440,
+      "redeemer": "0x6481B4521Ad2Bb4b5ba4872e4a4D7829e5120eb0",
+      "ethSent": "6.215142731311370445",
+      "ethFee": "0.031724842946452315"
+    },
+    {
+      "block": 12410109,
+      "txHash": "0xee40d7215677e7435db11ba4a2b1e0a04981b031d49bf6942d332687070c7d26",
+      "timestamp": 1620695758,
+      "redeemer": "0xF0177F327dcA75588B96c96b4418064894Ee234F",
+      "ethSent": "2.593872281853335386",
+      "ethFee": "0.01300349046238894"
+    },
+    {
+      "block": 12415922,
+      "txHash": "0x1dec28a30b041259ecc1ba3fdd4d6699c82df54c37e613fac4c886c4495359e9",
+      "timestamp": 1620773518,
+      "redeemer": "0x06B6C73A240e579B6fA991B715a26356d8af61d9",
+      "ethSent": "38.302616303681664798",
+      "ethFee": "0.193619485542692113"
+    },
+    {
+      "block": 12422977,
+      "txHash": "0x6bcbe8731e49b5b0445b58a7a4b8b55d472537d34a2cdbb2c55f80ee7f04b57a",
+      "timestamp": 1620868392,
+      "redeemer": "0xB2BC9D41339Dc512Ca7469982623229410C63A74",
+      "ethSent": "3.836714719193743368",
+      "ethFee": "0.019249335719311497"
+    },
+    {
+      "block": 12425684,
+      "txHash": "0xd8992c5b5ad65f44d2f4dc066e27c76205e2d6c582e348e5da41b28a47931864",
+      "timestamp": 1620904182,
+      "redeemer": "0x688DFd31DA0A82c41676cBed7A07dCe066169E26",
+      "ethSent": "61.407310861951537494",
+      "ethFee": "0.312094845296351363"
+    },
+    {
+      "block": 12479460,
+      "txHash": "0x4116585510719b7781834f817feb21467d57338382ef8db98adaed816f0c8c54",
+      "timestamp": 1621623533,
+      "redeemer": "0xd0A8b9B78eEB93f932a4dCc9b9bcdC83A9255B31",
+      "ethSent": "65.045631871017286186",
+      "ethFee": "0.445268232039271669"
+    },
+    {
+      "block": 12480329,
+      "txHash": "0x24ad921e461f359bbe4a668a015ce6cf66cf4b1c4cc7564051ab40e895156498",
+      "timestamp": 1621635280,
+      "redeemer": "0x4925ee4d70B169926a2be518478c5BEdfACF4b68",
+      "ethSent": "0.768197113136389665",
+      "ethFee": "0.005020525276356169"
+    },
+    {
+      "block": 12480359,
+      "txHash": "0x7ede62765cfa24491b0f935d7bfc8261ddce011482376f6d26895e238139ea24",
+      "timestamp": 1621635710,
+      "redeemer": "0x4925ee4d70B169926a2be518478c5BEdfACF4b68",
+      "ethSent": "8.105126807230188615",
+      "ethFee": "0.05301005853465215"
+    },
+    {
+      "block": 12480401,
+      "txHash": "0x6a2ebb3c51361d6f8f8652048eeba3c502dd5a28db81ecefa01971d97d21ea8b",
+      "timestamp": 1621636195,
+      "redeemer": "0xd0A8b9B78eEB93f932a4dCc9b9bcdC83A9255B31",
+      "ethSent": "31.18801062282811348",
+      "ethFee": "0.205430126862602422"
+    },
+    {
+      "block": 12482479,
+      "txHash": "0x57fdd4e347364ef7807e87dab683a94b0a0b8f47195fcb4016db3315bb3074fc",
+      "timestamp": 1621664537,
+      "redeemer": "0xaFbeb4Cb97f3B08Ec2FE07EF0dac15D37013a347",
+      "ethSent": "11.413254586983705528",
+      "ethFee": "0.068872891807949419"
+    },
+    {
+      "block": 12483733,
+      "txHash": "0x9f0946862eedf30bbbc5440993c2dc267ff0e0365a5f8760d5d1a844db519a1a",
+      "timestamp": 1621681611,
+      "redeemer": "0xD441C97eF1458d847271f91714799007081494eF",
+      "ethSent": "0.053758411446650854",
+      "ethFee": "0.000311309949555042"
+    },
+    {
+      "block": 12484391,
+      "txHash": "0xd84d3b0a76ed3ebb98d35357ce64c45b1c6eb09ad92137e618ffefffb59a6c6d",
+      "timestamp": 1621690438,
+      "redeemer": "0xd0A8b9B78eEB93f932a4dCc9b9bcdC83A9255B31",
+      "ethSent": "13.072190049000163429",
+      "ethFee": "0.074700533545460099"
+    },
+    {
+      "block": 12484963,
+      "txHash": "0x0898629185a885ed2385a8cb987894a240e5603866a78590376e8f57ba256367",
+      "timestamp": 1621698067,
+      "redeemer": "0xd0A8b9B78eEB93f932a4dCc9b9bcdC83A9255B31",
+      "ethSent": "90.380246728886371522",
+      "ethFee": "0.52429490885736165"
+    },
+    {
+      "block": 12486811,
+      "txHash": "0x9c8e70525d1bb37919f7811f03d4d3b6715d642a43d55a5d321bc19ee8b988a7",
+      "timestamp": 1621722353,
+      "redeemer": "0xFb80fAa097a783f34aa7228D62FD6Ab92a8E50b4",
+      "ethSent": "1.712144371438321944",
+      "ethFee": "0.009499150407829593"
+    },
+    {
+      "block": 12489223,
+      "txHash": "0x5efd420287aaf4ed2e719006c84df888ecc3d6613f3f6cda12795b45c9e2c532",
+      "timestamp": 1621754497,
+      "redeemer": "0xE05fD1304C1CfE19dcc6AAb0767848CC4A8f54aa",
+      "ethSent": "9.486651623299963497",
+      "ethFee": "0.05069882176628566"
+    },
+    {
+      "block": 12489238,
+      "txHash": "0x9721fbe25e4aebb12ff643c770b17514cc6ef5aafcbaa144a122675ce7511317",
+      "timestamp": 1621754731,
+      "redeemer": "0xE05fD1304C1CfE19dcc6AAb0767848CC4A8f54aa",
+      "ethSent": "22.061715090783879348",
+      "ethFee": "0.118703147037548406"
+    },
+    {
+      "block": 12490111,
+      "txHash": "0xd7a04c20a8f142ad8538606fc1d61fff672c7ca62667dc538c0a9531f52c900d",
+      "timestamp": 1621767188,
+      "redeemer": "0xEa5Ed53ec1244a1BAF72086c6f5726b1Dd913FdC",
+      "ethSent": "46.37032477845590945",
+      "ethFee": "0.249945820980990756"
+    },
+    {
+      "block": 12491164,
+      "txHash": "0x38207faf1df1f1fc94c635d29090811538154e69498787a6531fbb440bd7c376",
+      "timestamp": 1621780918,
+      "redeemer": "0xd0A8b9B78eEB93f932a4dCc9b9bcdC83A9255B31",
+      "ethSent": "67.835041563443715598",
+      "ethFee": "0.368955636183654043"
+    },
+    {
+      "block": 12491550,
+      "txHash": "0x272594193a4a961da21b4ecb9940b9071f411930b0e4ab3cab7a0db0b26cc298",
+      "timestamp": 1621786074,
+      "redeemer": "0x24f8B34b3A381cc72576a35d55A6996c9bF2C4CB",
+      "ethSent": "0.063110771368815301",
+      "ethFee": "0.00034111503626258"
+    },
+    {
+      "block": 12491703,
+      "txHash": "0xc03ebb0c8cbd43d1164314008de221a60e48ae5777b67f516916b7504fce743a",
+      "timestamp": 1621787878,
+      "redeemer": "0x0EB4ADD4bA497357546DA7F5D12D39587cA24606",
+      "ethSent": "0.057106647932428677",
+      "ethFee": "0.000308031244976347"
+    },
+    {
+      "block": 12491746,
+      "txHash": "0xf9dc1e063a1d35ac3a08c4001df9246d6383f784bfa7d7aa5259035b73f15d10",
+      "timestamp": 1621788421,
+      "redeemer": "0x0EB4ADD4bA497357546DA7F5D12D39587cA24606",
+      "ethSent": "256.594007831640021352",
+      "ethFee": "1.49087057679159398"
+    },
+    {
+      "block": 12491772,
+      "txHash": "0x50312f65d353543a081a0fd4711dacab41fe107b8f4fef61e056e567c1811e62",
+      "timestamp": 1621788700,
+      "redeemer": "0x0EB4ADD4bA497357546DA7F5D12D39587cA24606",
+      "ethSent": "557.960809574800339077",
+      "ethFee": "3.760862961060338836"
+    },
+    {
+      "block": 12491824,
+      "txHash": "0x400297089cdb3d66106952c9e0ae4f6c2e0b3f0fdad6c9afee65cfb0e2129617",
+      "timestamp": 1621789363,
+      "redeemer": "0x0EB4ADD4bA497357546DA7F5D12D39587cA24606",
+      "ethSent": "1025.867234793546090595",
+      "ethFee": "8.722774242471995836"
+    },
+    {
+      "block": 12492414,
+      "txHash": "0x45a39b490cde70e8f7fa6496faabde766def9f93eb600ad559f55f794d1dd3bf",
+      "timestamp": 1621797318,
+      "redeemer": "0x0EB4ADD4bA497357546DA7F5D12D39587cA24606",
+      "ethSent": "1575.206635292158514221",
+      "ethFee": "17.213312509922186175"
+    },
+    {
+      "block": 12497796,
+      "txHash": "0xf98c2b7ac2192564520ab94a98690a4b3cfb7899c8afa3ca3469e058e270f25d",
+      "timestamp": 1621869919,
+      "redeemer": "0xd0A8b9B78eEB93f932a4dCc9b9bcdC83A9255B31",
+      "ethSent": "82.873255350088339411",
+      "ethFee": "0.58954163580993947"
+    },
+    {
+      "block": 12499278,
+      "txHash": "0x965dc1283906f6be38cf82c6e7f51eebf9736d330664a1281988b4607ed21128",
+      "timestamp": 1621889084,
+      "redeemer": "0xEf1335914A41F20805bF3b74C7B597aFc4dAFbee",
+      "ethSent": "7.71067981412270386",
+      "ethFee": "0.050781587162667528"
+    },
+    {
+      "block": 12499318,
+      "txHash": "0x4bb868ea8fafbf3d7faf242950891473c5c1c729e0938706da2cae9080e9b6ae",
+      "timestamp": 1621889565,
+      "redeemer": "0xEf1335914A41F20805bF3b74C7B597aFc4dAFbee",
+      "ethSent": "3.855174127445348292",
+      "ethFee": "0.025388200129268696"
+    },
+    {
+      "block": 12502679,
+      "txHash": "0x9c1f182fee6a9735e3379e636641e54f0e66c68ac6a645bda65dec108cc9bf3a",
+      "timestamp": 1621934679,
+      "redeemer": "0x2B19471dcd4b5809253D6288eAdC3a8F04000D6d",
+      "ethSent": "7.356123371416599191",
+      "ethFee": "0.042709461444644422"
+    },
+    {
+      "block": 12504219,
+      "txHash": "0x1c5c4e3f8761dfdc1f852b38e50b1ac61f90733acaf23f9a0087cc17d61fa256",
+      "timestamp": 1621955338,
+      "redeemer": "0xFF15208Bb7bdc9024431c3294C9D1f6E262304a9",
+      "ethSent": "3.880627560629890681",
+      "ethFee": "0.021701335970193809"
+    },
+    {
+      "block": 12505138,
+      "txHash": "0xdb7eec2a0f85bb306243ed7e1d58804b1c9d84231e4355dfcc5464837a0c2fc0",
+      "timestamp": 1621967394,
+      "redeemer": "0xE3a6AF0974f9091415D2c59F105294f939Ce946F",
+      "ethSent": "10.810634002871239047",
+      "ethFee": "0.059657675296149512"
+    },
+    {
+      "block": 12506004,
+      "txHash": "0xa2301bb870eb13df6cf2c53bc6c2b80838ffd1b8be919b8c322b4482e588da54",
+      "timestamp": 1621979318,
+      "redeemer": "0xd0A8b9B78eEB93f932a4dCc9b9bcdC83A9255B31",
+      "ethSent": "28.856378597493516785",
+      "ethFee": "0.15888551152072937"
+    },
+    {
+      "block": 12506322,
+      "txHash": "0x04cad7111876eacb192b0a22cdb6e335b85972258fafe8f60db05e3c12ce0396",
+      "timestamp": 1621983598,
+      "redeemer": "0x760f6136a5ad6d7A8E989B3aDBDAE6b2DD2510C3",
+      "ethSent": "1.442669587591709606",
+      "ethFee": "0.007902252765769875"
+    },
+    {
+      "block": 12511115,
+      "txHash": "0x0d47d15691fab56aa27ff8798ccb257a9bc4b1ddaf008a992e7330153f73515e",
+      "timestamp": 1622047711,
+      "redeemer": "0xE7beB8db670Fff92dB179C99eb551D496cDAe353",
+      "ethSent": "19.741487475884312327",
+      "ethFee": "0.103210429093964661"
+    },
+    {
+      "block": 12512868,
+      "txHash": "0x74a5228e7dbc336fbc85826c0b2c922404d8718a9e0957c481ecac0c7c865eb8",
+      "timestamp": 1622071560,
+      "redeemer": "0xc6eAd34620572C0f1c5F27B92dFb9290D50A7986",
+      "ethSent": "0.003270728887167927",
+      "ethFee": "0.000016869152507756"
+    },
+    {
+      "block": 12580225,
+      "txHash": "0x838df136f942512910f8bc0206ac7e0abb513be59be378db7585060b51b64808",
+      "timestamp": 1622973010,
+      "redeemer": "0x2E61629295D2E9c64cA8991D16F9d8d0A093738F",
+      "ethSent": "0.655494420803384578",
+      "ethFee": "0.003280983728360441"
+    },
+    {
+      "block": 12581187,
+      "txHash": "0xc8d130cd137924add20bee759acaaa40411594dc5937f6630d56832051afa3cf",
+      "timestamp": 1622985744,
+      "redeemer": "0x601Cf77977F234c47F951987745d7217583c68E4",
+      "ethSent": "2.988087457884993221",
+      "ethFee": "0.014969187855209373"
+    },
+    {
+      "block": 12581583,
+      "txHash": "0xc2ecc5e3b639af8a159b819cc70081aa4a334b131ec0b01131f26c6487c5730d",
+      "timestamp": 1622990742,
+      "redeemer": "0x2259504FdC0A83710658A7fee22b75e25ea1a663",
+      "ethSent": "2.974937750229479872",
+      "ethFee": "0.014916698417115662"
+    },
+    {
+      "block": 12581929,
+      "txHash": "0x8e611230f1058a9351ce756add412feebc216656bb82609f19c736bc78acf370",
+      "timestamp": 1622995662,
+      "redeemer": "0x16E64E46742945E32dC670F746f820B90D63f050",
+      "ethSent": "0.735696763579668859",
+      "ethFee": "0.00368906458716715"
+    },
+    {
+      "block": 12584951,
+      "txHash": "0x41beb3ec95972634b34f24f627a9f80357136d38a7e9de74d80eace28f25ae88",
+      "timestamp": 1623035434,
+      "redeemer": "0xF9228aB30E3eF03B447A8Bbc775dB82154bb80aC",
+      "ethSent": "0.691247815348515211",
+      "ethFee": "0.003462461904853084"
+    },
+    {
+      "block": 12585377,
+      "txHash": "0xeeaff41b31d6881aa1b8386988ade3061bf39a325638b81b76fc1af831496f18",
+      "timestamp": 1623041421,
+      "redeemer": "0x0DDE17b27E57d71e6B59D5F1f1327f6953957955",
+      "ethSent": "0.648840122930818153",
+      "ethFee": "0.003250287496295075"
+    },
+    {
+      "block": 12587303,
+      "txHash": "0x7c294b66a3446ea4d83eb1ea8d00f64c1468196d442a7513c158f300d7d9c316",
+      "timestamp": 1623067683,
+      "redeemer": "0x1889AF6eB9Bd12fA90FDB7A4C857Eff510d54530",
+      "ethSent": "0.035609062664458334",
+      "ethFee": "0.00017826802808256"
+    },
+    {
+      "block": 12588761,
+      "txHash": "0xda53d1fe9fc6671ab5b61c87ed2d614904123c7e27e4b16a75259232bb4cb3ae",
+      "timestamp": 1623087680,
+      "redeemer": "0x42B93AcB6A9b1E9484d5D44ec762495Af52169Ee",
+      "ethSent": "0.055446360072614269",
+      "ethFee": "0.00027749016382762"
+    },
+    {
+      "block": 12593948,
+      "txHash": "0xe2d593967066f5f7ab20f49b491098b3055c721b7e852ace01ecca840d8db0c2",
+      "timestamp": 1623156422,
+      "redeemer": "0x35e63B409031CB1C25B675fFC0b86A4eb6b8F9Dc",
+      "ethSent": "0.677574301701899222",
+      "ethFee": "0.00338968518690191"
+    },
+    {
+      "block": 12594789,
+      "txHash": "0x95e48502390b2c44d501d64ab2e3658e06f140feb5d9490326450facc576dd6f",
+      "timestamp": 1623167448,
+      "redeemer": "0x84e0BB9C84b42C0570B9fDDC675eebe0c9B9bB94",
+      "ethSent": "2.110406493731052946",
+      "ethFee": "0.010563652913562561"
+    },
+    {
+      "block": 12596651,
+      "txHash": "0x94164a4cee9a18d369cb98edef572c3ccd7413d273df5a31b02645db9b41cd65",
+      "timestamp": 1623192358,
+      "redeemer": "0x5811c56BfD2aA7b5206cB807f4Da88D70EbE552e",
+      "ethSent": "0.076838983828854987",
+      "ethFee": "0.000384489790956094"
+    },
+    {
+      "block": 12597166,
+      "txHash": "0xbad1acb929a436c3aa22a3b8d5cc445e1602ea67a640b85b05731e0f0b076b70",
+      "timestamp": 1623199252,
+      "redeemer": "0xE384e7CcE0CDf48D0D709853528f45b4351cFa31",
+      "ethSent": "1.006677169674559436",
+      "ethFee": "0.005038496688592366"
+    },
+    {
+      "block": 12598381,
+      "txHash": "0x4b204e542c079e35e0ae56c0c25eeb3d857762ad23fd9ec2db8a9f3ee98c1831",
+      "timestamp": 1623215485,
+      "redeemer": "0x58ba15ED1b99a61C9Fd8E45E768f22013Fb9Bf42",
+      "ethSent": "0.451215189726575099",
+      "ethFee": "0.002258174556534543"
+    },
+    {
+      "block": 12601840,
+      "txHash": "0x6c6768b02ad9e41bdd038f5bb15ab819f4861045fe1a8fca0ce915dfb313a38e",
+      "timestamp": 1623262312,
+      "redeemer": "0xac4bF156874F819Bb3A0C2CEb740c01A4DC50560",
+      "ethSent": "1.154222219733018033",
+      "ethFee": "0.005775935645976823"
+    },
+    {
+      "block": 12603157,
+      "txHash": "0x2252169e711fe7b5d4697a5ce42a326e9ba429188fd9e19a801710fb3eac561c",
+      "timestamp": 1623279650,
+      "redeemer": "0x8BE5674cAA5db1857b8df20B80ed9a50c06762Ad",
+      "ethSent": "0.383921834825046623",
+      "ethFee": "0.001921083373223877"
+    },
+    {
+      "block": 12611851,
+      "txHash": "0xf6c99c4f5fbb34f053a81308c2722781cce703d71bcd7ca2d57b5c32654d04ba",
+      "timestamp": 1623395614,
+      "redeemer": "0xC51fFC33Fd5A093f4637d1f116825A459734BAa1",
+      "ethSent": "0.086104536081943896",
+      "ethFee": "0.000430587262713065"
+    },
+    {
+      "block": 12612219,
+      "txHash": "0x16b8cfc7c5c6f8277ae89d17be7ed1814caaca94034b93ee7abcd94b0830c631",
+      "timestamp": 1623400576,
+      "redeemer": "0x5Ee0dC22Ab173BD3De0dD2c169d8a5BF167ad747",
+      "ethSent": "3.761370063788448774",
+      "ethFee": "0.018832021017560475"
+    },
+    {
+      "block": 12613332,
+      "txHash": "0x3996b353a600128405e831015949ea750ed9e65efe584f2e96b4f524ceb2ee32",
+      "timestamp": 1623415696,
+      "redeemer": "0xcf356d6ff595A28cadeEc653f38e928323Baf25d",
+      "ethSent": "1.309861301073762607",
+      "ethFee": "0.006558927351660704"
+    },
+    {
+      "block": 12613969,
+      "txHash": "0xb7b21ee194fce50a071e71b8d8d2212816d59d1e43272f5ef5d0512f9ec9564a",
+      "timestamp": 1623424073,
+      "redeemer": "0xbfc4e1D39BefdA36D8F13a5a91B7C597e0200478",
+      "ethSent": "0.940310152438332867",
+      "ethFee": "0.004709001715901092"
+    },
+    {
+      "block": 12618028,
+      "txHash": "0x9ce81e55f0429c1f969ed8d3610146b9d1da6cea246fd065cad57f26871f5cfa",
+      "timestamp": 1623478074,
+      "redeemer": "0xc6eAd34620572C0f1c5F27B92dFb9290D50A7986",
+      "ethSent": "0.165753454656943258",
+      "ethFee": "0.000829365506993143"
+    },
+    {
+      "block": 12622094,
+      "txHash": "0xb5362acdded5baa7ea3e1d8b2f33cf384960977e8ba665e9820e9c2c4aa97544",
+      "timestamp": 1623533473,
+      "redeemer": "0xe108Ea033E9067c548b07cf63D66631646feE5FC",
+      "ethSent": "0.830707774348119118",
+      "ethFee": "0.004155852053041194"
+    },
+    {
+      "block": 12627242,
+      "txHash": "0xb3436b4a5ed1d7b56150d17e2f262e899a82f70478cb90bd30272f265940450d",
+      "timestamp": 1623602259,
+      "redeemer": "0xaCF2E28F16C490176530E24c1101FABbDA81f0f1",
+      "ethSent": "0.041849547970511613",
+      "ethFee": "0.000209289649143487"
+    },
+    {
+      "block": 12627302,
+      "txHash": "0x3cd4a35bcebe47a7ec6036f5a4528f641c196bd2198ca570d2b184866b0617da",
+      "timestamp": 1623603020,
+      "redeemer": "0xaCF2E28F16C490176530E24c1101FABbDA81f0f1",
+      "ethSent": "0.083699095941023226",
+      "ethFee": "0.000418589065298664"
+    },
+    {
+      "block": 12679518,
+      "txHash": "0x1747468c54e53e2ded28e987f82256042260175eb06c9145997553344ad4a91a",
+      "timestamp": 1624303629,
+      "redeemer": "0x55432317cA8eDe7CAfb3aCCEa287387AdbD35A0e",
+      "ethSent": "1.648370444405518747",
+      "ethFee": "0.009008005988829493"
+    },
+    {
+      "block": 12679721,
+      "txHash": "0xb1671b4fe0f4d1abb970b3d8ee051e3d8f001b37039a1c4ba9c0cfeaa2d594ac",
+      "timestamp": 1624306448,
+      "redeemer": "0x66E9a737be3A8b9EF00650b4b7044FCEB87008da",
+      "ethSent": "0.666985756633500466",
+      "ethFee": "0.003633220532696785"
+    },
+    {
+      "block": 12679954,
+      "txHash": "0xbf181724881140ada5b94869cb2da4c733dc60c1bfcfa6db883e59a9df14b35b",
+      "timestamp": 1624309707,
+      "redeemer": "0xFcd1aD31c93Fe9ec38742c686039bBDb1ABb95DC",
+      "ethSent": "1.035389603739324815",
+      "ethFee": "0.005618739152244882"
+    },
+    {
+      "block": 12680990,
+      "txHash": "0xaad8a96e42e2a233c0ac17a28caf4e4fea20e005711c881f4060456e0537f90d",
+      "timestamp": 1624324109,
+      "redeemer": "0x5F82C97e9b1755237692a946aE814998Bc0e2124",
+      "ethSent": "10.789256418768921707",
+      "ethFee": "0.057755941709820946"
+    },
+    {
+      "block": 12681598,
+      "txHash": "0xfa7c0a72496c47ddd50e8575e6f7be8477f95f0fc6dd1b7906f61e8071df1edf",
+      "timestamp": 1624332311,
+      "redeemer": "0x3D44F67b32454EBC1F579873EdF480FAA80Cd953",
+      "ethSent": "2.303663007034792521",
+      "ethFee": "0.012239497038096383"
+    },
+    {
+      "block": 12684635,
+      "txHash": "0xc1c8589196891f6827b3ddc6c686bae94861efac94bdad39cf6fc7c1ac9b02bd",
+      "timestamp": 1624373395,
+      "redeemer": "0xFdaE9B1bD9176f5051e33e0099eCb815811b97aF",
+      "ethSent": "1.161560532200803386",
+      "ethFee": "0.005998560462527389"
+    },
+    {
+      "block": 12684862,
+      "txHash": "0x41927b511ee26d53eb1d4bcad6322a62f7c21d2ab315808f000da9ec571e42ea",
+      "timestamp": 1624376353,
+      "redeemer": "0xAf5916Efa33a951FF3ef7F12bFd0D210964d8Bdd",
+      "ethSent": "1.723010263483305137",
+      "ethFee": "0.00888954412570271"
+    },
+    {
+      "block": 12688861,
+      "txHash": "0xc52a77ef23fddbfd1865c8827e0176d0fb3fdb5e8779ac7009f23358ad323e23",
+      "timestamp": 1624430133,
+      "redeemer": "0xEbC584Cc13ca8605cCA374cf1903d04cC8038c22",
+      "ethSent": "0.740016991657724382",
+      "ethFee": "0.003751869166535052"
+    },
+    {
+      "block": 12689632,
+      "txHash": "0xbd529b29f92a8c2a3d6823d20cdf022c74361b012fd93ff3280963b4a4d1c5f9",
+      "timestamp": 1624441175,
+      "redeemer": "0xEbC584Cc13ca8605cCA374cf1903d04cC8038c22",
+      "ethSent": "2.656112720554655297",
+      "ethFee": "0.013446845601475916"
+    },
+    {
+      "block": 12692530,
+      "txHash": "0x906204280283bb2100113dd2ed62bb38bf43c175b39d04ed495061ac5f8d2936",
+      "timestamp": 1624479826,
+      "redeemer": "0x5f04154a5F722f7c8Cf5ff8AeFE61E7F1dc199b6",
+      "ethSent": "3.622357005454589608",
+      "ethFee": "0.018252503725105991"
+    },
+    {
+      "block": 12700601,
+      "txHash": "0x98a6206ef1e36e078843afebe171e74ec3359e4e1c4ba98ae948a2f0c45f1665",
+      "timestamp": 1624587608,
+      "redeemer": "0xD09dDCd15FA3E13C4045C8670FE7B920129aBaf8",
+      "ethSent": "0.000484055158943164",
+      "ethFee": "0.000002423674690149"
+    },
+    {
+      "block": 12700661,
+      "txHash": "0xdbb1a4a05ab92141cc8b9664a5c5460dfb05b082faa5ab6cb37f2e9fa9857118",
+      "timestamp": 1624588410,
+      "redeemer": "0xD09dDCd15FA3E13C4045C8670FE7B920129aBaf8",
+      "ethSent": "0.099479884296700006",
+      "ethFee": "0.000498102853208774"
+    },
+    {
+      "block": 12702113,
+      "txHash": "0xf4670ca29689ab47bc238fee0f47b1211a28e2d48b38fac18a47aa7e571924c8",
+      "timestamp": 1624608183,
+      "redeemer": "0xD09dDCd15FA3E13C4045C8670FE7B920129aBaf8",
+      "ethSent": "0.051424220306780483",
+      "ethFee": "0.000257390548879786"
+    },
+    {
+      "block": 12703999,
+      "txHash": "0xa5237aa7c7e54dcf2a68fe046a8a37c7730385648ec230ace3df21ea0fd24172",
+      "timestamp": 1624634218,
+      "redeemer": "0xd94C214F7CF6C162e4eC9d622Fe6fc432e89406F",
+      "ethSent": "16.601186166111206965",
+      "ethFee": "0.083403985580086509"
+    },
+    {
+      "block": 12711341,
+      "txHash": "0xc2bcb2e5ea78803c560e27f5c3742f70502ce04a58d2bdfc618549fcb5cd3b88",
+      "timestamp": 1624733454,
+      "redeemer": "0xBB7Dc30A38807d954725d335d5933C4847df575C",
+      "ethSent": "4.470656470683203174",
+      "ethFee": "0.022400025023083223"
+    },
+    {
+      "block": 12711737,
+      "txHash": "0x4439997ed49ced4017e95a612685dc13dcd951de5296e29c798c46c2d4f3f0e7",
+      "timestamp": 1624739031,
+      "redeemer": "0x20dAAcb0864fF9a5e07d05Ea16Fa56cD00fdC16D",
+      "ethSent": "13.032089193622871476",
+      "ethFee": "0.065490247261260164"
+    },
+    {
+      "block": 12711790,
+      "txHash": "0x14b784a520f674748d11e3fddf0664917df8cda46a9c0aa80dfc5717bc58d468",
+      "timestamp": 1624739723,
+      "redeemer": "0x20dAAcb0864fF9a5e07d05Ea16Fa56cD00fdC16D",
+      "ethSent": "7.932574306385090094",
+      "ethFee": "0.039937406801639692"
+    },
+    {
+      "block": 12712604,
+      "txHash": "0x758a398b0df212d8aae947d68b443494187e199d947b897e9787a4a8e95edf16",
+      "timestamp": 1624750099,
+      "redeemer": "0x3Db42db0c17a8a5401f4eBE3d5f3b193bBcEE927",
+      "ethSent": "0.229760387265935344",
+      "ethFee": "0.001155637229136587"
+    },
+    {
+      "block": 12712635,
+      "txHash": "0xae8c42e5351a17a13a365f52459576598badd6b6df0c057891dee50f814be700",
+      "timestamp": 1624750485,
+      "redeemer": "0x3Db42db0c17a8a5401f4eBE3d5f3b193bBcEE927",
+      "ethSent": "0.999902795886143284",
+      "ethFee": "0.005030311775390608"
+    },
+    {
+      "block": 12723688,
+      "txHash": "0xd7bb4dd0e3f82ae553880f6439fafcd00d96acebea7c8ed283841906eaa7b7d7",
+      "timestamp": 1624899417,
+      "redeemer": "0x20dAAcb0864fF9a5e07d05Ea16Fa56cD00fdC16D",
+      "ethSent": "5.434566621520694134",
+      "ethFee": "0.027231155275846298"
+    },
+    {
+      "block": 12723698,
+      "txHash": "0x845ff779e975ec9d168bc5ccbade8358d3d1ca1c54528e194a887a18cfcf9b56",
+      "timestamp": 1624899530,
+      "redeemer": "0x20dAAcb0864fF9a5e07d05Ea16Fa56cD00fdC16D",
+      "ethSent": "4.522400518394751836",
+      "ethFee": "0.022689874516501259"
+    },
+    {
+      "block": 12724497,
+      "txHash": "0x5925735d487cf1ffd80c658a3fbc007f5ccb5cc96aca61c5579840f713aa2ba7",
+      "timestamp": 1624910151,
+      "redeemer": "0x4e7380524432283b88F29B95d2be8B316E920194",
+      "ethSent": "14.13517289890475057",
+      "ethFee": "0.071171135972243101"
+    },
+    {
+      "block": 12725044,
+      "txHash": "0xcf834ab875b84dd33d4ba0fa2a11b1c2ff798f10b547eb37ee6a890760ca3296",
+      "timestamp": 1624916787,
+      "redeemer": "0xc22060a0E86cC0eE5C24407303Aec752E2791c3a",
+      "ethSent": "1.083622419503885893",
+      "ethFee": "0.005454064094789215"
+    },
+    {
+      "block": 12779423,
+      "txHash": "0x412d43815d9b6493013bdb328b14ebc009cdb47b2b967cd19c73652b1dd83bd5",
+      "timestamp": 1625649040,
+      "redeemer": "0x00000000a4569cda123E73F94e35f9a625650Be6",
+      "ethSent": "89.15462537150317358",
+      "ethFee": "0.458301599433329041"
+    },
+    {
+      "block": 12782564,
+      "txHash": "0x37bc8dc30e96a5a916651974e6a863e84eea799464e1f8f3a90e3514c593081e",
+      "timestamp": 1625691178,
+      "redeemer": "0x85899933991672b5c8FAe5A9f931902BEd87c3CD",
+      "ethSent": "0.843820245299911241",
+      "ethFee": "0.004281185593304675"
+    },
+    {
+      "block": 12806832,
+      "txHash": "0xb90462a835fb4ff95c5badb6b6bcbca7f1635e6865856b01724ce273194cb979",
+      "timestamp": 1626017712,
+      "redeemer": "0xA82632ddDbfe8dAF954ec27BF23989C24060F4FD",
+      "ethSent": "16.518030840363231784",
+      "ethFee": "0.082986072625793776"
+    },
+    {
+      "block": 12813661,
+      "txHash": "0x6a577158befbaf0cccddd1e48f6578d29508f7ca6972e07db19c487984b90066",
+      "timestamp": 1626109118,
+      "redeemer": "0x50122D4a56d4c66F93baD3a978B18857901aFEa6",
+      "ethSent": "8.432643351276800995",
+      "ethFee": "0.042306740202549998"
+    },
+    {
+      "block": 12821045,
+      "txHash": "0x337129c833e2055504561e458cbb50cd1cf49cf6b15d80ba524bb388c7f82a33",
+      "timestamp": 1626209598,
+      "redeemer": "0x3f06d634e48BB6411E715Fb6D86D900A6BAFEA62",
+      "ethSent": "2.519982265782841823",
+      "ethFee": "0.012616749013738271"
+    },
+    {
+      "block": 12882240,
+      "txHash": "0xeec8824d5f6e8726f9bf9088b8c70c9098e5bde497f2ff6f39fa742069665d14",
+      "timestamp": 1627037733,
+      "redeemer": "0xDD1901CD19E94fACB4528383f0b9bCB642FEc163",
+      "ethSent": "1.948795724880998243",
+      "ethFee": "0.009754283736119432"
+    },
+    {
+      "block": 12896247,
+      "txHash": "0x54ec075bd457cc43ac3ea8656d18daad93189bb9fa8cdf822cea25d8f931df4d",
+      "timestamp": 1627227311,
+      "redeemer": "0xddE39a0150A5fb4a92cF2936d5C5428687335A15",
+      "ethSent": "0.036152491521429815",
+      "ethFee": "0.000180774802225932"
+    },
+    {
+      "block": 12900769,
+      "txHash": "0xc19e4789dd9f383aac0cb47a69dc7beb1ba17e88125d1a2e629808840b2b3390",
+      "timestamp": 1627288085,
+      "redeemer": "0x4B50CA44afC1e27F129B3060467a0284d80b618B",
+      "ethSent": "2.138016466320298729",
+      "ethFee": "0.010701588014517634"
+    },
+    {
+      "block": 12906621,
+      "txHash": "0x9503d857d40cb8ec235ff0e5d986b29dd2a1b88684aa78c412fcd69a8186b312",
+      "timestamp": 1627367839,
+      "redeemer": "0xC51fFC33Fd5A093f4637d1f116825A459734BAa1",
+      "ethSent": "0.024395677336934037",
+      "ethFee": "0.00012201707171459"
+    },
+    {
+      "block": 12914439,
+      "txHash": "0x23466be79a6fa70cb3ce169adac92207a28b10f874cc02e37957e73b7e772542",
+      "timestamp": 1627475297,
+      "redeemer": "0x5c66f09319d471E100892913ec977d75ce1342C3",
+      "ethSent": "0.120352582957509361",
+      "ethFee": "0.000601833169378137"
+    },
+    {
+      "block": 12914608,
+      "txHash": "0x7ef03d0cfbae18b79e5cb3e56e8638e335d04ebde30b405a27193ecb4102037d",
+      "timestamp": 1627477597,
+      "redeemer": "0x3fde28E43c4119409C9884b6CDB8A27C1f0a0BA0",
+      "ethSent": "0.872359935639516492",
+      "ethFee": "0.004364122184967265"
+    },
+    {
+      "block": 12917460,
+      "txHash": "0xde78e3442f8f8fc1c6bceb1223ebd4d4a74f58795496bf3b73047950d1f85424",
+      "timestamp": 1627517363,
+      "redeemer": "0x8D5a91854867440e1A8e2a3dd70746cCE6f3c7d6",
+      "ethSent": "0.781418411952763097",
+      "ethFee": "0.003909671804686791"
+    },
+    {
+      "block": 12984563,
+      "txHash": "0xa34382429feb66b86c9321b88218f4e5fdc4700253a636feb779f81054ede335",
+      "timestamp": 1628427652,
+      "redeemer": "0xAa0833dA4Dd529316F2a46957346986f615ffA62",
+      "ethSent": "40.501138906232034856",
+      "ethFee": "0.207207607255410394"
+    },
+    {
+      "block": 12986448,
+      "txHash": "0x6f9d9f7a0b10b903f882f0f4f617fe0e9045fa49b75390cb7450f37b176ddec9",
+      "timestamp": 1628452283,
+      "redeemer": "0xEcEcafB3feA380eD39264a7aC86A3af846375aFF",
+      "ethSent": "49.637075952913993489",
+      "ethFee": "0.258710063137125622"
+    },
+    {
+      "block": 12990111,
+      "txHash": "0xf499cc9354e43ff854e0d5842c9faa6af6d00e76537ce26bd07047fe2c2ae1f0",
+      "timestamp": 1628501507,
+      "redeemer": "0xF85D1943e284553215b4Ed5eB2D97dcd86cc818F",
+      "ethSent": "7.003216222342403243",
+      "ethFee": "0.035832081229724166"
+    },
+    {
+      "block": 12990145,
+      "txHash": "0x7a77574b4bca14bb73194c0b55efd27218b44f13858382048873ee75caf12ed2",
+      "timestamp": 1628502066,
+      "redeemer": "0xF85D1943e284553215b4Ed5eB2D97dcd86cc818F",
+      "ethSent": "0.524255797010719794",
+      "ethFee": "0.002682587600365159"
+    },
+    {
+      "block": 12990168,
+      "txHash": "0x1b9e4b1898ec1a66b1a47942055ec50271dcb2a438f60e12e84db59304a484a5",
+      "timestamp": 1628502402,
+      "redeemer": "0xF85D1943e284553215b4Ed5eB2D97dcd86cc818F",
+      "ethSent": "6.930992337319741704",
+      "ethFee": "0.035592755914524484"
+    },
+    {
+      "block": 12991919,
+      "txHash": "0xf187dcf5cf7f9699bf76bc762b935d21690f960f1972d9eeff017dae60c716f3",
+      "timestamp": 1628525270,
+      "redeemer": "0x4925ee4d70B169926a2be518478c5BEdfACF4b68",
+      "ethSent": "9.470183577502865011",
+      "ethFee": "0.048501364535453297"
+    },
+    {
+      "block": 12992200,
+      "txHash": "0xd301694fe6b2c7918af46a069c3ce38030df82e04fc5361cba5d2ecaa4112ab5",
+      "timestamp": 1628528845,
+      "redeemer": "0xF85D1943e284553215b4Ed5eB2D97dcd86cc818F",
+      "ethSent": "0.949906479670318646",
+      "ethFee": "0.004861330149618678"
+    },
+    {
+      "block": 13011145,
+      "txHash": "0x3c68200ecccd135ba95508c610461e86d04de91773c0c719b0d72983678d4f42",
+      "timestamp": 1628781858,
+      "redeemer": "0x5B84E08B8883f400120da8a0099bA142641D1AbB",
+      "ethSent": "0.148211247599866068",
+      "ethFee": "0.00074143606426776"
+    },
+    {
+      "block": 13016328,
+      "txHash": "0x32ac8be4246716673a4bc29fced2bdfcd5a4262a7b6c83e8ccb93fafc52c0330",
+      "timestamp": 1628851486,
+      "redeemer": "0xF10096c914EEe998632E18293a85b1963989bc53",
+      "ethSent": "0.814969441503337247",
+      "ethFee": "0.004077445099832299"
+    },
+    {
+      "block": 13027209,
+      "txHash": "0x7e5b95ed8cdcd5746739283fbde6559b89dfeb27256c9c66cc546b999dc0c2a5",
+      "timestamp": 1628996036,
+      "redeemer": "0x1c8ADd98D46ABA60DccF4bD03017Cad2e743601A",
+      "ethSent": "3.959948208186469792",
+      "ethFee": "0.019845816181244566"
+    },
+    {
+      "block": 13091873,
+      "txHash": "0x522c44962e8ba63ae84f26572b0ca96754ca0e5354d33dd0adb3f3972e0767a6",
+      "timestamp": 1629859041,
+      "redeemer": "0x71Cc25E270560aB31D5d2e15E5BF896eBfC4a640",
+      "ethSent": "16.467882767510505284",
+      "ethFee": "0.083049591150713503"
+    },
+    {
+      "block": 13109361,
+      "txHash": "0x1c291b262575641ff0fd050c973ba034ab7ab0db31bf330dbcbd741b9ae64a6b",
+      "timestamp": 1630092783,
+      "redeemer": "0x50122D4a56d4c66F93baD3a978B18857901aFEa6",
+      "ethSent": "23.171232556455162501",
+      "ethFee": "0.11731560102721796"
+    },
+    {
+      "block": 13119705,
+      "txHash": "0x819ec4308e25e5cfa8adb3ca8157aad65410a11ead464a023e41b601f01f913a",
+      "timestamp": 1630231194,
+      "redeemer": "0x9752Dad17648395aa719Aee5979033a906CCa596",
+      "ethSent": "2.184275267293189054",
+      "ethFee": "0.010949709291619517"
+    },
+    {
+      "block": 13180743,
+      "txHash": "0x5c72ec6516d6fbd60cdb37171c53d80e24aaaa0b8ee7cfc552b0f0eeb5f2ffd3",
+      "timestamp": 1631045662,
+      "redeemer": "0x20dAAcb0864fF9a5e07d05Ea16Fa56cD00fdC16D",
+      "ethSent": "10.03887959818558144",
+      "ethFee": "0.05052905262028498"
+    },
+    {
+      "block": 13181285,
+      "txHash": "0xb0149a76744c55b9d7fa9361fa2e0bbd3f7e8e20f16ed7e90bba72028bbbaf05",
+      "timestamp": 1631052960,
+      "redeemer": "0xE4F0E9359756A65Da70Fe37A3BFa45736F9BEA58",
+      "ethSent": "0.741267864555535788",
+      "ethFee": "0.003729874618502197"
+    },
+    {
+      "block": 13183466,
+      "txHash": "0x41ef69f1a3aa443e6612f5040c52ed7f037211621ff9ae1b443a0e6c75a8b9f4",
+      "timestamp": 1631082455,
+      "redeemer": "0xE4F0E9359756A65Da70Fe37A3BFa45736F9BEA58",
+      "ethSent": "0.739883571921122492",
+      "ethFee": "0.003715681453360004"
+    },
+    {
+      "block": 13199933,
+      "txHash": "0x9153cdf746e31fe86712020233e2906f913ad94556e564dff21c3ef369d99dd5",
+      "timestamp": 1631302240,
+      "redeemer": "0x130e3E65334020E5357A1e37776553e8D9Fb5c34",
+      "ethSent": "2.157933875211442198",
+      "ethFee": "0.010803608969277524"
+    },
+    {
+      "block": 13203812,
+      "txHash": "0xcf136f1932cd3b245e9efa44e51f5925737161a36d7b80d87fcab9ca29e67075",
+      "timestamp": 1631354517,
+      "redeemer": "0x06454B31E7A1861765B08d7eD579e603B5b97CAa",
+      "ethSent": "0.295921487922615775",
+      "ethFee": "0.001480677894108787"
+    },
+    {
+      "block": 13211779,
+      "txHash": "0x86efe966a8d153e7b3b062d814a5364f2583289c9b5f6d949cf79fbddc991faa",
+      "timestamp": 1631460634,
+      "redeemer": "0x10E73a5CBD612411461f5405f58c42683842950C",
+      "ethSent": "2.915361162655152315",
+      "ethFee": "0.014602799012425383"
+    },
+    {
+      "block": 13213772,
+      "txHash": "0xa7f1da08f58623c94232edb17090337b34745f47c14bcac1266c1cde66a7c638",
+      "timestamp": 1631487201,
+      "redeemer": "0x6c81B17575DD2D037fD67e64d1970B007CD96130",
+      "ethSent": "0.011109360663995465",
+      "ethFee": "0.00005561205751932"
+    },
+    {
+      "block": 13225950,
+      "txHash": "0x5d0cd6654f8f9e20428d212a85bf5b841f2a42e26068fcb3fa9830febddcfd42",
+      "timestamp": 1631650597,
+      "redeemer": "0x50122D4a56d4c66F93baD3a978B18857901aFEa6",
+      "ethSent": "2.751167852291424789",
+      "ethFee": "0.013778062871826685"
+    },
+    {
+      "block": 13303373,
+      "txHash": "0x565ce6ea98aa272bf5060b799f86e65291d12d345e6455d6547ace5451e56987",
+      "timestamp": 1632685374,
+      "redeemer": "0xb19d6B66b18FAE0FcA1023138B229e5F970b5180",
+      "ethSent": "0.002950035308608935",
+      "ethFee": "0.000014750306122974"
+    },
+    {
+      "block": 13316738,
+      "txHash": "0xfb4acec3c217ab18cc544bec6901ee719aee573ab03fb861f68dfd0dd49d5e93",
+      "timestamp": 1632865730,
+      "redeemer": "0x7369E5C97DB67c30F64ae2924728c952848713B6",
+      "ethSent": "3.898716969232582402",
+      "ethFee": "0.019530669725684166"
+    },
+    {
+      "block": 13322933,
+      "txHash": "0x8a07f7599fd18aa29e757ef458d32f6bee40dab0fdcd66155b1ffbf09b28c5b4",
+      "timestamp": 1632948746,
+      "redeemer": "0x5962bcDcd6AC84Cf58a5E8d8cB14c28bcC6A69f5",
+      "ethSent": "4.383844885672940373",
+      "ethFee": "0.021975978494308662"
+    },
+    {
+      "block": 13326370,
+      "txHash": "0xd878ea95e83c60522e998d8284f8899e0c260467926ec43dae19211a17133a3e",
+      "timestamp": 1632995525,
+      "redeemer": "0xe5090a0FCa5e1Baa6460fdCd5cE6088e735453EC",
+      "ethSent": "0.067055813906705246",
+      "ethFee": "0.00033570255999637"
+    },
+    {
+      "block": 13326391,
+      "txHash": "0x199bd9391e04a8471bcf8147b63c6f7aeb121cb360a4d618f18a160f52591558",
+      "timestamp": 1632995896,
+      "redeemer": "0xe5090a0FCa5e1Baa6460fdCd5cE6088e735453EC",
+      "ethSent": "0.16774502986795229",
+      "ethFee": "0.000839849862953824"
+    },
+    {
+      "block": 13327959,
+      "txHash": "0x181a82d1744df893c3cbd60c8630e3cdd38ff472030a5e4a2ecedb837bd5c739",
+      "timestamp": 1633017122,
+      "redeemer": "0xbE858236C63BdEc3A4E97E5A7802EbD08E164B0c",
+      "ethSent": "38.424825613420732071",
+      "ethFee": "0.196070673208616573"
+    },
+    {
+      "block": 13384021,
+      "txHash": "0x08803a8245cb75fdd69f742b574319f033f18bb8b5cc4a74d72179f1241a955f",
+      "timestamp": 1633775762,
+      "redeemer": "0xf3f5C252e8ACd60671f92c7F72cf33661221Ef42",
+      "ethSent": "174.094120260203670904",
+      "ethFee": "0.958345873126750272"
+    },
+    {
+      "block": 13388064,
+      "txHash": "0x9b492c719bfdb37c96aeeaa0a915d5f04c3dee9b055c266154ad29bde603640b",
+      "timestamp": 1633830262,
+      "redeemer": "0x91f04ffE5AA427e977086746e7b9E1B997F2aFA8",
+      "ethSent": "11.280334679829030335",
+      "ethFee": "0.059154454886708444"
+    },
+    {
+      "block": 13388227,
+      "txHash": "0x078a4cd3e407e6d266c6fd3ede338a52a2d53d803f30c04181a9a6c061915cd3",
+      "timestamp": 1633832483,
+      "redeemer": "0xD3e5ba0b92610e820256CaDAF6Bd543cc6beA02C",
+      "ethSent": "0.683412397804842871",
+      "ethFee": "0.003579473449059494"
+    },
+    {
+      "block": 13394232,
+      "txHash": "0x3a8dfd426b2ad944d56edd8a40c09a0955d828dd3008714261a963ec4bbb034d",
+      "timestamp": 1633913833,
+      "redeemer": "0xB8C7451647f81A15d1E9F0C7c37337dd5781C4fc",
+      "ethSent": "0.582255554064673938",
+      "ethFee": "0.00295036672756546"
+    },
+    {
+      "block": 13401553,
+      "txHash": "0x2d081c5a6dd927a1739e38d63dc832c91dff08f01ceff673612dc4924752d026",
+      "timestamp": 1634013138,
+      "redeemer": "0x06454B31E7A1861765B08d7eD579e603B5b97CAa",
+      "ethSent": "0.51579210847885654",
+      "ethFee": "0.002586864471493698"
+    },
+    {
+      "block": 13422995,
+      "txHash": "0xf88f1a80f00b7ff7c27627e2688a669928596888d2d36159c3667181b5ac4839",
+      "timestamp": 1634305554,
+      "redeemer": "0xBC784b5C62269a4aa739D801Bd06616559c88bd8",
+      "ethSent": "34.25076605797650294",
+      "ethFee": "0.17463322420072097"
+    },
+    {
+      "block": 13426164,
+      "txHash": "0xeaf05969104d2de55673f18a006c00cd8eb87fc8982b54581a1af5261fedb45c",
+      "timestamp": 1634348754,
+      "redeemer": "0xB0A6f90f11C5AE94e30476A7534191194492a91b",
+      "ethSent": "65.344332423204494829",
+      "ethFee": "0.343732696252545444"
+    },
+    {
+      "block": 13426441,
+      "txHash": "0xc4c89353ffabbb98837b1f644896371edc064cc159e115ae0a0b79d187c74a74",
+      "timestamp": 1634352436,
+      "redeemer": "0x06454B31E7A1861765B08d7eD579e603B5b97CAa",
+      "ethSent": "0.469906513449164595",
+      "ethFee": "0.002465598663735291"
+    },
+    {
+      "block": 13481882,
+      "txHash": "0x9c417e39eccad2c598faa2dc203bf440fb1b87967a5dc81af2538920058fa449",
+      "timestamp": 1635101407,
+      "redeemer": "0xe3786BF25E15013FDDa09dbe881529d44B9CA239",
+      "ethSent": "1009.737180038582999773",
+      "ethFee": "8.387563123500054373"
+    },
+    {
+      "block": 13484232,
+      "txHash": "0x92d148b0ea16c8f993a7544860ab38895f56882196b9dd03be9eb3705eb80050",
+      "timestamp": 1635133311,
+      "redeemer": "0x50122D4a56d4c66F93baD3a978B18857901aFEa6",
+      "ethSent": "6.058219558427375228",
+      "ethFee": "0.042523524489407406"
+    },
+    {
+      "block": 13484524,
+      "txHash": "0x70add40bd5e3ecd7378b5763398c7ce1268145357a846660d7ecc99d68a1c6fd",
+      "timestamp": 1635137091,
+      "redeemer": "0x935AD0fBea9572bB24138F23A69e314f0BDbdDbE",
+      "ethSent": "0.435001824126426748",
+      "ethFee": "0.003005485867509406"
+    },
+    {
+      "block": 13488023,
+      "txHash": "0xbb1200fab3445b81f229e44a4316c06cd1149cf132790f4697e3321ec6b47c8a",
+      "timestamp": 1635184002,
+      "redeemer": "0xd8d7f9de5fEAF03Afb2139f89AcB9D43f6a30F1B",
+      "ethSent": "37.63644854388484939",
+      "ethFee": "0.227329479760256338"
+    },
+    {
+      "block": 13488515,
+      "txHash": "0xbd4a10aba372a8cea17d6c630a3f3154bdd2e2c0e215f7949f68d0159e0df3d2",
+      "timestamp": 1635190501,
+      "redeemer": "0xF7D926db782dDB5DF45E2e68A32e6cf380400266",
+      "ethSent": "3.109077689221005624",
+      "ethFee": "0.018499087075015473"
+    },
+    {
+      "block": 13489426,
+      "txHash": "0x3cacd467cdc4f512ad95050b2569e21ab7de9a35fc81d4bf8d4d5db915081ee3",
+      "timestamp": 1635202994,
+      "redeemer": "0x78125A86c1b8ba6F8659409Ef75CccA943b458dD",
+      "ethSent": "7.53342509639055876",
+      "ethFee": "0.043743340702013762"
+    },
+    {
+      "block": 13492220,
+      "txHash": "0xd33da6741e6d6a4d99dbc06b214aa62c9f21f650302b26268307b98d588881d7",
+      "timestamp": 1635241076,
+      "redeemer": "0xB0A6f90f11C5AE94e30476A7534191194492a91b",
+      "ethSent": "38.629616618627884285",
+      "ethFee": "0.215314852129598601"
+    },
+    {
+      "block": 13492293,
+      "txHash": "0xe1d3560519ff2270fcacacca074cf91c177efc12a2a3f6b3d281254271bd5e50",
+      "timestamp": 1635242019,
+      "redeemer": "0xB0A6f90f11C5AE94e30476A7534191194492a91b",
+      "ethSent": "50.610261162486180924",
+      "ethFee": "0.290479489344674175"
+    },
+    {
+      "block": 13493574,
+      "txHash": "0x43baa6d4aa1854af09d3cd63e63e4feaf3a66abb170e639a8b96bbb1b09f29b4",
+      "timestamp": 1635259255,
+      "redeemer": "0xB0A6f90f11C5AE94e30476A7534191194492a91b",
+      "ethSent": "48.251914499444832145",
+      "ethFee": "0.276254832823119791"
+    },
+    {
+      "block": 13493790,
+      "txHash": "0x68e2c23ca34162d0565a73f81655c33e957fd48154ed339b7bd590d28c5d0975",
+      "timestamp": 1635262034,
+      "redeemer": "0x510346282A6A17f41980E951Ab88A2ed6b58D08f",
+      "ethSent": "21.581268371599222885",
+      "ethFee": "0.124481019715593926"
+    },
+    {
+      "block": 13493862,
+      "txHash": "0x9d87817051830dc514fc99bc1b7f02fa939cbc08d5fe9c6bcd386c83b9bbe6d3",
+      "timestamp": 1635262925,
+      "redeemer": "0x510346282A6A17f41980E951Ab88A2ed6b58D08f",
+      "ethSent": "0.50093528141498328",
+      "ethFee": "0.002885097431535441"
+    },
+    {
+      "block": 13495022,
+      "txHash": "0xc41c0eaf9a7f5793e5c45b9e1d5c712a80f6496d676d3aedd7467b96442e3a3c",
+      "timestamp": 1635278877,
+      "redeemer": "0xaD2e7447a5cC85C0Ae8D12D2a3467B2952E1E33A",
+      "ethSent": "0.473949386657188374",
+      "ethFee": "0.002649667039622028"
+    },
+    {
+      "block": 13508900,
+      "txHash": "0xd099fc104c4b748415336dcb71b0a27b2afc8cc23c6d5bb11ee62c9f3e9e049a",
+      "timestamp": 1635466610,
+      "redeemer": "0x4925ee4d70B169926a2be518478c5BEdfACF4b68",
+      "ethSent": "11.222347034522610246",
+      "ethFee": "0.056882118201270487"
+    },
+    {
+      "block": 13515678,
+      "txHash": "0x7b825de10f992dd2f07d9f504f94d30d17246c72a15f25fce15ea4d6e18a3e94",
+      "timestamp": 1635558338,
+      "redeemer": "0x2B217eAA3dd4FdDF03372a8D7834aFaFC2bc6835",
+      "ethSent": "69.299135131507702701",
+      "ethFee": "0.364465367386792347"
+    },
+    {
+      "block": 13521053,
+      "txHash": "0x41fdd6a339e4158c19316ef01c3a1573fb480861a28dedba070ce5bf3ac4c852",
+      "timestamp": 1635631958,
+      "redeemer": "0x9c5083dd4838E120Dbeac44C052179692Aa5dAC5",
+      "ethSent": "2092.055092192250829866",
+      "ethFee": "24.785563195830189574"
+    },
+    {
+      "block": 13521139,
+      "txHash": "0xbe717c9fc7624986891d068382386793c7823272dd6609d2ff75a7bdf9c04978",
+      "timestamp": 1635633294,
+      "redeemer": "0x9c5083dd4838E120Dbeac44C052179692Aa5dAC5",
+      "ethSent": "5140.495665548219339075",
+      "ethFee": "143.553185463118463553"
+    },
+    {
+      "block": 13521178,
+      "txHash": "0xb567f80577423f5d32077dd793099a00f3cc032530c7142d0b68ac81a015396d",
+      "timestamp": 1635633804,
+      "redeemer": "0x9c5083dd4838E120Dbeac44C052179692Aa5dAC5",
+      "ethSent": "2335.187600327790325814",
+      "ethFee": "82.35699250369103655"
+    },
+    {
+      "block": 13521234,
+      "txHash": "0x3d486e9cab784c57b57198eb091cf596ec20a79a760c6de14d37a38524814c6f",
+      "timestamp": 1635634399,
+      "redeemer": "0x9c5083dd4838E120Dbeac44C052179692Aa5dAC5",
+      "ethSent": "2334.226819456838602314",
+      "ethFee": "99.194403340729428354"
+    },
+    {
+      "block": 13521347,
+      "txHash": "0xad34ec33c931ee87fe79b112460eca3318366363d16bd001c95a021bb2060154",
+      "timestamp": 1635635714,
+      "redeemer": "0x9c5083dd4838E120Dbeac44C052179692Aa5dAC5",
+      "ethSent": "3242.191355976745470006",
+      "ethFee": "169.091523020156769851"
+    },
+    {
+      "block": 13521449,
+      "txHash": "0x5dec830dd11b1746b7300d5b3b5a77e3d719a82731ddee748a3fddf297ba6f56",
+      "timestamp": 1635637257,
+      "redeemer": "0x9c5083dd4838E120Dbeac44C052179692Aa5dAC5",
+      "ethSent": "2314.220438945252034709",
+      "ethFee": "135.191618961319430438"
+    },
+    {
+      "block": 13522771,
+      "txHash": "0x46ec4b815e98d2f0be826de72492b78f4d70a4e06e7a9897e168f506f8b0ab61",
+      "timestamp": 1635655533,
+      "redeemer": "0x100Bdc7550FAF97E12EA838dC85F5c36C3C30fa3",
+      "ethSent": "2.288417022511301644",
+      "ethFee": "0.102949234091026914"
+    },
+    {
+      "block": 13523087,
+      "txHash": "0x60bf26ad609b0cd83214a254db9f92bb8ff7f694dad5c787d501bdded0dd19a2",
+      "timestamp": 1635659607,
+      "redeemer": "0xd2c69Cd5D740BC735eB30188d3B406e2774A1D21",
+      "ethSent": "465.07852831211821628",
+      "ethFee": "20.461774837949870024"
+    },
+    {
+      "block": 13525270,
+      "txHash": "0x041e816fc41efe51e7c3a828499b35a9dd6e2d74dc02631efb464a25a844351c",
+      "timestamp": 1635689836,
+      "redeemer": "0x2AF33E93f68b8497bb535C492F5867c7E83f2Bc4",
+      "ethSent": "171.381623438146912057",
+      "ethFee": "5.102682059492413569"
+    },
+    {
+      "block": 13525306,
+      "txHash": "0x4ee6abcd6a96231ccd3e0ef9ee4d7cd122162792f909751286ebb5c37254f6c7",
+      "timestamp": 1635690345,
+      "redeemer": "0x0e5a65C3660020f75c29c4665c5392BF6cB889F1",
+      "ethSent": "13.003404556226870013",
+      "ethFee": "0.385221819200588725"
+    },
+    {
+      "block": 13525949,
+      "txHash": "0xd370d6e06682302749585022df4b5cf2e6c991469d49ada5bada50559fab7f0c",
+      "timestamp": 1635698772,
+      "redeemer": "0xD3e5ba0b92610e820256CaDAF6Bd543cc6beA02C",
+      "ethSent": "1.083150440717933419",
+      "ethFee": "0.028773489394482899"
+    },
+    {
+      "block": 13588787,
+      "txHash": "0xdd3b380fc8db3b0bc269a972f26488942020cccd17e5d791881b5c6e8c8941a4",
+      "timestamp": 1636551442,
+      "redeemer": "0xB11DA3e66D56f7684919F9BFf1Fd22B271aCFBF3",
+      "ethSent": "72.524768724916809648",
+      "ethFee": "0.381196922309032278"
+    },
+    {
+      "block": 13590941,
+      "txHash": "0xd185a31a51c2a50dfde08804df71aa5287c5a372f89fc2b4dc6a12c34124a263",
+      "timestamp": 1636580367,
+      "redeemer": "0xA085e76E7eb06f66Ee91e4AD42AfF24502800D73",
+      "ethSent": "102.103592315370616279",
+      "ethFee": "0.559049624079444395"
+    },
+    {
+      "block": 13591298,
+      "txHash": "0xed656646b8b9ee64bef764422816a0e60d783038ec324548541dbe3126ee7d82",
+      "timestamp": 1636584618,
+      "redeemer": "0x50122D4a56d4c66F93baD3a978B18857901aFEa6",
+      "ethSent": "5.434920467352071317",
+      "ethFee": "0.029682764912857159"
+    },
+    {
+      "block": 13591316,
+      "txHash": "0x6ec4df9f9b654afd312b81391732ebfae033f13f73d9acc0c65f6a5149b11eb5",
+      "timestamp": 1636584908,
+      "redeemer": "0xB11DA3e66D56f7684919F9BFf1Fd22B271aCFBF3",
+      "ethSent": "77.889546864372842025",
+      "ethFee": "0.443919613963137046"
+    },
+    {
+      "block": 13591907,
+      "txHash": "0xf134a51ae46ae6714275a14aa48aaf85e9526cd4c94eaf54529ced9e8814a863",
+      "timestamp": 1636593085,
+      "redeemer": "0x40B7b0F131D292Bbcf252b27e4CB23A3bB1cc041",
+      "ethSent": "1.351126312505325472",
+      "ethFee": "0.007591819866460191"
+    },
+    {
+      "block": 13607682,
+      "txHash": "0xadca2b256d9e80555fdd1518ca34f5df917611bb94e3fdba3c837eb5ee4958bc",
+      "timestamp": 1636806497,
+      "redeemer": "0x0e5a65C3660020f75c29c4665c5392BF6cB889F1",
+      "ethSent": "1.465951462981895229",
+      "ethFee": "0.007367003594163596"
+    },
+    {
+      "block": 13608095,
+      "txHash": "0xa943ab1eca8141aab110a76a574352d4f403964c9930f3a7547d8b581f754e87",
+      "timestamp": 1636812100,
+      "redeemer": "0xB11DA3e66D56f7684919F9BFf1Fd22B271aCFBF3",
+      "ethSent": "111.217605905126370213",
+      "ethFee": "0.596290600565099664"
+    },
+    {
+      "block": 13624024,
+      "txHash": "0x3ad4747c797fa9bd7ff48b0bf73335b3b8bb83d32c3b21c6cf92ebce58f8928b",
+      "timestamp": 1637029917,
+      "redeemer": "0xD0F0b33573950C4fd9faD0Fc04B321996F958Dd6",
+      "ethSent": "79.807765680064422762",
+      "ethFee": "0.41819560704792104"
+    },
+    {
+      "block": 13624557,
+      "txHash": "0x1e03c9085d3166eb347627fb4e59033cbfae3d6f5da55126344566603bc03f38",
+      "timestamp": 1637037637,
+      "redeemer": "0x50122D4a56d4c66F93baD3a978B18857901aFEa6",
+      "ethSent": "10.179696404670707513",
+      "ethFee": "0.053352023104508984"
+    },
+    {
+      "block": 13625878,
+      "txHash": "0xe1ab8e51ddf33fe0ad283926a67a6a4eda7ebfc1bd1a0b6498b7c79812adc45e",
+      "timestamp": 1637055739,
+      "redeemer": "0x06454B31E7A1861765B08d7eD579e603B5b97CAa",
+      "ethSent": "0.143465443861573848",
+      "ethFee": "0.000743489063424799"
+    },
+    {
+      "block": 13625939,
+      "txHash": "0x54c8fae642eb32555e3a130488f5ae16752791474746430b475c8ec141730eb1",
+      "timestamp": 1637056590,
+      "redeemer": "0x75e214428E0E234e45C341558792D5dFB850e3C1",
+      "ethSent": "0.421833547554255076",
+      "ethFee": "0.002185627462034626"
+    },
+    {
+      "block": 13625950,
+      "txHash": "0x4bd8ccd1423f4d9ab7c6f2068a8a068a5966a3865c093d9918bd34fa4b11b145",
+      "timestamp": 1637056723,
+      "redeemer": "0x75e214428E0E234e45C341558792D5dFB850e3C1",
+      "ethSent": "2.156038131943970393",
+      "ethFee": "0.011183095999729381"
+    },
+    {
+      "block": 13684419,
+      "txHash": "0xa1afe8c85dfa8bae9e38c47f81cd19568b6186de3cde16e6de5c90d388edc3c9",
+      "timestamp": 1637856172,
+      "redeemer": "0x67dc0cAd9F5a12a4e5FaA368A6Aa7CD7FB6259C2",
+      "ethSent": "0.447163838818426531",
+      "ethFee": "0.002236669315159448"
+    },
+    {
+      "block": 13685034,
+      "txHash": "0xbca20571e4b40e6543e99bb6e4060d0ea48027a47774c3014e838f3888d1517b",
+      "timestamp": 1637864509,
+      "redeemer": "0x2A8aC196905aFFf02550b547af6110C87f504B8e",
+      "ethSent": "1.376815273564260024",
+      "ethFee": "0.006891205162334467"
+    },
+    {
+      "block": 13696703,
+      "txHash": "0x9d27c267ba147b365b1c42c1aba7a3651a201fb97825a19be815ca5afaa389bc",
+      "timestamp": 1638025023,
+      "redeemer": "0x6599BE9FbEf78fe48604791f14359A61DD9Dc50C",
+      "ethSent": "2.827603578057276333",
+      "ethFee": "0.014157205184239577"
+    },
+    {
+      "block": 13701008,
+      "txHash": "0x85fd18bc5d17fb09b92da371960b2bc8f66b1f5a12588f6d98320418e55b6392",
+      "timestamp": 1638083635,
+      "redeemer": "0x989B82Ed1E240597C0EAD2E1734235784FF865c0",
+      "ethSent": "0.441471892996687713",
+      "ethFee": "0.002208964784389106"
+    },
+    {
+      "block": 13706437,
+      "txHash": "0x2981e88fd05744499b75f63793069dcf54fc8091dc22010e853878813fe84cb7",
+      "timestamp": 1638158709,
+      "redeemer": "0xDD8d326c3b0f3183D0AcceC059c27FD48c5101B2",
+      "ethSent": "397.668918427938195203",
+      "ethFee": "2.355666941929297739"
+    },
+    {
+      "block": 13778815,
+      "txHash": "0xb4349c8c3d3d55d0a4ce28891f3c50cca04f6c0af3ab87a220f3b177c0b6496a",
+      "timestamp": 1639158255,
+      "redeemer": "0x8348AE00055D2Bc57F6A786BaB2486A7Fd912Da4",
+      "ethSent": "1.232893257418314082",
+      "ethFee": "0.006215879136859916"
+    },
+    {
+      "block": 13799354,
+      "txHash": "0xfbb73d57d9cc26ab11887b532c26147469653e79bc237c0c9e9f8e083a6f6b6f",
+      "timestamp": 1639431640,
+      "redeemer": "0x6BA6CA24651Adc8F927d5470D33dBc2480694357",
+      "ethSent": "4.795903101728394578",
+      "ethFee": "0.024033134880770783"
+    },
+    {
+      "block": 13801923,
+      "txHash": "0x1dc4d4a9a83373b1e597c46a64cb35ba5c5d3cb732686ad6aa4be41646806fe4",
+      "timestamp": 1639466820,
+      "redeemer": "0xB4c668d7BBacc6030a26b76aD321D18152aB4ED3",
+      "ethSent": "6.985127721293805645",
+      "ethFee": "0.035077262261611517"
+    },
+    {
+      "block": 13811543,
+      "txHash": "0xc002ec761dba84b3cf1f35d42ffcc5bfa26ab45079d5d6497c8a9f6593cecc5d",
+      "timestamp": 1639595170,
+      "redeemer": "0xDD8d326c3b0f3183D0AcceC059c27FD48c5101B2",
+      "ethSent": "985.56710053056176942",
+      "ethFee": "7.083709884381795387"
+    },
+    {
+      "block": 13892346,
+      "txHash": "0x568908e0e4c611c0a4ed51892c8743d898c4babe095bceb49dcaa6d318d7657c",
+      "timestamp": 1640676148,
+      "redeemer": "0x17816E9A858b161c3E37016D139cf618056CaCD4",
+      "ethSent": "0.098262183612445548",
+      "ethFee": "0.000491805770154168"
+    },
+    {
+      "block": 13900814,
+      "txHash": "0xd560963f74459dabb54775c1e5b423338ad27ff988f76a45ad6ffd772bf3b2b1",
+      "timestamp": 1640788701,
+      "redeemer": "0x9c22d83FB0315263566740d018f08e8c075FC927",
+      "ethSent": "1.796034877052738599",
+      "ethFee": "0.008988665696294271"
+    },
+    {
+      "block": 13902442,
+      "txHash": "0x575fdc1f88f0aebc0657df98f4740598a0d95141a8e7e588c3e71a3e2b267481",
+      "timestamp": 1640810063,
+      "redeemer": "0xB11DA3e66D56f7684919F9BFf1Fd22B271aCFBF3",
+      "ethSent": "149.257551805821332462",
+      "ethFee": "0.794655870398565022"
+    },
+    {
+      "block": 13902445,
+      "txHash": "0x9f332e413e0952dbb446db90441a22fc48d232b6ded9f3c80f4b5bdf90166440",
+      "timestamp": 1640810080,
+      "redeemer": "0xDD8d326c3b0f3183D0AcceC059c27FD48c5101B2",
+      "ethSent": "119.59674865555565738",
+      "ethFee": "0.667492098815603079"
+    },
+    {
+      "block": 13906452,
+      "txHash": "0xc7f94dac34c493b28c4f34aec6b77cff37ae2e4922655fdba479e15f020f98ec",
+      "timestamp": 1640864557,
+      "redeemer": "0xd25d33F56EfA7A0Ddf8A7F0dDAAb4489fe6d57c9",
+      "ethSent": "108.312708171067647528",
+      "ethFee": "0.593012789742831454"
+    },
+    {
+      "block": 13912063,
+      "txHash": "0x8000d9b3e28abf1a3e722b0bb2bdae249a5e733a2fff9ca15bb4b964ab7c0128",
+      "timestamp": 1640939098,
+      "redeemer": "0x7603F88Ae21185339e8873391394A18C2bE3DD42",
+      "ethSent": "556.699451555384581831",
+      "ethFee": "3.525789496629994281"
+    },
+    {
+      "block": 13912065,
+      "txHash": "0x939010731022dad5704975bfca97f1e3c3d8385a216e362c9c22b09ffd14f13b",
+      "timestamp": 1640939126,
+      "redeemer": "0xd25d33F56EfA7A0Ddf8A7F0dDAAb4489fe6d57c9",
+      "ethSent": "142.136027646004795878",
+      "ethFee": "0.943453232818992668"
+    },
+    {
+      "block": 13917634,
+      "txHash": "0x3ca6a30e93d8015b9eb6b6f1c021cd8154469ae6cac47b407ce93e5f0d9ef617",
+      "timestamp": 1641014814,
+      "redeemer": "0x0ef3794cb89864337e15a9F077020C285EF0989b",
+      "ethSent": "112.55328324035787639",
+      "ethFee": "0.645082234670141824"
+    },
+    {
+      "block": 13920388,
+      "txHash": "0x7e5c888e327cea4477cf68059f5fd320cebc23216f38475f2a0acea3298723d0",
+      "timestamp": 1641051277,
+      "redeemer": "0xA3Aa86bd2A68eb8009f4Cad78BD7E2E9047bde8C",
+      "ethSent": "96.782011169930891404",
+      "ethFee": "0.543543259380156855"
+    },
+    {
+      "block": 13927253,
+      "txHash": "0xcba76890fb91d8242d67b5203ca2a1cdd598f20f43f820ef18cf351b888b32cf",
+      "timestamp": 1641142538,
+      "redeemer": "0x06fDA5B767c8b6171045E6549aAb369A9dEa36Fc",
+      "ethSent": "162.519265283910153649",
+      "ethFee": "0.895009633750418411"
+    },
+    {
+      "block": 13928536,
+      "txHash": "0x5f9cc3aebc42850921874e47fb910470322a20e092f7a2f055c8e4d4f2753ab0",
+      "timestamp": 1641159888,
+      "redeemer": "0x8F9cfA5e735dCA900eE392B657dFEFbF3Af7FeCF",
+      "ethSent": "1.341024107167055764",
+      "ethFee": "0.007224028709594854"
+    },
+    {
+      "block": 13990728,
+      "txHash": "0x02894dcb77f2e4e6800c0a60b86931959cc555a7f754f4bbb8a3fe08075e29cc",
+      "timestamp": 1641990914,
+      "redeemer": "0xB11DA3e66D56f7684919F9BFf1Fd22B271aCFBF3",
+      "ethSent": "420.009485272676249582",
+      "ethFee": "2.459892907344892486"
+    },
+    {
+      "block": 13990730,
+      "txHash": "0xa25a5b78aec5867014f5f29995e652e2459cd0bb73b8edbb39691cce00bd364a",
+      "timestamp": 1641990979,
+      "redeemer": "0xd25d33F56EfA7A0Ddf8A7F0dDAAb4489fe6d57c9",
+      "ethSent": "588.850172582374685804",
+      "ethFee": "4.153138026075894362"
+    },
+    {
+      "block": 14010635,
+      "txHash": "0xdbf12304030932895ccc5efa04a915527b2da669a2942394f62567c0a8201c04",
+      "timestamp": 1642257810,
+      "redeemer": "0xA3Aa86bd2A68eb8009f4Cad78BD7E2E9047bde8C",
+      "ethSent": "636.283417120469487887",
+      "ethFee": "4.030947922235823303"
+    },
+    {
+      "block": 14010643,
+      "txHash": "0x508f0db2abce525e38b3770031521707edff14cea50c505c23640e8507a609b6",
+      "timestamp": 1642257885,
+      "redeemer": "0xDD8d326c3b0f3183D0AcceC059c27FD48c5101B2",
+      "ethSent": "308.141211771985388363",
+      "ethFee": "2.147164767522217407"
+    },
+    {
+      "block": 14010647,
+      "txHash": "0xc80009d4223714650c680dd465e3350126d8e10ca509179e07abb285a09221a2",
+      "timestamp": 1642257923,
+      "redeemer": "0x5E550b762A68b8ec1c1Dbe81eFD67f8C2Ac7f2e7",
+      "ethSent": "250.708276074866563231",
+      "ethFee": "1.876505805128040149"
+    },
+    {
+      "block": 14014869,
+      "txHash": "0x523e1b81877f931ec51fa078fae0bad753fdafb115a7d3b6402bf8c568d5e332",
+      "timestamp": 1642314250,
+      "redeemer": "0xE4F0E9359756A65Da70Fe37A3BFa45736F9BEA58",
+      "ethSent": "0.252593952768385286",
+      "ethFee": "0.001518006815606772"
+    },
+    {
+      "block": 14016937,
+      "txHash": "0xa1429f6b77bfe66274c82fc198befa578cbf045786944be811dc584c7f74c962",
+      "timestamp": 1642341520,
+      "redeemer": "0xA085e76E7eb06f66Ee91e4AD42AfF24502800D73",
+      "ethSent": "149.653732223606518435",
+      "ethFee": "0.892557895964450665"
+    },
+    {
+      "block": 14016938,
+      "txHash": "0x53b165b7822346ceb9bbc15dc6e867a7bc47bb4e07ff517d8ab131deeef0ec2d",
+      "timestamp": 1642341541,
+      "redeemer": "0xDD8d326c3b0f3183D0AcceC059c27FD48c5101B2",
+      "ethSent": "326.608687659992658244",
+      "ethFee": "2.168216132677390367"
+    },
+    {
+      "block": 14016944,
+      "txHash": "0x5ec96f94a35c4c6658fe288385c43ae6738c381632110831d29652b946723d30",
+      "timestamp": 1642341641,
+      "redeemer": "0x7603F88Ae21185339e8873391394A18C2bE3DD42",
+      "ethSent": "311.418020028870162064",
+      "ethFee": "2.266919315770652338"
+    },
+    {
+      "block": 14025807,
+      "txHash": "0xd2ced49d285a7d608b0e189247e8bc2f858ba1d21df7382063aff7c54b7055bb",
+      "timestamp": 1642459173,
+      "redeemer": "0xDD8d326c3b0f3183D0AcceC059c27FD48c5101B2",
+      "ethSent": "208.386893060900114439",
+      "ethFee": "1.204730239660052277"
+    },
+    {
+      "block": 14083055,
+      "txHash": "0xc7296e8ae0379533159375d68de386dbf09930bad77e58b6a95403ad5c777c65",
+      "timestamp": 1643223904,
+      "redeemer": "0xB11DA3e66D56f7684919F9BFf1Fd22B271aCFBF3",
+      "ethSent": "343.968362184194824216",
+      "ethFee": "2.023846789005808538"
+    },
+    {
+      "block": 14096315,
+      "txHash": "0x831908f36730a911d896234c02bec1d9fb4d1b822c7e5437d12f785cfdc6ff63",
+      "timestamp": 1643401629,
+      "redeemer": "0x7d78d877f85b8917be84E96604Aba715B57B2e19",
+      "ethSent": "4.140519988457588097",
+      "ethFee": "0.020961355389228196"
+    },
+    {
+      "block": 14179038,
+      "txHash": "0x963a5a3cf42e5cf5d304b8fefcf1c77973c6e4281fa76d83f2d193138621259f",
+      "timestamp": 1644505494,
+      "redeemer": "0x5E550b762A68b8ec1c1Dbe81eFD67f8C2Ac7f2e7",
+      "ethSent": "536.755068646512861435",
+      "ethFee": "3.600371054742371291"
+    },
+    {
+      "block": 14182363,
+      "txHash": "0x1d4feef06f64eadb8c7eec684c591444fdfe5840e772df99217e9e051f9e030b",
+      "timestamp": 1644550645,
+      "redeemer": "0xAD8da72fB6c0Bc3b27A67dBe0Daf8AD1476c8D20",
+      "ethSent": "4.18493353511498999",
+      "ethFee": "0.024446775130676665"
+    },
+    {
+      "block": 14198596,
+      "txHash": "0xe18608dc783241c8562942ca92fcd3fca27cb4b5405e52f23015deaf00380139",
+      "timestamp": 1644766272,
+      "redeemer": "0x683EF6303433ae8bCfa055854110466BC0083e9A",
+      "ethSent": "0.446854634916420288",
+      "ethFee": "0.002246800500853015"
+    },
+    {
+      "block": 14202119,
+      "txHash": "0xeda0fd3fef890c03552086ec0bef939d40bdc89c3676b1c896345fb6496c10ac",
+      "timestamp": 1644813691,
+      "redeemer": "0x18A38d7Cabc34a2cb53aCE05CfaFb0a9ba79b57C",
+      "ethSent": "0.234586120266704388",
+      "ethFee": "0.001176170025483502"
+    },
+    {
+      "block": 14207781,
+      "txHash": "0x5b97e84350abb27b133addaf16d2717e95644d42d5116741857ab06f3df8d476",
+      "timestamp": 1644889088,
+      "redeemer": "0x06fDA5B767c8b6171045E6549aAb369A9dEa36Fc",
+      "ethSent": "271.306780598557470953",
+      "ethFee": "1.577258118311782122"
+    },
+    {
+      "block": 14295126,
+      "txHash": "0xfaa1a54636e2d9a5741f26ade79829563ef7ce9a1c77e7d4c136a3e8a49a7cf6",
+      "timestamp": 1646057850,
+      "redeemer": "0xDD8d326c3b0f3183D0AcceC059c27FD48c5101B2",
+      "ethSent": "198.648208881321154661",
+      "ethFee": "1.105282223494113354"
+    },
+    {
+      "block": 14297380,
+      "txHash": "0x2d7dcbcd93082350cb0632fe94db265678885a83b231d9bc93d85f903a5a1512",
+      "timestamp": 1646087723,
+      "redeemer": "0x762E40Ae8eEA193E372E594882682F4ef1EACcd6",
+      "ethSent": "302.43281297054149159",
+      "ethFee": "1.896114922064785453"
+    },
+    {
+      "block": 14305208,
+      "txHash": "0xcc9ad26a5d152c34351f4c39df3f0948145315a70dc5378855c4f3afab3aa643",
+      "timestamp": 1646192322,
+      "redeemer": "0xDD8d326c3b0f3183D0AcceC059c27FD48c5101B2",
+      "ethSent": "438.705195916281523699",
+      "ethFee": "2.889818524747959911"
+    },
+    {
+      "block": 14306777,
+      "txHash": "0xbc0172229574354a90bbc3c150722a1139703f3c37493011e5ba98b424d2464f",
+      "timestamp": 1646213402,
+      "redeemer": "0x5101F854F670812f2eBca8f6669AfF324F192218",
+      "ethSent": "0.560637751418049345",
+      "ethFee": "0.003440675925984736"
+    },
+    {
+      "block": 14308242,
+      "txHash": "0x5b97f3d381d24a32b92fa5d210ef3b0b99e820c5ae2accc85eb39da0c65b88d4",
+      "timestamp": 1646232295,
+      "redeemer": "0x0ef3794cb89864337e15a9F077020C285EF0989b",
+      "ethSent": "667.137816096787961507",
+      "ethFee": "5.272203379833136462"
+    },
+    {
+      "block": 14316604,
+      "txHash": "0x993d032f154122bc00519744d1fe6b55109ef02d91293da028b4d0ee79406511",
+      "timestamp": 1646345009,
+      "redeemer": "0x762E40Ae8eEA193E372E594882682F4ef1EACcd6",
+      "ethSent": "266.321095192873940659",
+      "ethFee": "1.666721952878126167"
+    },
+    {
+      "block": 14322510,
+      "txHash": "0xd627b6adabef4019b3e452ec34efb56df28a072f81cec60b7a8dcbaa38ab0e1c",
+      "timestamp": 1646423673,
+      "redeemer": "0x0a21cc3B38eFB19353dc05a1f98db809d08f3a07",
+      "ethSent": "1.901933966185128127",
+      "ethFee": "0.010200290162270518"
+    },
+    {
+      "block": 14382516,
+      "txHash": "0xf0c1ba46342be2c4f344b112bb4c432218a9422bf2257830a2e63a22b22553e6",
+      "timestamp": 1647231201,
+      "redeemer": "0x5E550b762A68b8ec1c1Dbe81eFD67f8C2Ac7f2e7",
+      "ethSent": "407.362617185145720545",
+      "ethFee": "2.487098992324676341"
+    },
+    {
+      "block": 14382527,
+      "txHash": "0xee7e01eb2ac1e41abd4e1198f4a32e39dcd76c11e4ca675f1dc17cd8485281cf",
+      "timestamp": 1647231406,
+      "redeemer": "0x0ef3794cb89864337e15a9F077020C285EF0989b",
+      "ethSent": "40.341096354153696163",
+      "ethFee": "0.250619874597607608"
+    },
+    {
+      "block": 14382530,
+      "txHash": "0x9bc4e851d8b28a47b394a76b8b5aa8355d39fcefdb2c8fd3cb21deb9d279dbdf",
+      "timestamp": 1647231435,
+      "redeemer": "0x5E550b762A68b8ec1c1Dbe81eFD67f8C2Ac7f2e7",
+      "ethSent": "113.302739154525003544",
+      "ethFee": "0.739015927395497764"
+    },
+    {
+      "block": 14391715,
+      "txHash": "0xa50cf0682aeee2fcfed8906636163ec81f977c4d3e15a17f48eed516cf156f55",
+      "timestamp": 1647354983,
+      "redeemer": "0x28f57B197E66148A72b791Cf6175fEeFB590b392",
+      "ethSent": "324.477180490696840787",
+      "ethFee": "1.979252072445286359"
+    },
+    {
+      "block": 14394811,
+      "txHash": "0x0d9a7ce6997398ac7c471742804697f84b3d06ecdf745bb86ae92696557c99e0",
+      "timestamp": 1647396613,
+      "redeemer": "0x06fDA5B767c8b6171045E6549aAb369A9dEa36Fc",
+      "ethSent": "628.432357206934992867",
+      "ethFee": "4.626797605251248521"
+    },
+    {
+      "block": 14406315,
+      "txHash": "0x7579a60302db0d05a2f95aeb425a590f5f30ce9827f68d9b1efd6b1e312f1dbd",
+      "timestamp": 1647551175,
+      "redeemer": "0x5481484616fd5Bcc97Dd5Bbb4F58dAADF34d099D",
+      "ethSent": "0.058223967054500229",
+      "ethFee": "0.000302750170549115"
+    },
+    {
+      "block": 14406338,
+      "txHash": "0xda883c225719d87377592f92726ac6576efb2692b4b486a2e67a00efc37a5cfe",
+      "timestamp": 1647551381,
+      "redeemer": "0x5481484616fd5Bcc97Dd5Bbb4F58dAADF34d099D",
+      "ethSent": "0.300934017827435577",
+      "ethFee": "0.001564883824797942"
+    },
+    {
+      "block": 14412454,
+      "txHash": "0x3cf12383c2feb595f819ee3e261d4cc4bbead925240c0c16a6ea6a38b4ce42a6",
+      "timestamp": 1647633716,
+      "redeemer": "0x0ef3794cb89864337e15a9F077020C285EF0989b",
+      "ethSent": "240.766966363725353746",
+      "ethFee": "1.398370510192527744"
+    },
+    {
+      "block": 14417649,
+      "txHash": "0xcd46210016df6127b68c19d26227a01f9088166834aed5d8e40835281a2840b2",
+      "timestamp": 1647703751,
+      "redeemer": "0x9c22d83FB0315263566740d018f08e8c075FC927",
+      "ethSent": "0.699362286303964108",
+      "ethFee": "0.003683149622303999"
+    },
+    {
+      "block": 14417650,
+      "txHash": "0x2df21528b3f4bf74e5695800afaf4ace78cab4605f485a6d15fde961ca6d3fa7",
+      "timestamp": 1647703771,
+      "redeemer": "0x0e5a65C3660020f75c29c4665c5392BF6cB889F1",
+      "ethSent": "0.408746406444740503",
+      "ethFee": "0.002153165117001222"
+    },
+    {
+      "block": 14425341,
+      "txHash": "0xfb7ddf819bff4a0ab1f59dbd6fe397197d3eab35d8d9da810f8222c638673768",
+      "timestamp": 1647807213,
+      "redeemer": "0x0ef3794cb89864337e15a9F077020C285EF0989b",
+      "ethSent": "186.551801105412088608",
+      "ethFee": "1.048553980914016763"
+    },
+    {
+      "block": 14599672,
+      "txHash": "0x57869abd39bd860da7d65778830c98febe15d5807e7c1ceb1e0d400bcabb5200",
+      "timestamp": 1650156226,
+      "redeemer": "0xAb4013a37adcF157452576A06398209dBdacA489",
+      "ethSent": "22.528850484964728084",
+      "ethFee": "0.114230032539876215"
+    },
+    {
+      "block": 14610442,
+      "txHash": "0x5b7bcf93f7ed2f0a045e86630c3ad01deafc8fad2f8b056b6a399ebe3003a3ca",
+      "timestamp": 1650301906,
+      "redeemer": "0x5E550b762A68b8ec1c1Dbe81eFD67f8C2Ac7f2e7",
+      "ethSent": "164.048481928964825633",
+      "ethFee": "0.901633451467255995"
+    },
+    {
+      "block": 14621710,
+      "txHash": "0x2cfee0ff0727a2606749b7d8a38033f29883c62c2120a51a8d4fcdb35ae50933",
+      "timestamp": 1650455418,
+      "redeemer": "0x5E550b762A68b8ec1c1Dbe81eFD67f8C2Ac7f2e7",
+      "ethSent": "232.696082804449576859",
+      "ethFee": "1.345431424166965569"
+    },
+    {
+      "block": 14621711,
+      "txHash": "0x7218767e53e0f85ea4dcc30a5fec8c94832c913e53abf8f52ec5ff91bbce9dbe",
+      "timestamp": 1650455429,
+      "redeemer": "0x5E550b762A68b8ec1c1Dbe81eFD67f8C2Ac7f2e7",
+      "ethSent": "292.306344888129330396",
+      "ethFee": "1.961919582746087142"
+    },
+    {
+      "block": 14688797,
+      "txHash": "0xe8f830f769d01e52adbf6ea30f152361b28c3aa7bc9b6ae9c31aa2b1892c57cf",
+      "timestamp": 1651365535,
+      "redeemer": "0xC3598d91844B061195136600AD243b077Cc164e2",
+      "ethSent": "18.475695101049433608",
+      "ethFee": "0.094307600729905187"
+    },
+    {
+      "block": 14701763,
+      "txHash": "0x212c6c39c7590485b408e88198755889fd7fb1c427a125b0e3109ac4975ea21c",
+      "timestamp": 1651541556,
+      "redeemer": "0xe24328e7dF3d87C1cbcC9043326f9b20c425a9e6",
+      "ethSent": "3.302901889039187223",
+      "ethFee": "0.016567463646050424"
+    },
+    {
+      "block": 14712404,
+      "txHash": "0x805311010ecc58bd27a50baf11b16643a2c4421ccd42da1872ed1ce3b92f0e58",
+      "timestamp": 1651687299,
+      "redeemer": "0x7603F88Ae21185339e8873391394A18C2bE3DD42",
+      "ethSent": "217.282271328976366313",
+      "ethFee": "1.226981073224446829"
+    },
+    {
+      "block": 14712618,
+      "txHash": "0x97da3d48a21d451e0b688089885a219ededd5b4abf5c8b88e60b3916e5bd7c0c",
+      "timestamp": 1651690202,
+      "redeemer": "0xB11DA3e66D56f7684919F9BFf1Fd22B271aCFBF3",
+      "ethSent": "193.151583957872004459",
+      "ethFee": "1.1973153579135884"
+    },
+    {
+      "block": 14712642,
+      "txHash": "0x069791a72f65a9ec7402daf1cbf0f73d7bbbb53742e61f0f01dc9596e3828d10",
+      "timestamp": 1651690541,
+      "redeemer": "0xB11DA3e66D56f7684919F9BFf1Fd22B271aCFBF3",
+      "ethSent": "279.518678320349981167",
+      "ethFee": "1.968994110621428942"
+    },
+    {
+      "block": 14712644,
+      "txHash": "0xdae31ee72c54c8941af576a48d909ce7bc79aa2c3ecd58c8c512c84a68eb9a10",
+      "timestamp": 1651690559,
+      "redeemer": "0x0f4bF98593F4f30F5C7c8bb63dbd9D16aF412b75",
+      "ethSent": "370.661166898010387484",
+      "ethFee": "3.030096493541331318"
+    },
+    {
+      "block": 14722344,
+      "txHash": "0x6bd3d869abee356e0dc7763288f16f2ec134900cff28419383c93e81203ab479",
+      "timestamp": 1651823733,
+      "redeemer": "0xB11DA3e66D56f7684919F9BFf1Fd22B271aCFBF3",
+      "ethSent": "169.973055489394296709",
+      "ethFee": "0.99627213903373474"
+    },
+    {
+      "block": 14786113,
+      "txHash": "0x348a9f27251356918fae0a2cf42286fa435d05c162ba70caf5b272eafb2c54a3",
+      "timestamp": 1652702294,
+      "redeemer": "0x88607a01fF429B111cC13Dbec88B8aC6353126E0",
+      "ethSent": "0.050124100185153808",
+      "ethFee": "0.00025697206115174"
+    },
+    {
+      "block": 14786117,
+      "txHash": "0x053e001ea01e471c65c57d8471902186a3cc7d55935239e16acdd299039191ed",
+      "timestamp": 1652702340,
+      "redeemer": "0x2aDBc63f1a72d33b8050521eCa1b57D335bD9dbC",
+      "ethSent": "0.0501189446366782",
+      "ethFee": "0.000256952964127925"
+    },
+    {
+      "block": 14802571,
+      "txHash": "0xa9a56f27cfa5c722afbd6dbbd0928b57a2592a758b4c390ceffe52525932b5b1",
+      "timestamp": 1652929601,
+      "redeemer": "0xDD8d326c3b0f3183D0AcceC059c27FD48c5101B2",
+      "ethSent": "243.997880483990873344",
+      "ethFee": "1.388597249837028898"
+    },
+    {
+      "block": 14812029,
+      "txHash": "0x4dcea4fd24aebb7eb77071fa83b0d67b6f913aa7a538f23e9d6657b40021c4de",
+      "timestamp": 1653062601,
+      "redeemer": "0x4761E872A7ef84888f37D2aD779e0ED38aa33243",
+      "ethSent": "4.266604998684018878",
+      "ethFee": "0.021736473305333111"
+    },
+    {
+      "block": 14819126,
+      "txHash": "0xb477cda75e7f9c991beb964c7a0454c0bfcff21f530fb321945e1eee04d978f2",
+      "timestamp": 1653161924,
+      "redeemer": "0x2403D69BEC40e9F8A25bD42f3e2396c6C08ae4C5",
+      "ethSent": "0.17900388675273198",
+      "ethFee": "0.000898563485982333"
+    },
+    {
+      "block": 14898540,
+      "txHash": "0x36276460fdce72e3649b5ca14f74a9357eb51cdb1db393463d55389a0a3d7a4d",
+      "timestamp": 1654279394,
+      "redeemer": "0xc2475Ee206F97595bf17e4aa13152e5A0B2B223a",
+      "ethSent": "5.365840317688546664",
+      "ethFee": "0.026906416208191686"
+    },
+    {
+      "block": 14986379,
+      "txHash": "0x20e7954657e560f1a75d565adedf3ebea33dc94380ea97b1339c7e398ef69e76",
+      "timestamp": 1655576103,
+      "redeemer": "0x3815c846be224426eC3b704099fd2Ed9301d351a",
+      "ethSent": "17.447070979053821346",
+      "ethFee": "0.089604673950074875"
+    },
+    {
+      "block": 14987245,
+      "txHash": "0x83fc5633227609ae462d17caac8c2ecc0418ed4e49581f15121bc80b9b53f237",
+      "timestamp": 1655588522,
+      "redeemer": "0xA3Aa86bd2A68eb8009f4Cad78BD7E2E9047bde8C",
+      "ethSent": "151.123527745155105068",
+      "ethFee": "0.841839424143763523"
+    },
+    {
+      "block": 14989004,
+      "txHash": "0x846e4d1fc4107eb74548a9ab90d5eb8523d17232dac250ea45469e51b6b51e94",
+      "timestamp": 1655615083,
+      "redeemer": "0x9c22d83FB0315263566740d018f08e8c075FC927",
+      "ethSent": "0.207384979105963355",
+      "ethFee": "0.001114598971901734"
+    },
+    {
+      "block": 15007149,
+      "txHash": "0x4353b4cb79a0eab48dbd8c2e21e151d565ead9df86e2bf0600f0d947ec15ca11",
+      "timestamp": 1655893202,
+      "redeemer": "0x2b9D06c6a83884382256609bDc4D72f53Ec55888",
+      "ethSent": "0.462034188512333368",
+      "ethFee": "0.002312944576811563"
+    },
+    {
+      "block": 15085130,
+      "txHash": "0x6c398cca3b21bbade883810727f8deaf21ad0ff45a3e729e9f9292dd8c17b7af",
+      "timestamp": 1657058783,
+      "redeemer": "0x67e396fD3f4bF958A45b55e4fFDB4b272a053daa",
+      "ethSent": "1.73773015136675367",
+      "ethFee": "0.008698969615272444"
+    },
+    {
+      "block": 15095127,
+      "txHash": "0xf1aafde1b0776094bb57a518c344f5f7251023b656e5a2d493d84217d307d3e0",
+      "timestamp": 1657192139,
+      "redeemer": "0x67e396fD3f4bF958A45b55e4fFDB4b272a053daa",
+      "ethSent": "0.9723257578669324",
+      "ethFee": "0.004865608743293261"
+    },
+    {
+      "block": 15183386,
+      "txHash": "0x5f7943a5f399c2cd188b3a964acb72cf7ef37f1296819962507d3e28845698d7",
+      "timestamp": 1658372096,
+      "redeemer": "0xC1f8A6c8c4e3dD64A1153e23eE757e1043B96b24",
+      "ethSent": "0.007101005826126943",
+      "ethFee": "0.000035507107926293"
+    },
+    {
+      "block": 15209493,
+      "txHash": "0xe63a3093aa8a65fffed8fdb513aec67ec69b36ccecacbeda49a3c6f48a6685c2",
+      "timestamp": 1658722712,
+      "redeemer": "0x92fd25E1d775324085cCfbf9CbC61C4FcfbF2CD6",
+      "ethSent": "0.005987008188741755",
+      "ethFee": "0.000029935204593946"
+    },
+    {
+      "block": 15311416,
+      "txHash": "0x4b904732409f533c11b1c61973a220a37341ad9130595465de7ac2b38e42ef49",
+      "timestamp": 1660094332,
+      "redeemer": "0x4857d1C4b89A046F834FD9F271b0A82f5159889b",
+      "ethSent": "1.197012688382349267",
+      "ethFee": "0.005991973391857413"
+    },
+    {
+      "block": 15314966,
+      "txHash": "0x6bd5ccf1f02302429680e9bb997a7df10938ad59f434ba1c18254924010bd971",
+      "timestamp": 1660143251,
+      "redeemer": "0x19bC8Ba52Cf0173014be50C73eD85517C5962E17",
+      "ethSent": "2.352151991863761279",
+      "ethFee": "0.01179581560610572"
+    },
+    {
+      "block": 15316797,
+      "txHash": "0x477809c1c62a2e8437ed2fbc8826e13d616bf5481f80e6ebf0588f7bf9194f29",
+      "timestamp": 1660167524,
+      "redeemer": "0x2d1f24C8837A94e28E0c2A5E723E190A333B00b9",
+      "ethSent": "1.108815510078407315",
+      "ethFee": "0.005561749234727827"
+    },
+    {
+      "block": 15320172,
+      "txHash": "0xb21cf9617b9c256b71c05978d468bc4146e83c6e2d26b197eac4c0c57f966ac2",
+      "timestamp": 1660213594,
+      "redeemer": "0x163D8b117F10E265eF2908E2A2576bA5aDCd51A7",
+      "ethSent": "5.436203275488989774",
+      "ethFee": "0.027376885960759747"
+    },
+    {
+      "block": 15380356,
+      "txHash": "0x42426b46ab9f01029fa0d3e88947b5f4ecf523d33f2807f05b495f51369a3c49",
+      "timestamp": 1661035941,
+      "redeemer": "0x649fd14Dd407443caD284b0CDe76971e30303816",
+      "ethSent": "1.15909632391157024",
+      "ethFee": "0.005804248175127802"
+    },
+    {
+      "block": 15422115,
+      "txHash": "0xc433e8b2228a89576c0f690739af5ceef6c2598b31bb015576164b94fc3025a2",
+      "timestamp": 1661610836,
+      "redeemer": "0x7E56b14AA930Abb55E272D6f75f7612Bb6a4DfA2",
+      "ethSent": "5.371166163019286991",
+      "ethFee": "0.026974593706614687"
+    },
+    {
+      "block": 15480018,
+      "txHash": "0x683408e9dd577122f90e9a0564d76851d8fd8c954a98c612c52f0ac4456782aa",
+      "timestamp": 1662411308,
+      "redeemer": "0x9F5D29096d2F0FEDBe8f317129070d2375270C9E",
+      "ethSent": "1.127657041904988629",
+      "ethFee": "0.005647258447950031"
+    },
+    {
+      "block": 15480719,
+      "txHash": "0x3990c16d7c996108ba7e12c7c5d33871f89979df402eed7758345f39156320a1",
+      "timestamp": 1662421062,
+      "redeemer": "0xe40A84F18Dd4e55Aa57d8C3973FF5Cf57aB3C521",
+      "ethSent": "1.08821054658560296",
+      "ethFee": "0.005453686278484048"
+    },
+    {
+      "block": 15489633,
+      "txHash": "0xd99127b0d23e0d1234e57b52945700f7d5ce075e302c311d108368510d0a71c1",
+      "timestamp": 1662544387,
+      "redeemer": "0x2006482dFA492dadd365456fe487674BD569bcBF",
+      "ethSent": "60.323254793543174743",
+      "ethFee": "0.317566873486152691"
+    },
+    {
+      "block": 15502081,
+      "txHash": "0x94a7780b798d978abe76ba6622b80982275e370b853aa506d0ba0774bc346519",
+      "timestamp": 1662716923,
+      "redeemer": "0x019947394428cd14f11faCfE2b22c9421315887D",
+      "ethSent": "3.167752250118427285",
+      "ethFee": "0.015940833850425566"
+    },
+    {
+      "block": 15617054,
+      "txHash": "0x4e0f669ac302d1b646ea32168fd26a8ff5133f9bd52caedec7d9780fce614fca",
+      "timestamp": 1664189327,
+      "redeemer": "0x308048bed0306d3F1471863ee08464184A2E63DE",
+      "ethSent": "1.547800976544348061",
+      "ethFee": "0.007748275931695913"
+    },
+    {
+      "block": 15786612,
+      "txHash": "0x6a30c9249f989d5c0d0d21d2ddddb8b2f2e275ecfc1a735dc59c7be659f99be9",
+      "timestamp": 1666236383,
+      "redeemer": "0x70524a3cf5F5049C9F8742e10939094EfA3F2d6B",
+      "ethSent": "4.217139689163711081",
+      "ethFee": "0.021152541111967765"
+    },
+    {
+      "block": 16009433,
+      "txHash": "0x58be6571d2d56a27cbd9745c35d33a040f2f93215b134c76f512ca1479d1723e",
+      "timestamp": 1668925655,
+      "redeemer": "0xab58779cec2B82A75Ffd103fDc88D7e3aDb13468",
+      "ethSent": "2.667838139657097811",
+      "ethFee": "0.013361926183032064"
+    },
+    {
+      "block": 16010987,
+      "txHash": "0x13bbe43972f7c42329ce0607aa578c3a51994bba9722432d94369153a4f61a45",
+      "timestamp": 1668944411,
+      "redeemer": "0x1286bA2Bb6a7399a798A407b9ea852FFA27f1aC9",
+      "ethSent": "0.007738782671049246",
+      "ethFee": "0.000038742982968952"
+    },
+    {
+      "block": 16011047,
+      "txHash": "0xa56afdc98a0f5ea7119f21b3dbacc17c7a7c2fa67d7fc027a9a5d7bc60fbf346",
+      "timestamp": 1668945131,
+      "redeemer": "0x1286bA2Bb6a7399a798A407b9ea852FFA27f1aC9",
+      "ethSent": "3.417868617130357508",
+      "ethFee": "0.017146658975618883"
+    },
+    {
+      "block": 16011053,
+      "txHash": "0x06395084d22afc11dca888f2d1c36ef10b3ceba684b7951405a695ec20f96689",
+      "timestamp": 1668945203,
+      "redeemer": "0x1286bA2Bb6a7399a798A407b9ea852FFA27f1aC9",
+      "ethSent": "0.62626745557031971",
+      "ethFee": "0.003143035202452593"
+    },
+    {
+      "block": 16313629,
+      "txHash": "0x30e31824dc0b353ad48b2e49d9433e82f21437631bb857f62ec1f78916b937fa",
+      "timestamp": 1672596755,
+      "redeemer": "0x69Ed24795649c23F9C13BFE317432fe0e679f1F6",
+      "ethSent": "48.972815973639124001",
+      "ethFee": "0.252925976916067371"
+    }
+  ]
+}

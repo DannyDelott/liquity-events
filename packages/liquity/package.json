@@ -11,6 +11,7 @@
   "scripts": {
     "build": "parcel build",
     "scrape-borrow-infos": "ts-node -r tsconfig-paths/register scripts/scrape-borrow-infos.ts",
+    "scrape-redemption-infos": "ts-node -r tsconfig-paths/register scripts/scrape-redemption-infos.ts",
     "scrape-stake-changed-infos": "ts-node -r tsconfig-paths/register scripts/scrape-stake-changed-infos.ts"
   },
   "author": "",
