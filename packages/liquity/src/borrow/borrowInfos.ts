@@ -1,11 +1,12 @@
 import { AlchemyProvider } from "alchemy-sdk";
 import { Event } from "ethers";
-import range from "lodash.range";
-import chunk from "lodash.chunk";
 
 import { borrowerOperationsContract } from "src/contracts/borrowerOperations";
 import { lqtyStakingContract } from "src/contracts/lqtyStaking";
 import { formatEther } from "ethers/lib/utils";
+import { fetchPrice } from "src/defillama";
+import { LUSD_TOKEN_ADDRESS } from "src/lusdToken";
+import { createBlockIntervals } from "src/base/blocks";
 
 export const BORROW_INFOS_URL =
   "https://liquity.s3.amazonaws.com/borrowInfos.json";
@@ -15,7 +16,8 @@ export interface BorrowInfo {
   txHash: string;
   timestamp: number;
   borrower: string;
-  lusdFeePaid: string;
+  lusdFee: string;
+  lusdFeeUSD: string;
   totalLqtyStaked: string;
 }
 
@@ -39,19 +41,12 @@ async function queryLUSDBorrowingFeePaidEvents(
 ) {
   const latestBlock = await provider.getBlockNumber();
 
-  // creates a list of block intervals
-  const blockRanges = chunk(range(startBlock, latestBlock + 1, 50_000), 2);
-  // Add an additional interval that extends to the latest block
-  const lastBlockRange = blockRanges[blockRanges.length - 1];
-  const lastBlockRangeEnd = lastBlockRange[1];
-  if (lastBlockRangeEnd && lastBlockRangeEnd < latestBlock) {
-    blockRanges.push([lastBlockRangeEnd, latestBlock]);
-  }
+  const blockIntervals = createBlockIntervals(startBlock, latestBlock);
 
   const borrowerOperations = borrowerOperationsContract.connect(provider);
 
   const feePaidEvents: Event[] = [];
-  for (const [startBlock, endBlock = latestBlock] of blockRanges) {
+  for (const [startBlock, endBlock] of blockIntervals) {
     const rawEvents = await borrowerOperations.queryFilter(
       borrowerOperations.filters["LUSDBorrowingFeePaid"](null, null),
       startBlock,
@@ -84,7 +79,7 @@ async function makeBorrowInfos(
       provider,
       lusdBorrowingFeePaidEvent
     );
-    console.log(`(${counter} of ${numEvents}): Fee $${borrowInfo.lusdFeePaid}`);
+    console.log(`(${counter} of ${numEvents}): Fee $${borrowInfo.lusdFee}`);
 
     borrowInfos.push(borrowInfo);
 
@@ -108,12 +103,25 @@ async function fetchBorrowInfoForEvent(
     blockTag: blockNumber,
   });
 
+  const lusdFee = formatEther(lusdBorrowingFeePaidEvent.args?.[1]);
+  const priceResult = await fetchPrice(LUSD_TOKEN_ADDRESS, timestamp);
+
+  // default to 1:1 since lusd is a stable coin
+  let lusdFeeUSD = lusdFee;
+
+  // but we may have a more accurate price since it can be off-peg by small
+  // amounts
+  if (priceResult) {
+    lusdFeeUSD = `${+lusdFee * priceResult.price}`;
+  }
+
   return {
     block: blockNumber,
     txHash: transactionHash,
     timestamp,
     borrower: lusdBorrowingFeePaidEvent.args?.[0],
-    lusdFeePaid: formatEther(lusdBorrowingFeePaidEvent.args?.[1]),
+    lusdFee,
+    lusdFeeUSD,
     totalLqtyStaked: formatEther(totalLQTYStaked),
   };
 }

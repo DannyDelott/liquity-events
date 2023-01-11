@@ -8,7 +8,7 @@ export function ProtocolBorrowStats() {
   const { data: borrowInfos, status } = useBorrowInfos();
 
   const totalFeesPaid = borrowInfos?.data.reduce((sum, currentEvent) => {
-    return sum + Number(currentEvent.lusdFeePaid);
+    return sum + Number(currentEvent.lusdFee);
   }, 0);
 
   const uniqueBorrowers = uniqBy(

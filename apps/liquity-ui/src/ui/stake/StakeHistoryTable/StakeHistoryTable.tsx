@@ -8,6 +8,8 @@ import dateFormat from "dateformat";
 import { isAddress } from "@ethersproject/address";
 import { parseEther } from "@ethersproject/units";
 import { formatEther } from "ethers/lib/utils.js";
+import { SearchIcon, TrophyIcon } from "src/ui/base/icons";
+import { CryptoIcon, IconName, IconSize } from "src/ui/crypto/CryptoIcon";
 
 interface StakeHistoryTable {
   account: string;
@@ -36,6 +38,7 @@ export function StakeHistoryTable({
     }
     return data;
   }, [stakeChangedInfos?.data, sortBy, searchAddress]);
+
   const accountTableData = useMemo(() => {
     const data = stakeChangedInfos?.data.filter(({ staker }) => {
       return staker === account;
@@ -45,76 +48,111 @@ export function StakeHistoryTable({
     }
     return data;
   }, [stakeChangedInfos?.data, sortBy, account]);
+
   const tableData = isSearchAddressValid ? searchTableData : accountTableData;
-  console.log("tableData", tableData);
 
   return (
     <div className="daisy-card bg-base-100">
-      <div className="daisy-card-body flex justify-center flex-col items-center ">
-        <h2 className="text-2xl font-bold flex-1 text-center mb-8">
-          Staking History
-        </h2>
-        <div className="flex w-full justify-between">
-          <div className="daisy-form-control">
-            <div className="daisy-input-group">
-              <input
-                type="text"
-                placeholder="Search staker address..."
-                className={classNames("daisy-input daisy-input-bordered", {
-                  "daisy-input-error": isSearchAddressValid,
-                })}
-                onChange={(e) => setSearchAddressDraft(e.target.value)}
-              />
-              <button
-                className={classNames(
-                  "daisy-btn daisy-btn-outline daisy-btn-square",
-                  {
-                    "daisy-btn-primary": !isSearchAddressValid,
-                    "daisy-btn-error": isSearchAddressValid,
-                  }
-                )}
-                onClick={() => {
-                  if (!isAddress(searchAddressDraft)) {
-                    setIsSearchAddressValid(false);
-                    return;
-                  }
-                  setIsSearchAddressValid(true);
-                  setSearchAddress(searchAddressDraft);
-                }}
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
+      <figure className="bg-[#D2D6DC14] border-b-2 flex w-full">
+        <div className="mt-8 flex flex-col gap-8 w-full">
+          <div className="flex flex-col justify-center items-center px-24 text-center m-auto">
+            <h2 className="text-2xl font-bold mb-2">Staking History</h2>
+            <span className="">
+              View each time an address has staked or unstaked from the LQTY
+              Staking Pool.
+            </span>
+          </div>
+          <div className="w-full flex justify-between mb-4 px-8 gap-8">
+            <div className="daisy-form-control flex-1 w-full items-center">
+              <div className="daisy-input-group w-2/3">
+                <input
+                  type="text"
+                  placeholder="Enter a staker address..."
+                  className={classNames(
+                    "daisy-input daisy-input-bordered w-full",
+                    {
+                      "daisy-input-error": !isSearchAddressValid,
+                    }
+                  )}
+                  onChange={(e) => setSearchAddressDraft(e.target.value)}
+                />
+                <button
+                  className={classNames(
+                    "daisy-btn daisy-btn-outline daisy-btn-square",
+                    {
+                      "daisy-btn-primary": isSearchAddressValid,
+                      "daisy-btn-error": !isSearchAddressValid,
+                    }
+                  )}
+                  onClick={() => {
+                    if (!isAddress(searchAddressDraft)) {
+                      console.log("searchAddressDraft", searchAddressDraft);
+                      setIsSearchAddressValid(false);
+                      return;
+                    }
+                    setIsSearchAddressValid(true);
+                    setSearchAddress(searchAddressDraft);
+                  }}
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  />
-                </svg>
-              </button>
+                  <SearchIcon height={20} width={20} />
+                </button>
+              </div>
             </div>
           </div>
-          <select
-            className="daisy-select daisy-select-bordered "
-            onChange={(e) =>
-              setSortBy(e.target.value as unknown as SortByOptions)
-            }
-          >
-            <option disabled>Sort by</option>
-            <option value={SortByOptions.OLDEST_TO_NEWEST}>
-              Date (oldest to newest)
-            </option>
-            <option value={SortByOptions.NEWEST_TO_OLDEST}>
-              Date (newest to oldest)
-            </option>
-          </select>
         </div>
-        <div className="justify-center overflow-x-auto">
+      </figure>
+      <div className="daisy-card-body flex justify-center flex-col items-center gap-4 ">
+        <div className="daisy-stats">
+          <div className="daisy-stat place-items-center">
+            <div className="daisy-stat-title">Staker Rank</div>
+            <div className="daisy-stat-value flex gap-2 justify-center items-center">
+              <TrophyIcon height={32} width={32} />
+              12th
+            </div>
+          </div>
+          <div className="daisy-stat place-items-center">
+            <div className="daisy-stat-title">Staked Balance</div>
+            <div className="daisy-stat-value flex gap-2 justify-center">
+              <CryptoIcon
+                icon={IconName.LQTY}
+                size={IconSize.MEDIUM}
+                className={"flex-shrink-0"}
+              />
+              19,115,232.86
+            </div>
+          </div>
+
+          <div className="daisy-stat place-items-center">
+            <div className="daisy-stat-title">Unclaimed Rewards</div>
+            <div className="daisy-stat-value flex gap-2 justify-center">
+              <CryptoIcon
+                icon={IconName.LUSD}
+                size={IconSize.MEDIUM}
+                className={"flex-shrink-0"}
+              />
+              1,200,232.97
+            </div>
+          </div>
+        </div>
+        <div className="daisy-divider"></div>
+
+        <div className="flex flex-col justify-center overflow-x-auto gap-4">
+          <div className="flex w-full justify-end">
+            <select
+              className="daisy-select daisy-select-bordered "
+              onChange={(e) =>
+                setSortBy(e.target.value as unknown as SortByOptions)
+              }
+            >
+              <option disabled>Sort by</option>
+              <option value={SortByOptions.OLDEST_TO_NEWEST}>
+                Date (oldest to newest)
+              </option>
+              <option value={SortByOptions.NEWEST_TO_OLDEST}>
+                Date (newest to oldest)
+              </option>
+            </select>
+          </div>
           <table
             className={classNames("relative daisy-table ", {
               "daisy-table-zebra": status === "success",

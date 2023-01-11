@@ -20,18 +20,16 @@ const BORROW_INFOS_FILE_PATH = "src/borrow/json/borrowInfos.json";
 (async () => {
   const provider = await alchemy.config.getProvider();
 
-  const borrowEventsJson = await fetchJson<BorrowInfosFile>(
-    BORROW_INFOS_URL
-  );
+  const borrowInfosJson = await fetchJson<BorrowInfosFile>(BORROW_INFOS_URL);
 
   // scrape the latest borrow events, starting where we left off
   const newBorrowInfos = await fetchBorrowInfos(
-    borrowEventsJson.data[borrowEventsJson.data.length - 1].block + 1,
+    borrowInfosJson.data[borrowInfosJson.data.length - 1].block + 1,
     provider
   );
 
   const borrowInfos: BorrowInfo[] = [
-    ...borrowEventsJson.data,
+    ...borrowInfosJson.data,
     ...newBorrowInfos,
   ];
 

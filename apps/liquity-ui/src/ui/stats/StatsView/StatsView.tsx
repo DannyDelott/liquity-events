@@ -34,7 +34,7 @@ export function StatsView(): ReactElement {
         <ProtocolBorrowStats />
       </div>
       <div className="daisy-card bg-base-100">
-        <TopBorrowersTable limit={25} />
+        <TopBorrowersTable limit={10} />
       </div>
     </Page>
   );

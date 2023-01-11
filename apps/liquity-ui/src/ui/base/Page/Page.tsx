@@ -1,3 +1,4 @@
+import classNames from "classnames";
 import { ReactElement, ReactNode } from "react";
 
 interface PageProps {
@@ -5,9 +6,14 @@ interface PageProps {
   className?: string;
 }
 
-export function Page({ className, children }: PageProps): ReactElement {
+export function Page({ className = "", children }: PageProps): ReactElement {
   return (
-    <div className={`h-full flex flex-col overflow-scroll py-8 ${className}`}>
+    <div
+      className={classNames(
+        "h-full flex flex-col overflow-scroll py-8",
+        className
+      )}
+    >
       {children}
     </div>
   );

@@ -19,7 +19,7 @@ export default function TopBorrowersTable({
   const totalFeesPaidByBorrower = mapValues(
     borrowInfosByBorrower,
     (borrowInfosForBorrower) =>
-      sumBy(borrowInfosForBorrower, (info) => +info.lusdFeePaid)
+      sumBy(borrowInfosForBorrower, (info) => +info.lusdFee)
   );
   const allTableData = Object.keys(borrowInfosByBorrower).map((borrower) => {
     return {

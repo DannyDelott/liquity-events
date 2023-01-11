@@ -1,14 +1,13 @@
-import { ReactElement } from "react";
-import { useLQTYStakedForAccount } from "src/ui/stake/useLQTYStakedForAccount";
-import { commify, formatEther, parseEther } from "ethers/lib/utils.js";
-import { useTotalLQTYStaked } from "src/ui/stake/useTotalLQTYStaked";
-import { usePendingLUSDGain } from "src/ui/stake/usePendingLUSDGain";
-import { usePendingETHGain } from "src/ui/stake/usePendingETHGain";
-import { CryptoIcon, IconName, IconSize } from "src/ui/crypto/CryptoIcon";
-import { useBlockNumber } from "wagmi";
+import { commify, formatEther } from "ethers/lib/utils.js";
+import { ReactElement, ReactNode } from "react";
 import { BLOCKS_PER_DAY } from "src/base/ethereum";
-import classNames from "classnames";
-import Skeleton from "react-loading-skeleton";
+import { CryptoIcon, IconName, IconSize } from "src/ui/crypto/CryptoIcon";
+import { useLQTYStakedForAccount } from "src/ui/stake/useLQTYStakedForAccount";
+import { usePendingETHGain } from "src/ui/stake/usePendingETHGain";
+import { usePendingLUSDGain } from "src/ui/stake/usePendingLUSDGain";
+import { useTotalLQTYStaked } from "src/ui/stake/useTotalLQTYStaked";
+import { StatWith24HourChange } from "src/ui/stats/StatWith24HourChange/StatWith24HourChange";
+import { useBlockNumber } from "wagmi";
 
 interface StakeCardProps {
   account: string;
@@ -18,21 +17,29 @@ export function StakeCard({ account }: StakeCardProps): ReactElement {
   const { data: blockNumber } = useBlockNumber();
   const { data: lqtyStaked } = useLQTYStakedForAccount(account);
   const { data: totalLQTYStaked } = useTotalLQTYStaked();
-  const { data: pendingETHGain } = usePendingETHGain(account);
-
-  const { data: currentPendingLUSDGain } = usePendingLUSDGain(account);
-  const { data: yesterdayPendingLUSDGain } = usePendingLUSDGain(
+  const { data: currentPendingETHGain, status: currentPendingETHGainStatus } =
+    usePendingETHGain(account);
+  const {
+    data: yesterdayPendingETHGain,
+    status: yesterdayPendingETHGainStatus,
+  } = usePendingETHGain(
     account,
     // safe to cast because enabled is set
     (blockNumber as number) - BLOCKS_PER_DAY,
     { enabled: !!blockNumber, keepPreviousData: true }
   );
-  let lusdGain24Hours = "";
-  if (currentPendingLUSDGain && yesterdayPendingLUSDGain) {
-    lusdGain24Hours = (+formatEther(
-      currentPendingLUSDGain.sub(yesterdayPendingLUSDGain)
-    )).toFixed(2);
-  }
+
+  const { data: currentPendingLUSDGain, status: currentPendingLUSDGainStatus } =
+    usePendingLUSDGain(account);
+  const {
+    data: yesterdayPendingLUSDGain,
+    status: yesterdayPendingLUSDGainStatus,
+  } = usePendingLUSDGain(
+    account,
+    // safe to cast because enabled is set
+    (blockNumber as number) - BLOCKS_PER_DAY,
+    { enabled: !!blockNumber, keepPreviousData: true }
+  );
 
   let poolShare = "";
   if (lqtyStaked && totalLQTYStaked) {
@@ -47,7 +54,7 @@ export function StakeCard({ account }: StakeCardProps): ReactElement {
     (+formatEther(totalLQTYStaked || 0)).toFixed()
   );
   return (
-    <div className="daisy-card bg-base-100 shadow-xl min-w-[400px] max-w-[500px]">
+    <div className="daisy-card bg-base-100 shadow-xl w-full md:min-w-[400px] md:max-w-[500px]">
       <figure className="bg-[#D2D6DC14] border-b-2 flex w-full">
         <div className="mt-8 flex flex-col gap-8 w-full">
           <div className="px-12 flex flex-col justify-center items-center w-96 text-center m-auto">
@@ -98,7 +105,7 @@ export function StakeCard({ account }: StakeCardProps): ReactElement {
 
               <div className="daisy-stat-actions gap-2 flex mt-2 justify-center">
                 <button className="daisy-btn daisy-btn-sm daisy-btn-outline daisy-btn-primary">
-                  deposit
+                  Deposit
                 </button>
                 <button className="daisy-btn daisy-btn-sm daisy-btn-outline daisy-btn-primary">
                   Withdraw
@@ -110,51 +117,57 @@ export function StakeCard({ account }: StakeCardProps): ReactElement {
 
         <div className="flex flex-col gap-4">
           <div className="daisy-stats">
-            {currentPendingLUSDGain ? (
-              <div className="daisy-stat">
-                <div className="daisy-stat-title text-neutral">
-                  Pending LUSD Gain
-                </div>
-                <div className="daisy-stat-value flex gap-2 items-center">
-                  <CryptoIcon
-                    icon={IconName.LUSD}
-                    size={IconSize.SMALL}
-                    className={"flex-shrink-0"}
-                  />
-                  {(+formatEther(currentPendingLUSDGain)).toFixed(2)}
-                </div>
-                {!yesterdayPendingLUSDGain ? (
-                  <Skeleton />
-                ) : (
-                  <div
-                    className={classNames(
-                      "daisy-stat-desc text-[darkgreen] mt-1 text-base font-semibold"
-                    )}
-                  >
-                    {+lusdGain24Hours > 0 ? "+" : null}
-                    {lusdGain24Hours} (24h change)
-                  </div>
-                )}
-              </div>
-            ) : null}
-            {pendingETHGain ? (
-              <div className="daisy-stat">
-                <div className="daisy-stat-title text-neutral">
-                  Pending ETH Gain
-                </div>
-                <div className="daisy-stat-value flex gap-2 items-center">
-                  <CryptoIcon
-                    icon={IconName.ETH}
-                    size={IconSize.SMALL}
-                    className={"flex-shrink-0"}
-                  />
-                  {(+formatEther(pendingETHGain)).toFixed(4)}
-                </div>
-                <div className="daisy-stat-desc text-green-700 mt-1 text-base font-semibold invisible">
-                  no change
-                </div>
-              </div>
-            ) : null}
+            <StatWith24HourChange
+              label="Pending LUSD Gain"
+              icon={
+                <CryptoIcon
+                  icon={IconName.LUSD}
+                  size={IconSize.SMALL}
+                  className={"flex-shrink-0"}
+                />
+              }
+              statValue={
+                currentPendingLUSDGain
+                  ? formatEther(currentPendingLUSDGain)
+                  : undefined
+              }
+              yesterdayStatValue={
+                yesterdayPendingLUSDGain
+                  ? formatEther(yesterdayPendingLUSDGain)
+                  : undefined
+              }
+              statValuePrecision={2}
+              isLoading={[
+                currentPendingLUSDGainStatus,
+                yesterdayPendingLUSDGainStatus,
+              ].includes("loading")}
+            />
+
+            <StatWith24HourChange
+              label="Pending ETH Gain"
+              icon={
+                <CryptoIcon
+                  icon={IconName.ETH}
+                  size={IconSize.SMALL}
+                  className={"flex-shrink-0"}
+                />
+              }
+              statValue={
+                currentPendingETHGain
+                  ? formatEther(currentPendingETHGain)
+                  : undefined
+              }
+              yesterdayStatValue={
+                yesterdayPendingETHGain
+                  ? formatEther(yesterdayPendingETHGain)
+                  : undefined
+              }
+              statValuePrecision={4}
+              isLoading={[
+                currentPendingETHGainStatus,
+                yesterdayPendingETHGainStatus,
+              ].includes("loading")}
+            />
           </div>
           <button className="daisy-btn daisy-btn-outline w-full daisy-btn-primary">
             Claim Rewards

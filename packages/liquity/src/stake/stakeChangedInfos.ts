@@ -1,8 +1,7 @@
 import { AlchemyProvider } from "alchemy-sdk";
 import { Event } from "ethers";
 import { formatEther } from "ethers/lib/utils";
-import chunk from "lodash.chunk";
-import range from "lodash.range";
+import { createBlockIntervals } from "src/base/blocks";
 import { lqtyStakingContract } from "src/contracts/lqtyStaking";
 export const STAKE_CHANGED_INFOS_URL =
   "https://liquity.s3.amazonaws.com/stakeChangedInfos.json";
@@ -44,18 +43,11 @@ async function queryStakeChangedEvents(
 ) {
   const latestBlock = await provider.getBlockNumber();
 
-  // creates a list of block intervals
-  const blockRanges = chunk(range(startBlock, latestBlock + 1, 50_000), 2);
-  // Add an additional interval that extends to the latest block
-  const lastBlockRange = blockRanges[blockRanges.length - 1];
-  const lastBlockRangeEnd = lastBlockRange[1];
-  if (lastBlockRangeEnd && lastBlockRangeEnd < latestBlock) {
-    blockRanges.push([lastBlockRangeEnd, latestBlock]);
-  }
+  const blockIntervals = createBlockIntervals(startBlock, latestBlock);
 
   const lqtyStaking = lqtyStakingContract.connect(provider);
   const stakeChangedEvents: Event[] = [];
-  for (const [startBlock, endBlock = latestBlock] of blockRanges) {
+  for (const [startBlock, endBlock] of blockIntervals) {
     const rawEvents = await lqtyStaking.queryFilter(
       lqtyStakingContract.filters["StakeChanged"](address || null, null),
       startBlock,

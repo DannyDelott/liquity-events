@@ -3,11 +3,12 @@ import { STATS_ROUTE } from "src/ui/stats/routes";
 import Link from "next/link";
 import classNames from "classnames";
 import { useRouter } from "next/router";
-import { HomeIcon, MenuIcon, StatsIcon } from "src/ui/base/icons";
+import { HistoryIcon, HomeIcon, MenuIcon, StatsIcon } from "src/ui/base/icons";
 import { useIsTailwindSmallScreen } from "src/ui/base/tailwindBreakpoints";
 import { useAccountModal, useConnectModal } from "@rainbow-me/rainbowkit";
 import { useAccount } from "wagmi";
 import { formatAddress } from "src/ui/base/format";
+import { HISTORY_ROUTE } from "src/ui/history/routes";
 
 export function Navigation() {
   const { pathname } = useRouter();
@@ -29,6 +30,12 @@ export function Navigation() {
             <Link href={HOME_ROUTE}>
               <HomeIcon height={20} width={20} />
               Home
+            </Link>
+          </li>
+          <li>
+            <Link href={HISTORY_ROUTE}>
+              <HistoryIcon height={20} width={20} />
+              History
             </Link>
           </li>
           <li>
@@ -54,6 +61,7 @@ export function Navigation() {
       </div>
     );
   }
+
   return (
     <div className="daisy-tabs">
       <Link
@@ -68,6 +76,17 @@ export function Navigation() {
       >
         <HomeIcon height={20} width={20} />
         Home
+      </Link>
+      <Link
+        href={HISTORY_ROUTE}
+        className={classNames(
+          "daisy-tab gap-1",
+          isSmallScreen ? "daisy-tab-sm" : "daisy-tab-lg",
+          { ["daisy-tab-active"]: pathname === HISTORY_ROUTE }
+        )}
+      >
+        <HistoryIcon height={20} width={20} />
+        History
       </Link>
       <Link
         href={STATS_ROUTE}

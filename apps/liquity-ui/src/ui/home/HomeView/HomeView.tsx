@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 import { Fragment, ReactElement } from "react";
 import { Page } from "src/ui/base/Page/Page";
 import { StakeCard } from "src/ui/stake/StakeCard/StakeCard";
-import { StakeHistoryTable } from "src/ui/stake/StakeHistoryTable/StakeHistoryTable";
 import { useAccount } from "wagmi";
 
 export function HomeView(): ReactElement {
@@ -15,12 +14,7 @@ export function HomeView(): ReactElement {
       <div className="flex flex-col gap-20 items-center">
         {connectedAccount ? (
           <div className="flex gap-4 flex-col items-center 2xl:flex-row 2xl:items-start ">
-            <div className="">
-              <StakeCard account={connectedAccount} />
-            </div>
-            <div className="flex-1">
-              <StakeHistoryTable account={connectedAccount} />
-            </div>
+            <StakeCard account={connectedAccount} />
           </div>
         ) : (
           <Fragment>

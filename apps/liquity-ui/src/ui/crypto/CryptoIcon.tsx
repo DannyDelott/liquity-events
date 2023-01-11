@@ -38,13 +38,13 @@ const CryptoIconSize: Record<
     // lqty icon isn't a perfect square, so we bump up the size to be consistent
     // with the other logos
     small: { height: 28, width: 28 },
-    medium: { height: 24, width: 24 },
+    medium: { height: 32, width: 32 },
     large: { height: 42, width: 42 },
   },
   LUSD: {
     "x-small": { height: 18, width: 18 },
     small: { height: 24, width: 24 },
-    medium: { height: 24, width: 24 },
+    medium: { height: 32, width: 32 },
     large: { height: 42, width: 42 },
   },
 };
