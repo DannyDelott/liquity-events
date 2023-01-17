@@ -7,7 +7,5 @@ export function useLQTYStakedForAccount(account: string) {
     abi: lqtyStakingABI,
     functionName: "stakes",
     args: [account as `0x${string}`],
-    // refetch on every new block
-    watch: true,
   });
 }
