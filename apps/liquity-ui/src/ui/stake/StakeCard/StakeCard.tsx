@@ -1,7 +1,9 @@
-import { commify, formatEther } from "ethers/lib/utils.js";
-import { ReactElement, ReactNode } from "react";
+import { formatEther } from "ethers/lib/utils.js";
+import { ReactElement } from "react";
 import { BLOCKS_PER_DAY } from "src/base/ethereum";
+import { formatLQTYOrLUSDLabel } from "src/ui/base/format";
 import { CryptoIcon, IconName, IconSize } from "src/ui/crypto/CryptoIcon";
+import { DepositLQTYButton } from "src/ui/stake/DepositLQTYModal/DepositLQTYButton";
 import { useLQTYStakedForAccount } from "src/ui/stake/useLQTYStakedForAccount";
 import { usePendingETHGain } from "src/ui/stake/usePendingETHGain";
 import { usePendingLUSDGain } from "src/ui/stake/usePendingLUSDGain";
@@ -49,10 +51,9 @@ export function StakeCard({ account }: StakeCardProps): ReactElement {
     ).toFixed(4);
   }
 
-  const formattedStakedBalance = commify(formatEther(lqtyStaked || 0));
-  const formattedTotalStaked = commify(
-    (+formatEther(totalLQTYStaked || 0)).toFixed()
-  );
+  const formattedStakedBalance = formatLQTYOrLUSDLabel(lqtyStaked);
+  const formattedTotalStaked = formatLQTYOrLUSDLabel(totalLQTYStaked);
+
   return (
     <div className="daisy-card bg-base-100 shadow-xl w-full md:min-w-[400px] md:max-w-[500px]">
       <figure className="bg-[#D2D6DC14] border-b-2 flex w-full">
@@ -104,9 +105,7 @@ export function StakeCard({ account }: StakeCardProps): ReactElement {
               </div>
 
               <div className="daisy-stat-actions gap-2 flex mt-2 justify-center">
-                <button className="daisy-btn daisy-btn-sm daisy-btn-outline daisy-btn-primary">
-                  Deposit
-                </button>
+                <DepositLQTYButton />
                 <button className="daisy-btn daisy-btn-sm daisy-btn-outline daisy-btn-primary">
                   Withdraw
                 </button>

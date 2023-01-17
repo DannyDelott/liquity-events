@@ -14,7 +14,7 @@ export function formatPoolShare(poolShare?: number) {
   return `${(poolShare * 100).toFixed(4)}%`;
 }
 
-export function formatLQTYLabel(amount?: BigNumber | string): string {
+export function formatLQTYOrLUSDLabel(amount?: BigNumber | string): string {
   if (!amount) {
     return "0.00";
   }

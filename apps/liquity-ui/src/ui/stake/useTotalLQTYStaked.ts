@@ -1,4 +1,3 @@
-import { formatEther } from "ethers/lib/utils.js";
 import { lqtyStakingABI, LIQUITY_STAKING_ADDRESS } from "liquity";
 import { useContractRead } from "wagmi";
 

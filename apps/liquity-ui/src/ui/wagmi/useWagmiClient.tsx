@@ -1,6 +1,7 @@
 import { getDefaultWallets } from "@rainbow-me/rainbowkit";
 import { useQuery } from "@tanstack/react-query";
 import { alchemy } from "src/provider";
+import { queryClient } from "src/queryClient";
 import { configureChains, createClient, mainnet } from "wagmi";
 
 /**

@@ -3,7 +3,7 @@ import Skeleton from "react-loading-skeleton";
 import { ReactElement, useMemo, useState } from "react";
 import { useStakeChangedInfos } from "src/ui/stake/useStakeChangedInfos";
 import { makeEtherscanBlockUrl, makeEtherscanTxUrl } from "src/etherscan";
-import { formatLQTYLabel, formatPoolShare } from "src/ui/base/format";
+import { formatLQTYOrLUSDLabel, formatPoolShare } from "src/ui/base/format";
 import dateFormat from "dateformat";
 import { isAddress } from "@ethersproject/address";
 import { parseEther } from "@ethersproject/units";
@@ -242,21 +242,21 @@ export function StakeHistoryTable({
                           </td>
 
                           <td className={`font-bold`} align="right">
-                            {formatLQTYLabel(newStake)}
+                            {formatLQTYOrLUSDLabel(newStake)}
                             <br />{" "}
                             {stakedDelta ? (
                               +stakedDelta > 0 ? (
                                 <span className="text-[green]">
-                                  ({`+${formatLQTYLabel(stakedDelta)}`})
+                                  ({`+${formatLQTYOrLUSDLabel(stakedDelta)}`})
                                 </span>
                               ) : (
                                 <span className="text-[red]">
-                                  ({`${formatLQTYLabel(stakedDelta)}`})
+                                  ({`${formatLQTYOrLUSDLabel(stakedDelta)}`})
                                 </span>
                               )
                             ) : (
                               <span className="text-[green]">
-                                ({`+${formatLQTYLabel(newStake)}`})
+                                ({`+${formatLQTYOrLUSDLabel(newStake)}`})
                               </span>
                             )}
                           </td>
@@ -264,7 +264,7 @@ export function StakeHistoryTable({
                             {formatPoolShare(+newStake / +totalLqtyStaked)}
                           </td>
                           <td className={``} align="right">
-                            {formatLQTYLabel(totalLqtyStaked)}
+                            {formatLQTYOrLUSDLabel(totalLqtyStaked)}
                           </td>
                         </tr>
                       );

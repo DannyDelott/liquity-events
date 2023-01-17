@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import { CryptoIcon, IconName, IconSize } from "src/ui/crypto/CryptoIcon";
 import { useTokenBalance } from "src/wallet/useTokenBalance";
 import { useAccount } from "wagmi";
-import { formatLQTYLabel } from "src/ui/base/format";
+import { formatLQTYOrLUSDLabel } from "src/ui/base/format";
 import { PriceWidget } from "src/ui/price/PriceWidget";
 import { useIsTailwindSmallScreen } from "src/ui/base/tailwindBreakpoints";
 import { Navigation } from "src/ui/navigation/Navigation";
@@ -53,13 +53,13 @@ export function Header(): ReactElement {
           {lusdBalance ? (
             <div className="flex gap-1.5 items-center text-lg">
               <CryptoIcon icon={IconName.LUSD} size={IconSize.SMALL} />
-              <span>{lusdBalance.formatted}</span>
+              <span>{formatLQTYOrLUSDLabel(lusdBalance.formatted)}</span>
             </div>
           ) : null}
           {lqtyBalance ? (
             <div className="flex gap-1.5 items-center text-lg">
               <CryptoIcon icon={IconName.LQTY} size={IconSize.SMALL} />
-              <span>{formatLQTYLabel(lqtyBalance.formatted)}</span>
+              <span>{formatLQTYOrLUSDLabel(lqtyBalance.formatted)}</span>
             </div>
           ) : null}
         </div>
