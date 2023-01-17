@@ -1,16 +1,12 @@
 import { AlchemyProvider } from "alchemy-sdk";
 import { Event } from "ethers";
 import { formatEther } from "ethers/lib/utils";
-import { createBlockIntervals } from "src/base/blocks";
 import { scrapeEventData } from "src/scrapeEventData";
 import {
   LIQUITY_STAKING_ADDRESS,
   lqtyStakingABI,
   lqtyStakingContract,
 } from "src/contracts/lqtyStaking";
-import { makeStakeChangedInfosFile } from "src/stake/makeStakeChangedInfosFile";
-import { writeFile } from "src/base/writeFile";
-import stakeChangedInfosJson from "src/stake/json/stakeChangedInfos.json";
 export const STAKE_CHANGED_INFOS_URL =
   "https://liquity.s3.amazonaws.com/stakeChangedInfos.json";
 
