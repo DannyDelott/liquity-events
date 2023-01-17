@@ -2,7 +2,15 @@ import { AlchemyProvider } from "alchemy-sdk";
 import { Event } from "ethers";
 import { formatEther } from "ethers/lib/utils";
 import { createBlockIntervals } from "src/base/blocks";
-import { lqtyStakingContract } from "src/contracts/lqtyStaking";
+import { scrapeEventData } from "src/scrapeEventData";
+import {
+  LIQUITY_STAKING_ADDRESS,
+  lqtyStakingABI,
+  lqtyStakingContract,
+} from "src/contracts/lqtyStaking";
+import { makeStakeChangedInfosFile } from "src/stake/makeStakeChangedInfosFile";
+import { writeFile } from "src/base/writeFile";
+import stakeChangedInfosJson from "src/stake/json/stakeChangedInfos.json";
 export const STAKE_CHANGED_INFOS_URL =
   "https://liquity.s3.amazonaws.com/stakeChangedInfos.json";
 
@@ -25,69 +33,25 @@ export async function fetchStakeChangedInfos(
   provider: AlchemyProvider,
   address?: string
 ): Promise<StakeChangedInfo[]> {
-  // // Grab the raw events
-  const stakeChangedEvents = await queryStakeChangedEvents(
-    startBlock,
-    provider,
-    address
-  );
-
-  // // map the events to their borrow infos
-  return makeStakeChangedInfos(stakeChangedEvents, provider);
-}
-
-async function queryStakeChangedEvents(
-  startBlock: number,
-  provider: AlchemyProvider,
-  address?: string
-) {
   const latestBlock = await provider.getBlockNumber();
 
-  const blockIntervals = createBlockIntervals(startBlock, latestBlock);
+  return scrapeEventData<StakeChangedInfo, typeof lqtyStakingABI>({
+    contractAddress: LIQUITY_STAKING_ADDRESS,
+    contractABI: lqtyStakingABI,
+    startBlock: startBlock,
+    endBlock: latestBlock,
+    eventName: "StakeChanged",
+    filterArgs: [address || null, null],
+    provider,
+    mapEventToEventData: async (stakeChangedEvent) => {
+      const stakeChangedInfo = await fetchStakeChangedInfoForEvent(
+        provider,
+        stakeChangedEvent
+      );
 
-  const lqtyStaking = lqtyStakingContract.connect(provider);
-  const stakeChangedEvents: Event[] = [];
-  for (const [startBlock, endBlock] of blockIntervals) {
-    const rawEvents = await lqtyStaking.queryFilter(
-      lqtyStakingContract.filters["StakeChanged"](address || null, null),
-      startBlock,
-      endBlock
-    );
-
-    stakeChangedEvents.push(...rawEvents);
-  }
-
-  console.log(
-    `StakeChanged: ${stakeChangedEvents.length} events (startBlock #${startBlock}, endBlock #${latestBlock})`
-  );
-
-  return stakeChangedEvents;
-}
-
-async function makeStakeChangedInfos(
-  stakeChangedEvents: Event[],
-  provider: AlchemyProvider
-) {
-  const numEvents = stakeChangedEvents.length;
-  const stakeChangedInfos: StakeChangedInfo[] = [];
-  let counter = 1;
-  for (const stakeChangedEvent of stakeChangedEvents) {
-    const stakeChangedInfo = await fetchStakeChangedInfoForEvent(
-      provider,
-      stakeChangedEvent
-    );
-    console.log(
-      `(${counter} of ${numEvents}): LQTY Staked = ${(+stakeChangedInfo.totalLqtyStaked).toFixed(
-        2
-      )}`
-    );
-
-    stakeChangedInfos.push(stakeChangedInfo);
-
-    counter++;
-  }
-
-  return stakeChangedInfos;
+      return stakeChangedInfo;
+    },
+  });
 }
 
 async function fetchStakeChangedInfoForEvent(

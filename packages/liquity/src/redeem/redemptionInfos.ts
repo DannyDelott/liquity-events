@@ -5,10 +5,11 @@ import { formatEther } from "ethers/lib/utils";
 import {
   troveOperationsABI,
   TROVE_OPERATIONS_ADDRESS,
-  TROVE_OPERATIONS_DEPLOYMENT_BLOCK,
 } from "src/contracts/troveOperations";
 import { fetchEthPrice } from "src/defillama";
 import { scrapeEventData } from "src/scrapeEventData";
+import { makeRedemptionInfosFile } from "src/redeem/makeRedemptionInfosFile";
+import { writeFile } from "src/base/writeFile";
 
 export const REDEMPTION_INFOS_URL =
   "https://liquity.s3.amazonaws.com/redemptionInfos.json";
@@ -37,8 +38,21 @@ export async function fetchRedemptionInfos(
     eventName: "Redemption",
     filterArgs: [],
     provider,
-    mapEventToEventData: async (redeemEvent) =>
-      fetchRedemptionInfoForEvent(provider, redeemEvent),
+    mapEventToEventData: async (redeemEvent, redeemInfos) => {
+      const redeemInfo = await fetchRedemptionInfoForEvent(
+        provider,
+        redeemEvent
+      );
+
+      // TODO: REMOVE THIS
+      const redemptionInfos: RedemptionInfo[] = [...redeemInfos, redeemInfo];
+      const json = makeRedemptionInfosFile(redemptionInfos);
+      const REDEMPTION_INFOS_FILE_PATH = "src/redeem/json/redemptionInfos.json";
+      writeFile(REDEMPTION_INFOS_FILE_PATH, json);
+      // TODO: END REMOVE THIS
+
+      return redeemInfo;
+    },
   });
 }
 

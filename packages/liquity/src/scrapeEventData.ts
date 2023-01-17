@@ -10,7 +10,10 @@ interface ScrapeEventDataArguments<EventData, ContractABI extends Abi> {
   filterArgs: any[];
   startBlock: number;
   endBlock: number;
-  mapEventToEventData: (event: Event) => Promise<EventData>;
+  mapEventToEventData: (
+    currentEvent: Event,
+    existingEventInfos: EventData[]
+  ) => Promise<EventData>;
   provider: AlchemyProvider;
   eventPredicate?: (event: Event) => boolean;
 }
@@ -51,12 +54,18 @@ export async function scrapeEventData<EventData, ContractABI extends Abi>({
       events.push(...rawEvents);
     }
   }
+  console.log(
+    `${eventName}: ${events.length} events (startBlock #${startBlock}, endBlock #${endBlock})`
+  );
 
   // add additional information to each event to create the EventData
   const eventDatas: EventData[] = [];
+  let counter = 1;
   for (const event of events) {
-    const eventData = await mapEventToEventData(event);
+    console.log(`${eventName}: ${counter} of ${events.length}`);
+    const eventData = await mapEventToEventData(event, eventDatas);
     eventDatas.push(eventData);
+    counter++;
   }
 
   return eventDatas;
