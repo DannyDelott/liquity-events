@@ -1,4 +1,5 @@
 import { Contract } from "ethers";
+import { TypedEvent } from "src/base/abitype";
 
 export const TROVE_OPERATIONS_ADDRESS =
   "0xA39739EF8b0231DbFA0DcdA07d7e29faAbCf4bb2";
@@ -1078,3 +1079,8 @@ export const troveOperationsContract = new Contract(
   TROVE_OPERATIONS_ADDRESS,
   troveOperationsABI
 );
+
+export type RedemptionEvent = TypedEvent<
+  typeof troveOperationsABI,
+  "Redemption"
+>;

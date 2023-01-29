@@ -1,18 +1,15 @@
 import { AlchemyProvider } from "alchemy-sdk";
-import { Event } from "ethers";
 
 import {
   borrowerOperationsABI,
   BORROWER_OPERATIONS_ADDRESS,
+  LUSDBorrowingFeePaidEvent,
 } from "src/contracts/borrowerOperations";
 import { lqtyStakingContract } from "src/contracts/lqtyStaking";
 import { formatEther } from "ethers/lib/utils";
 import { fetchPrice } from "src/defillama";
 import { LUSD_TOKEN_ADDRESS } from "src/lusdToken";
-import { scrapeEventData } from "src/scrapeEventData";
-
-export const BORROW_INFOS_URL =
-  "https://liquity.s3.amazonaws.com/borrowInfos.json";
+import { makeEventInfos } from "src/makeEventInfos";
 
 export interface BorrowInfo {
   block: number;
@@ -30,22 +27,26 @@ export async function fetchBorrowInfos(
 ): Promise<BorrowInfo[]> {
   const latestBlock = await provider.getBlockNumber();
 
-  return scrapeEventData<BorrowInfo, typeof borrowerOperationsABI>({
+  return makeEventInfos<
+    typeof borrowerOperationsABI,
+    "LUSDBorrowingFeePaid",
+    BorrowInfo
+  >({
     contractABI: borrowerOperationsABI,
     contractAddress: BORROWER_OPERATIONS_ADDRESS,
     startBlock,
     endBlock: latestBlock,
     eventName: "LUSDBorrowingFeePaid",
-    filterArgs: [],
+    filterArgs: [null],
     eventPredicate: (event) => isNonZeroFeeEvent(event),
     provider,
-    mapEventToEventData: (event) => fetchBorrowInfoForEvent(provider, event),
+    mapEventToEventInfo: (event) => mapEventToBorrowInfo(event, provider),
   });
 }
 
-async function fetchBorrowInfoForEvent(
-  provider: AlchemyProvider,
-  lusdBorrowingFeePaidEvent: Event
+async function mapEventToBorrowInfo(
+  lusdBorrowingFeePaidEvent: LUSDBorrowingFeePaidEvent,
+  provider: AlchemyProvider
 ): Promise<BorrowInfo> {
   const { blockNumber, transactionHash } = lusdBorrowingFeePaidEvent;
   const { timestamp } = await provider.getBlock(blockNumber);
@@ -57,7 +58,7 @@ async function fetchBorrowInfoForEvent(
     blockTag: blockNumber,
   });
 
-  const lusdFee = formatEther(lusdBorrowingFeePaidEvent.args?.[1]);
+  const lusdFee = formatEther(lusdBorrowingFeePaidEvent.args[1]);
   const priceResult = await fetchPrice(LUSD_TOKEN_ADDRESS, timestamp);
 
   // default to 1:1 since lusd is a stable coin
@@ -73,13 +74,13 @@ async function fetchBorrowInfoForEvent(
     block: blockNumber,
     txHash: transactionHash,
     timestamp,
-    borrower: lusdBorrowingFeePaidEvent.args?.[0],
+    borrower: lusdBorrowingFeePaidEvent.args[0],
     lusdFee,
     lusdFeeUSD,
     totalLqtyStaked: formatEther(totalLQTYStaked),
   };
 }
 
-function isNonZeroFeeEvent(event: Event) {
-  return event.args?.[1].gt(0);
+function isNonZeroFeeEvent(event: LUSDBorrowingFeePaidEvent) {
+  return event.args[1].gt(0);
 }

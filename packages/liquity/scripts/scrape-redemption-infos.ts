@@ -2,7 +2,6 @@ require("dotenv").config();
 
 import { fetchJson } from "src/base/fetchJson";
 import { writeFile } from "src/base/writeFile";
-import { TROVE_OPERATIONS_DEPLOYMENT_BLOCK } from "src/contracts/troveOperations";
 import { alchemy } from "src/provider/provider";
 import {
   makeRedemptionInfosFile,
@@ -11,8 +10,8 @@ import {
 import {
   fetchRedemptionInfos,
   RedemptionInfo,
-  REDEMPTION_INFOS_URL,
 } from "src/redeem/redemptionInfos";
+import { REDEMPTION_INFOS_URL } from "src/redeem/s3";
 import { pushToS3 } from "src/s3/pushToS3";
 import { s3 } from "src/s3/s3Client";
 

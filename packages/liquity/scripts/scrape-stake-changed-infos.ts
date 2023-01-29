@@ -2,7 +2,6 @@ require("dotenv").config();
 
 import { fetchJson } from "src/base/fetchJson";
 import { writeFile } from "src/base/writeFile";
-import { LIQUITY_STAKING_DEPLOYMENT_BLOCK } from "src/index";
 import { alchemy } from "src/provider/provider";
 import { pushToS3 } from "src/s3/pushToS3";
 import { s3 } from "src/s3/s3Client";
@@ -12,9 +11,9 @@ import {
 } from "src/stake/makeStakeChangedInfosFile";
 import {
   fetchStakeChangedInfos,
-  STAKE_CHANGED_INFOS_URL,
   StakeChangedInfo,
 } from "src/stake/stakeChangedInfos";
+import { STAKE_CHANGED_INFOS_URL } from "src/stake/s3";
 
 const STAKE_CHANGED_INFOS_FILE_PATH = "src/stake/json/stakeChangedInfos.json";
 

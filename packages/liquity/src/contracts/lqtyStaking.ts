@@ -1,4 +1,5 @@
 import { Contract } from "ethers";
+import { TypedEvent } from "src/base/abitype";
 
 export const LIQUITY_STAKING_ADDRESS =
   "0x4f9Fbb3f1E99B56e0Fe2892e623Ed36A76Fc605d";
@@ -391,3 +392,8 @@ export const lqtyStakingContract = new Contract(
   LIQUITY_STAKING_ADDRESS,
   lqtyStakingABI
 );
+
+export type StakeChangedEvent = TypedEvent<
+  typeof lqtyStakingABI,
+  "StakeChanged"
+>;

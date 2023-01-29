@@ -2,15 +2,12 @@ require("dotenv").config();
 
 import { fetchJson } from "src/base/fetchJson";
 import { writeFile } from "src/base/writeFile";
-import {
-  BorrowInfo,
-  BORROW_INFOS_URL,
-  fetchBorrowInfos,
-} from "src/borrow/borrowInfos";
+import { BorrowInfo, fetchBorrowInfos } from "src/borrow/borrowInfos";
 import {
   BorrowInfosFile,
   makeBorrowInfosFile,
 } from "src/borrow/makeBorrowInfosFile";
+import { BORROW_INFOS_URL } from "src/borrow/s3";
 import { alchemy } from "src/provider/provider";
 import { pushToS3 } from "src/s3/pushToS3";
 import { s3 } from "src/s3/s3Client";

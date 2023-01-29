@@ -1,15 +1,12 @@
 import { AlchemyProvider } from "alchemy-sdk";
-import { Event } from "ethers";
 import { formatEther } from "ethers/lib/utils";
-import { scrapeEventData } from "src/scrapeEventData";
+import { makeEventInfos } from "src/makeEventInfos";
 import {
   LIQUITY_STAKING_ADDRESS,
   lqtyStakingABI,
   lqtyStakingContract,
+  StakeChangedEvent,
 } from "src/contracts/lqtyStaking";
-export const STAKE_CHANGED_INFOS_URL =
-  "https://liquity.s3.amazonaws.com/stakeChangedInfos.json";
-
 export interface StakeChangedInfo {
   block: number;
   txHash: string;
@@ -31,28 +28,26 @@ export async function fetchStakeChangedInfos(
 ): Promise<StakeChangedInfo[]> {
   const latestBlock = await provider.getBlockNumber();
 
-  return scrapeEventData<StakeChangedInfo, typeof lqtyStakingABI>({
+  return makeEventInfos<
+    typeof lqtyStakingABI,
+    "StakeChanged",
+    StakeChangedInfo
+  >({
     contractAddress: LIQUITY_STAKING_ADDRESS,
     contractABI: lqtyStakingABI,
     startBlock: startBlock,
     endBlock: latestBlock,
     eventName: "StakeChanged",
-    filterArgs: [address || null, null],
+    filterArgs: [address || null],
     provider,
-    mapEventToEventData: async (stakeChangedEvent) => {
-      const stakeChangedInfo = await fetchStakeChangedInfoForEvent(
-        provider,
-        stakeChangedEvent
-      );
-
-      return stakeChangedInfo;
-    },
+    mapEventToEventInfo: (stakeChangedEvent) =>
+      mapEventToStakeChangedInfo(stakeChangedEvent, provider),
   });
 }
 
-async function fetchStakeChangedInfoForEvent(
-  provider: AlchemyProvider,
-  stakeChangedEvent: Event
+async function mapEventToStakeChangedInfo(
+  stakeChangedEvent: StakeChangedEvent,
+  provider: AlchemyProvider
 ): Promise<StakeChangedInfo> {
   const { blockNumber, transactionHash } = stakeChangedEvent;
   const { timestamp } = await provider.getBlock(blockNumber);
@@ -68,8 +63,8 @@ async function fetchStakeChangedInfoForEvent(
     block: blockNumber,
     txHash: transactionHash,
     timestamp,
-    staker: stakeChangedEvent.args?.[0],
-    newStake: formatEther(stakeChangedEvent.args?.[1]),
+    staker: stakeChangedEvent.args[0],
+    newStake: formatEther(stakeChangedEvent.args[1]),
     totalLqtyStaked: formatEther(totalLQTYStaked),
   };
 }
