@@ -1,4 +1,5 @@
 import { Contract } from "ethers";
+import { TypedEvent } from "src/base/abitype";
 
 // See: https://etherscan.io/txs?a=0x24179cd81c9e782a4096035f7ec97fb8b783e007&f=5
 export const BORROWER_OPERATIONS_DEPLOYMENT_BLOCK = 12178582;
@@ -598,3 +599,8 @@ export const borrowerOperationsContract = new Contract(
   BORROWER_OPERATIONS_ADDRESS,
   borrowerOperationsABI
 );
+
+export type LUSDBorrowingFeePaidEvent = TypedEvent<
+  typeof borrowerOperationsABI,
+  "LUSDBorrowingFeePaid"
+>;
