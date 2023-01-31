@@ -8,6 +8,7 @@ import { useLQTYStakedForAccount } from "src/ui/stake/useLQTYStakedForAccount";
 import { usePendingETHGain } from "src/ui/stake/usePendingETHGain";
 import { usePendingLUSDGain } from "src/ui/stake/usePendingLUSDGain";
 import { useTotalLQTYStaked } from "src/ui/stake/useTotalLQTYStaked";
+import { WithdrawLQTYButton } from "src/ui/stake/WithdrawLQTYModal/WithdrawLQTYButton";
 import { StatWith24HourChange } from "src/ui/stats/StatWith24HourChange/StatWith24HourChange";
 import { useBlockNumber } from "wagmi";
 
@@ -106,9 +107,7 @@ export function StakeCard({ account }: StakeCardProps): ReactElement {
 
               <div className="daisy-stat-actions gap-2 flex mt-2 justify-center">
                 <DepositLQTYButton />
-                <button className="daisy-btn daisy-btn-sm daisy-btn-outline daisy-btn-primary">
-                  Withdraw
-                </button>
+                <WithdrawLQTYButton />
               </div>
             </div>
           </div>
