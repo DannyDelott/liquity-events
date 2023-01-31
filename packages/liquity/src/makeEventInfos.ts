@@ -17,7 +17,8 @@ interface MakeEventInfosOptions<
   endBlock: number;
   mapEventToEventInfo: (
     currentEvent: TypedEvent<ContractABI, EventName>,
-    existingEventInfos: EventInfo[]
+    existingEventInfos: EventInfo[],
+    totalEvents: number
   ) => Promise<EventInfo>;
   provider: AlchemyProvider;
   eventPredicate?: (event: TypedEvent<ContractABI, EventName>) => boolean;
@@ -72,8 +73,11 @@ export async function makeEventInfos<
   const eventInfos: EventInfo[] = [];
   let counter = 1;
   for (const event of filteredEvents) {
-    console.log(`${eventName}: ${counter} of ${events.length}`);
-    const eventInfo = await mapEventToEventInfo(event, eventInfos);
+    const eventInfo = await mapEventToEventInfo(
+      event,
+      eventInfos,
+      filteredEvents.length
+    );
     eventInfos.push(eventInfo);
     counter++;
   }

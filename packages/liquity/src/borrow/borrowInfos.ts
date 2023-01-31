@@ -10,6 +10,7 @@ import { formatEther } from "ethers/lib/utils";
 import { fetchPrice } from "src/defillama";
 import { LUSD_TOKEN_ADDRESS } from "src/lusdToken";
 import { makeEventInfos } from "src/makeEventInfos";
+import { LQTY_TOKEN_ADDRESS } from "src/lqtyToken";
 
 export interface BorrowInfo {
   block: number;
@@ -17,8 +18,9 @@ export interface BorrowInfo {
   timestamp: number;
   borrower: string;
   lusdFee: string;
-  lusdFeeUSD: string;
+  lusdPrice: string;
   totalLqtyStaked: string;
+  lqtyPrice: string;
 }
 
 export async function fetchBorrowInfos(
@@ -40,7 +42,28 @@ export async function fetchBorrowInfos(
     filterArgs: [null],
     eventPredicate: (event) => isNonZeroFeeEvent(event),
     provider,
-    mapEventToEventInfo: (event) => mapEventToBorrowInfo(event, provider),
+    mapEventToEventInfo: async (event, existingInfos, totalEvents) => {
+      try {
+        const borrowInfo = await mapEventToBorrowInfo(event, provider);
+        console.log(
+          `${existingInfos.length + 1} of ${totalEvents}: Fee ${
+            borrowInfo.lusdFee
+          }`
+        );
+        return borrowInfo;
+      } catch (err) {
+        console.log(
+          "Something went wrong in mapEventToBorrowInfo! Retrying..."
+        );
+        const borrowInfo = await mapEventToBorrowInfo(event, provider);
+        console.log(
+          `${existingInfos.length + 1} of ${totalEvents}: Fee ${
+            borrowInfo.lusdFee
+          }`
+        );
+        return borrowInfo;
+      }
+    },
   });
 }
 
@@ -54,21 +77,20 @@ async function mapEventToBorrowInfo(
   // the totalLQTYStaked is useful for calculating your pool share at the time
   // of the event
   const lqtyStaking = lqtyStakingContract.connect(provider);
-  const totalLQTYStaked = await lqtyStaking["totalLQTYStaked"]({
-    blockTag: blockNumber,
-  });
+  const totalLqtyStaked = formatEther(
+    await lqtyStaking["totalLQTYStaked"]({
+      blockTag: blockNumber,
+    })
+  );
 
   const lusdFee = formatEther(lusdBorrowingFeePaidEvent.args[1]);
-  const priceResult = await fetchPrice(LUSD_TOKEN_ADDRESS, timestamp);
 
-  // default to 1:1 since lusd is a stable coin
-  let lusdFeeUSD = lusdFee;
+  // We need the $ value of the fee to calculate the staking APY.
+  const lusdPriceResult = await fetchPrice(LUSD_TOKEN_ADDRESS, timestamp);
 
-  // but we may have a more accurate price since it can be off-peg by small
-  // amounts
-  if (priceResult) {
-    lusdFeeUSD = `${+lusdFee * priceResult.price}`;
-  }
+  // We also need the $ value of all the staked LQTY to calculate the staking
+  // apy.
+  const lqtyPriceResult = await fetchPrice(LQTY_TOKEN_ADDRESS, timestamp);
 
   return {
     block: blockNumber,
@@ -76,8 +98,10 @@ async function mapEventToBorrowInfo(
     timestamp,
     borrower: lusdBorrowingFeePaidEvent.args[0],
     lusdFee,
-    lusdFeeUSD,
-    totalLqtyStaked: formatEther(totalLQTYStaked),
+    // Default to $1 since lusd is a stable coin
+    lusdPrice: `${lusdPriceResult?.price || "1"}`,
+    totalLqtyStaked,
+    lqtyPrice: `${lqtyPriceResult?.price || "0"}`,
   };
 }
 
