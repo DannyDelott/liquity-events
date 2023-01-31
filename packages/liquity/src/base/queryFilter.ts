@@ -1,6 +1,5 @@
 import { Abi, ExtractAbiEventNames } from "abitype";
-import { AlchemyProvider } from "alchemy-sdk";
-import { Contract, ContractInterface } from "ethers";
+import { Contract } from "ethers";
 import { ExtractEventFilterArgs, TypedEvent } from "src/base/abitype";
 import { createBlockIntervals } from "src/base/blocks";
 
@@ -27,7 +26,6 @@ export async function queryFilter<
 }: QueryEventsOptions<ContractABI, ContractEventName>): Promise<
   TypedEvent<ContractABI, ContractEventName>[]
 > {
-  // Collect the events from on-chain
   const blockIntervals = createBlockIntervals(startBlock, endBlock);
   const events: TypedEvent<ContractABI, ContractEventName>[] = [];
   for (const [blockIntervalStart, blockIntervalEnd] of blockIntervals) {
