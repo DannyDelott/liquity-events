@@ -10,7 +10,7 @@
   },
   "scripts": {
     "build": "parcel build",
-    "update-borrow-infos": "ts-node -r tsconfig-paths/register scripts/add-totalLQTYStakedUSD-to-borrow-infos.ts",
+    "update-borrow-infos": "ts-node -r tsconfig-paths/register scripts/batch-fetch-lqty-and-lusd-prices-for-borrow-infos.ts",
     "scrape-borrow-infos": "ts-node -r tsconfig-paths/register scripts/scrape-borrow-infos.ts",
     "scrape-redemption-infos": "ts-node -r tsconfig-paths/register scripts/scrape-redemption-infos.ts",
     "scrape-stake-changed-infos": "ts-node -r tsconfig-paths/register scripts/scrape-stake-changed-infos.ts"
