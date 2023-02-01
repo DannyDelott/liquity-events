@@ -21,8 +21,8 @@ export function StatWith24HourChange({
 }: StatWith24HourChangeProps) {
   return (
     <div className="daisy-stat">
-      <div className="daisy-stat-title text-neutral">{label}</div>
-      <div className="daisy-stat-value flex gap-2 items-center">
+      <div className="daisy-stat-title text-neutral text-center">{label}</div>
+      <div className="daisy-stat-value flex gap-2 justify-center">
         {icon}
         <Stat
           isLoading={isLoading}
@@ -72,9 +72,10 @@ function Stat24HourChange({
   return (
     <div
       className={classNames(
-        "daisy-stat-desc text-[darkgreen] mt-1 text-base font-semibold",
+        "daisy-stat-desc text-[darkgreen] mt-1 text-base font-semibold text-center",
         {
-          invisible: +gain24Hours <= 0,
+          "hidden md:block": +gain24Hours <= 0,
+          "md:invisible": +gain24Hours <= 0,
         }
       )}
     >

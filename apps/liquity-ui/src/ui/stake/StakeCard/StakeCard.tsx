@@ -57,12 +57,12 @@ export function StakeCard({ account }: StakeCardProps): ReactElement {
   const formattedTotalStaked = formatLQTYOrLUSDLabel(totalLQTYStaked);
 
   return (
-    <div className="daisy-card bg-base-100 shadow-xl w-full md:min-w-[400px] md:max-w-[500px]">
+    <div className="daisy-card bg-base-100 shadow-xl w-full max-w-[350px] md:min-w-[400px] md:max-w-[500px]">
       <figure className="bg-[#D2D6DC14] border-b-2 flex w-full">
         <div className="mt-8 flex flex-col gap-8 w-full">
-          <div className="px-12 flex flex-col justify-center items-center w-96 text-center m-auto">
+          <div className="flex flex-col justify-center items-center w-full md:w-96 text-center m-auto">
             <h2 className="text-2xl font-bold mb-1">LQTY Staking Pool</h2>
-            <span className="">
+            <span className="px-6 md:px-12">
               Earn LUSD and ETH whenever users borrow or pay back their LUSD
               loans.
             </span>
@@ -114,8 +114,8 @@ export function StakeCard({ account }: StakeCardProps): ReactElement {
           </div>
         ) : null}
 
-        <div className="flex flex-col gap-4">
-          <div className="daisy-stats">
+        <div className="flex flex-col md:gap-4">
+          <div className="daisy-stats daisy-stats-vertical md:daisy-stats-horizontal">
             <StatWith24HourChange
               label="Pending LUSD Gain"
               icon={
@@ -147,7 +147,7 @@ export function StakeCard({ account }: StakeCardProps): ReactElement {
               icon={
                 <CryptoIcon
                   icon={IconName.ETH}
-                  size={IconSize.SMALL}
+                  size={IconSize.EXTRA_SMALL}
                   className={"flex-shrink-0"}
                 />
               }
