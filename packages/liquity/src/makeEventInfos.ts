@@ -57,12 +57,9 @@ export async function makeEventInfos<
   });
 
   // We only care about events that pass the eventPredicate
-  const filteredEvents: TypedEvent<ContractABI, EventName>[] = [];
+  let eventsToKeep: TypedEvent<ContractABI, EventName>[] = events;
   if (eventPredicate) {
-    const eventsToKeep = events.filter((event) => eventPredicate(event));
-    events.push(...eventsToKeep);
-  } else {
-    events.push(...events);
+    eventsToKeep = events.filter((event) => eventPredicate(event));
   }
 
   console.log(
@@ -71,15 +68,13 @@ export async function makeEventInfos<
 
   // Now map the events to the event infos
   const eventInfos: EventInfo[] = [];
-  let counter = 1;
-  for (const event of filteredEvents) {
+  for (const event of eventsToKeep) {
     const eventInfo = await mapEventToEventInfo(
       event,
       eventInfos,
-      filteredEvents.length
+      eventsToKeep.length
     );
     eventInfos.push(eventInfo);
-    counter++;
   }
 
   return eventInfos;
