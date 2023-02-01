@@ -1,6 +1,7 @@
 import fetch from "node-fetch";
 export interface PriceInfo {
   price: number; // in USD
+  timestamp: number;
 }
 
 interface FetchPriceResponse {
@@ -34,7 +35,6 @@ export async function fetchPrice(
     ? `https://coins.llama.fi/prices/historical/${timestampMS}/${tokenId}`
     : `https://coins.llama.fi/prices/current/${tokenId}`;
 
-  console.log("priceUrl", priceUrl);
   const response = await fetch(priceUrl);
   console.log("response", response.status, response.statusText);
   const json = (await response.json()) as FetchPriceResponse;
