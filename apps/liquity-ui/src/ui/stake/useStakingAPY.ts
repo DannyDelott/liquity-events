@@ -6,11 +6,15 @@ import { useBorrowInfos } from "src/ui/borrow/useBorrowInfos";
 
 // See: https://money.stackexchange.com/questions/154267/how-to-calculate-the-apr-on-an-investment
 export function useStakingAPY() {
-  const { data: borrowInfos, status } = useBorrowInfos();
+  const { data: borrowInfos, status: borrowInfosStatus } = useBorrowInfos();
+
+  // TODO: Add Redemption infos for Eth
+  // const { data: redemptionInfos, status: redemptionInfosStatus } =
+  //   useRedemptionInfos();
 
   if (!borrowInfos) {
     return {
-      status,
+      status: borrowInfosStatus,
       apy: undefined,
     };
   }
@@ -18,7 +22,7 @@ export function useStakingAPY() {
   const now = Date.now() / 1000;
   const oneWeekAgo = now - ONE_WEEK_IN_SECONDS;
   const borrowInfosFromLast7Days = borrowInfos.data.filter(
-    ({ timestamp }) => timestamp > oneWeekAgo
+    ({ timestamp }) => timestamp >= oneWeekAgo
   );
 
   const totalInterestLast7Days = getTotalInterestUSD(borrowInfosFromLast7Days);
@@ -27,8 +31,9 @@ export function useStakingAPY() {
   const principalValue = meanLQTYStakedLast7Days * meanLQTYPriceLast7Days;
 
   const apy = totalInterestLast7Days / (principalValue * (7 / 365));
+
   return {
-    status,
+    status: borrowInfosStatus,
     apy,
   };
 }

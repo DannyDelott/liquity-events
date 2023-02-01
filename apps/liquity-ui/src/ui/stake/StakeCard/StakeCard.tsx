@@ -1,5 +1,6 @@
 import { formatEther } from "ethers/lib/utils.js";
 import { ReactElement } from "react";
+import Skeleton from "react-loading-skeleton";
 import { BLOCKS_PER_DAY } from "src/base/ethereum";
 import { formatLQTYOrLUSDLabel } from "src/ui/base/format";
 import { CryptoIcon, IconName, IconSize } from "src/ui/crypto/CryptoIcon";
@@ -23,7 +24,6 @@ export function StakeCard({ account }: StakeCardProps): ReactElement {
   const { data: lqtyStaked } = useLQTYStakedForAccount(account);
   const { data: totalLQTYStaked } = useTotalLQTYStaked();
   const { apy } = useStakingAPY();
-                console.log('apy', apy);
   const { data: currentPendingETHGain, status: currentPendingETHGainStatus } =
     usePendingETHGain(account);
   const {
@@ -74,7 +74,7 @@ export function StakeCard({ account }: StakeCardProps): ReactElement {
             <div>
               APR (7d Average)
               <div className="font-bold flex gap-2">
-                {apy ? `${apy * 100}%` : "loading"}
+                {apy ? `${(apy * 100).toFixed(2)}%` : <Skeleton width={64} />}
               </div>
             </div>
             <div>
