@@ -2,7 +2,7 @@ import { LIQUITY_STAKING_ADDRESS, lqtyStakingABI } from "liquity";
 import { useContractRead } from "wagmi";
 
 export function usePendingETHGain(
-  account: string,
+  account: string | undefined,
   atBlock?: number,
   options?: { enabled?: boolean; keepPreviousData?: boolean }
 ) {
@@ -12,7 +12,7 @@ export function usePendingETHGain(
     functionName: "getPendingETHGain",
     args: [account as `0x${string}`],
     overrides: { blockTag: atBlock || "latest" },
-    enabled: options?.enabled,
+    enabled: !!account && options?.enabled,
     keepPreviousData: options?.keepPreviousData,
   });
 }

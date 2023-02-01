@@ -11,6 +11,7 @@ import { useTotalLQTYStaked } from "src/ui/stake/useTotalLQTYStaked";
 import { WithdrawLQTYButton } from "src/ui/stake/WithdrawLQTYModal/WithdrawLQTYButton";
 import { StatWith24HourChange } from "src/ui/stats/StatWith24HourChange/StatWith24HourChange";
 import { useBlockNumber } from "wagmi";
+import { ClaimRewardsButton } from "./ClaimRewardsButton";
 
 interface StakeCardProps {
   account: string;
@@ -167,9 +168,7 @@ export function StakeCard({ account }: StakeCardProps): ReactElement {
               ].includes("loading")}
             />
           </div>
-          <button className="daisy-btn daisy-btn-outline w-full daisy-btn-primary">
-            Claim Rewards
-          </button>
+          <ClaimRewardsButton account={account} />
         </div>
       </div>
     </div>
