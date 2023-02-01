@@ -43,26 +43,13 @@ export async function fetchBorrowInfos(
     eventPredicate: (event) => isNonZeroFeeEvent(event),
     provider,
     mapEventToEventInfo: async (event, existingInfos, totalEvents) => {
-      try {
-        const borrowInfo = await mapEventToBorrowInfo(event, provider);
-        console.log(
-          `${existingInfos.length + 1} of ${totalEvents}: Fee ${
-            borrowInfo.lusdFee
-          }`
-        );
-        return borrowInfo;
-      } catch (err) {
-        console.log(
-          "Something went wrong in mapEventToBorrowInfo! Retrying..."
-        );
-        const borrowInfo = await mapEventToBorrowInfo(event, provider);
-        console.log(
-          `${existingInfos.length + 1} of ${totalEvents}: Fee ${
-            borrowInfo.lusdFee
-          }`
-        );
-        return borrowInfo;
-      }
+      const borrowInfo = await mapEventToBorrowInfo(event, provider);
+      console.log(
+        `${existingInfos.length + 1} of ${totalEvents}: Fee ${
+          borrowInfo.lusdFee
+        }`
+      );
+      return borrowInfo;
     },
   });
 }
