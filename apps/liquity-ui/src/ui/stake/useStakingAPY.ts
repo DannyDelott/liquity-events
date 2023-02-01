@@ -1,11 +1,10 @@
 import { BorrowInfo } from "liquity";
+import meanBy from "lodash.meanby";
 import sumBy from "lodash.sumby";
-import {
-  ONE_DAY_IN_MILLISECONDS,
-  ONE_WEEK_IN_MILLISECONDS,
-} from "src/base/time";
+import { ONE_WEEK_IN_SECONDS } from "src/base/time";
 import { useBorrowInfos } from "src/ui/borrow/useBorrowInfos";
 
+// See: https://money.stackexchange.com/questions/154267/how-to-calculate-the-apr-on-an-investment
 export function useStakingAPY() {
   const { data: borrowInfos, status } = useBorrowInfos();
 
@@ -16,60 +15,31 @@ export function useStakingAPY() {
     };
   }
 
-  const now = Date.now();
-  const oneWeekAgo = now - ONE_WEEK_IN_MILLISECONDS;
+  const now = Date.now() / 1000;
+  const oneWeekAgo = now - ONE_WEEK_IN_SECONDS;
   const borrowInfosFromLast7Days = borrowInfos.data.filter(
     ({ timestamp }) => timestamp > oneWeekAgo
   );
 
-  const oneDayAgo = now - ONE_DAY_IN_MILLISECONDS;
-  const borrowInfosYesterday = borrowInfosFromLast7Days.filter(
-    ({ timestamp }) => timestamp > oneDayAgo
-  );
-  const totalValueOfInterestYesterday = getTotalLUSDFees(borrowInfosYesterday);
+  const totalInterestLast7Days = getTotalInterestUSD(borrowInfosFromLast7Days);
+  const meanLQTYStakedLast7Days = getMeanLQTYStaked(borrowInfosFromLast7Days);
+  const meanLQTYPriceLast7Days = getMeanLQTYPrice(borrowInfosFromLast7Days);
+  const principalValue = meanLQTYStakedLast7Days * meanLQTYPriceLast7Days;
 
-  const twoDaysAgo = now - ONE_DAY_IN_MILLISECONDS * 2;
-  const borrowInfosTwoDaysAgo = borrowInfosFromLast7Days.filter(
-    ({ timestamp }) => timestamp > twoDaysAgo && timestamp < oneDayAgo
-  );
-
-  const threeDaysAgo = now - ONE_DAY_IN_MILLISECONDS * 3;
-  const borrowInfosThreeDaysAgo = borrowInfosFromLast7Days.filter(
-    ({ timestamp }) => timestamp > threeDaysAgo && timestamp < twoDaysAgo
-  );
-
-  const fourDaysAgo = now - ONE_DAY_IN_MILLISECONDS * 4;
-  const borrowInfosFourDaysAgo = borrowInfosFromLast7Days.filter(
-    ({ timestamp }) => timestamp > fourDaysAgo && timestamp < threeDaysAgo
-  );
-
-  const fiveDaysAgo = now - ONE_DAY_IN_MILLISECONDS * 5;
-  const borrowInfosFiveDaysAgo = borrowInfosFromLast7Days.filter(
-    ({ timestamp }) => timestamp > fiveDaysAgo && timestamp < fourDaysAgo
-  );
-
-  const sixDaysAgo = now - ONE_DAY_IN_MILLISECONDS * 6;
-  const borrowInfosSixDaysAgo = borrowInfosFromLast7Days.filter(
-    ({ timestamp }) => timestamp > sixDaysAgo && timestamp < fiveDaysAgo
-  );
-
-  const sevenDaysAgo = now - ONE_DAY_IN_MILLISECONDS * 7;
-  const borrowInfosSevenDaysAgo = borrowInfosFromLast7Days.filter(
-    ({ timestamp }) => timestamp > sevenDaysAgo && timestamp < sixDaysAgo
-  );
+  const apy = totalInterestLast7Days / (principalValue * (7 / 365));
+  return {
+    status,
+    apy,
+  };
 }
 
-function getTotalLUSDFees(borrowInfosYesterday: BorrowInfo[]) {
-  return sumBy(
-    borrowInfosYesterday,
-    ({ lusdFee, lusdPrice }) => +lusdFee * +lusdPrice
-  );
+function getMeanLQTYPrice(borrowInfos: BorrowInfo[]) {
+  return meanBy(borrowInfos, ({ lqtyPrice }) => +lqtyPrice);
+}
+function getMeanLQTYStaked(borrowInfos: BorrowInfo[]) {
+  return meanBy(borrowInfos, ({ totalLqtyStaked }) => +totalLqtyStaked);
 }
 
-function calculateAPY(
-  valueOfPrincipal: number,
-  valueOfInterest: number,
-  numberOfYears: number
-): number {
-  return 0;
+function getTotalInterestUSD(borrowInfos: BorrowInfo[]) {
+  return sumBy(borrowInfos, ({ lusdFee, lusdPrice }) => +lusdFee * +lusdPrice);
 }

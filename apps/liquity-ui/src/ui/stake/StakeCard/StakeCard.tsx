@@ -7,6 +7,7 @@ import { DepositLQTYButton } from "src/ui/stake/DepositLQTYModal/DepositLQTYButt
 import { useLQTYStakedForAccount } from "src/ui/stake/useLQTYStakedForAccount";
 import { usePendingETHGain } from "src/ui/stake/usePendingETHGain";
 import { usePendingLUSDGain } from "src/ui/stake/usePendingLUSDGain";
+import { useStakingAPY } from "src/ui/stake/useStakingAPY";
 import { useTotalLQTYStaked } from "src/ui/stake/useTotalLQTYStaked";
 import { WithdrawLQTYButton } from "src/ui/stake/WithdrawLQTYModal/WithdrawLQTYButton";
 import { StatWith24HourChange } from "src/ui/stats/StatWith24HourChange/StatWith24HourChange";
@@ -21,6 +22,8 @@ export function StakeCard({ account }: StakeCardProps): ReactElement {
   const { data: blockNumber } = useBlockNumber();
   const { data: lqtyStaked } = useLQTYStakedForAccount(account);
   const { data: totalLQTYStaked } = useTotalLQTYStaked();
+  const { apy } = useStakingAPY();
+                console.log('apy', apy);
   const { data: currentPendingETHGain, status: currentPendingETHGainStatus } =
     usePendingETHGain(account);
   const {
@@ -70,7 +73,9 @@ export function StakeCard({ account }: StakeCardProps): ReactElement {
           <div className="w-full flex justify-between mb-4 px-8">
             <div>
               APR (7d Average)
-              <div className="font-bold flex gap-2">1.78%</div>
+              <div className="font-bold flex gap-2">
+                {apy ? `${apy * 100}%` : "loading"}
+              </div>
             </div>
             <div>
               Total LQTY Staked
