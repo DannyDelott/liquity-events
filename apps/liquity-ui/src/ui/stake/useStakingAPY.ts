@@ -60,7 +60,10 @@ export function useStakingAPY() {
 }
 
 function getTotalLUSDFees(borrowInfosYesterday: BorrowInfo[]) {
-  return sumBy(borrowInfosYesterday, ({ lusdFeeUSD }) => +lusdFeeUSD);
+  return sumBy(
+    borrowInfosYesterday,
+    ({ lusdFee, lusdPrice }) => +lusdFee * +lusdPrice
+  );
 }
 
 function calculateAPY(
