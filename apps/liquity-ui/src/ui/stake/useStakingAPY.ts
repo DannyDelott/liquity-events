@@ -1,11 +1,11 @@
 import { BorrowInfo } from "liquity";
 import meanBy from "lodash.meanby";
 import sumBy from "lodash.sumby";
-import { ONE_WEEK_IN_SECONDS } from "src/base/time";
+import { ONE_DAY_IN_SECONDS, ONE_WEEK_IN_SECONDS } from "src/base/time";
 import { useBorrowInfos } from "src/ui/borrow/useBorrowInfos";
 
 // See: https://money.stackexchange.com/questions/154267/how-to-calculate-the-apr-on-an-investment
-export function useStakingAPY() {
+export function useStakingAPY(numDays: number) {
   const { data: borrowInfos, status: borrowInfosStatus } = useBorrowInfos();
 
   // TODO: Add Redemption infos for Eth
@@ -20,17 +20,21 @@ export function useStakingAPY() {
   }
 
   const now = Date.now() / 1000;
-  const oneWeekAgo = now - ONE_WEEK_IN_SECONDS;
-  const borrowInfosFromLast7Days = borrowInfos.data.filter(
-    ({ timestamp }) => timestamp >= oneWeekAgo
+  const numDaysAgo = now - numDays * ONE_DAY_IN_SECONDS;
+  const borrowInfosFromLastNumDays = borrowInfos.data.filter(
+    ({ timestamp }) => timestamp >= numDaysAgo
   );
 
-  const totalInterestLast7Days = getTotalInterestUSD(borrowInfosFromLast7Days);
-  const meanLQTYStakedLast7Days = getMeanLQTYStaked(borrowInfosFromLast7Days);
-  const meanLQTYPriceLast7Days = getMeanLQTYPrice(borrowInfosFromLast7Days);
-  const principalValue = meanLQTYStakedLast7Days * meanLQTYPriceLast7Days;
+  const totalInterestLastNumDays = getTotalInterestUSD(
+    borrowInfosFromLastNumDays
+  );
+  const meanLQTYStakedLastNumDays = getMeanLQTYStaked(
+    borrowInfosFromLastNumDays
+  );
+  const meanLQTYPriceLastNumDays = getMeanLQTYPrice(borrowInfosFromLastNumDays);
+  const principalValue = meanLQTYStakedLastNumDays * meanLQTYPriceLastNumDays;
 
-  const apy = totalInterestLast7Days / (principalValue * (7 / 365));
+  const apy = totalInterestLastNumDays / (principalValue * (numDays / 365));
 
   return {
     status: borrowInfosStatus,

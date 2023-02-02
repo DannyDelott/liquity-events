@@ -23,7 +23,7 @@ export function StakeCard({ account }: StakeCardProps): ReactElement {
   const { data: blockNumber } = useBlockNumber();
   const { data: lqtyStaked } = useLQTYStakedForAccount(account);
   const { data: totalLQTYStaked } = useTotalLQTYStaked();
-  const { apy } = useStakingAPY();
+  const { apy } = useStakingAPY(7);
   const { data: currentPendingETHGain, status: currentPendingETHGainStatus } =
     usePendingETHGain(account);
   const {
