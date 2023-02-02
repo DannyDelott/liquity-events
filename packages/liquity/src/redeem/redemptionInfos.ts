@@ -1,6 +1,5 @@
 import { AlchemyProvider } from "alchemy-sdk";
 import { formatEther } from "ethers/lib/utils";
-import { writeFile } from "src/base/writeFile";
 import {
   RedemptionEvent,
   troveOperationsABI,
@@ -53,11 +52,6 @@ export async function fetchRedemptionInfos(
           redemptionInfo.ethFee
         }`
       );
-
-      // write a local file, TODO: REMove this
-      const json = makeRedemptionInfosFile([...existingInfos, redemptionInfo]);
-      const REDEMPTION_INFOS_FILE_PATH = "src/redeem/json/redemptionInfos.json";
-      writeFile(REDEMPTION_INFOS_FILE_PATH, json);
 
       return redemptionInfo;
     },
