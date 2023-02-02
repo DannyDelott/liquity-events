@@ -10,6 +10,7 @@
   },
   "scripts": {
     "build": "parcel build",
+    "update-redemption-infos": "ts-node -r tsconfig-paths/register scripts/batch-fetch-lqty-price-for-redemption-infos.ts",
     "update-borrow-infos": "ts-node -r tsconfig-paths/register scripts/batch-fetch-lqty-and-lusd-prices-for-borrow-infos.ts",
     "scrape-borrow-infos": "ts-node -r tsconfig-paths/register scripts/scrape-borrow-infos.ts",
     "scrape-redemption-infos": "ts-node -r tsconfig-paths/register scripts/scrape-redemption-infos.ts",

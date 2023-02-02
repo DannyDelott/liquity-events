@@ -5,12 +5,12 @@ import {
   BORROWER_OPERATIONS_ADDRESS,
   LUSDBorrowingFeePaidEvent,
 } from "src/contracts/borrowerOperations";
-import { lqtyStakingContract } from "src/contracts/lqtyStaking";
 import { formatEther } from "ethers/lib/utils";
 import { fetchPrice } from "src/defillama";
 import { LUSD_TOKEN_ADDRESS } from "src/lusdToken";
 import { makeEventInfos } from "src/makeEventInfos";
 import { LQTY_TOKEN_ADDRESS } from "src/lqtyToken";
+import { getTotalLQTYStakedAtBlock } from "src/stake/getTotalLQTYStakedAtBlock";
 
 export interface BorrowInfo {
   block: number;
@@ -63,11 +63,9 @@ async function mapEventToBorrowInfo(
 
   // the totalLQTYStaked is useful for calculating your pool share at the time
   // of the event
-  const lqtyStaking = lqtyStakingContract.connect(provider);
-  const totalLqtyStaked = formatEther(
-    await lqtyStaking["totalLQTYStaked"]({
-      blockTag: blockNumber,
-    })
+  const totalLqtyStaked = await getTotalLQTYStakedAtBlock(
+    blockNumber,
+    provider
   );
 
   const lusdFee = formatEther(lusdBorrowingFeePaidEvent.args[1]);

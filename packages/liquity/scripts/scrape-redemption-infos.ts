@@ -2,6 +2,7 @@ require("dotenv").config();
 
 import { fetchJson } from "src/base/fetchJson";
 import { writeFile } from "src/base/writeFile";
+import { TROVE_OPERATIONS_DEPLOYMENT_BLOCK } from "src/contracts/troveOperations";
 import { alchemy } from "src/provider/provider";
 import {
   makeRedemptionInfosFile,
@@ -26,12 +27,13 @@ const REDEMPTION_INFOS_FILE_PATH = "src/redeem/json/redemptionInfos.json";
 
   // scrape the latest redemption infos, starting where we left off
   const newRedemptionInfos = await fetchRedemptionInfos(
-    redemptionInfosJson.data[redemptionInfosJson.data.length - 1].block + 1,
+    TROVE_OPERATIONS_DEPLOYMENT_BLOCK,
+    // redemptionInfosJson.data[redemptionInfosJson.data.length - 1].block + 1,
     provider
   );
 
   const redemptionInfos: RedemptionInfo[] = [
-    ...redemptionInfosJson.data,
+    // ...redemptionInfosJson.data,
     ...newRedemptionInfos,
   ];
 
