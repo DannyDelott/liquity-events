@@ -127,8 +127,7 @@ export function WithdrawLQTYModal(): ReactElement {
             </button>
           </div>
           <label className="inline-block mt-4 daisy-label-text whitespace-normal text-center font-bold">
-            Unstaking LQTY will automatically harvest all pending LUSD and ETH
-            rewards.
+            This will automatically harvest all pending LUSD and ETH rewards.
           </label>
         </label>
       </label>
