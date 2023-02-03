@@ -103,7 +103,7 @@ function Stat({
     statValueLabel = (+statValue).toFixed(statValuePrecision);
   }
 
-  return <span>{statValueLabel}</span>;
+  return <span className="text-2xl md:text-4xl">{statValueLabel}</span>;
 }
 
 function calculate24HourGains(
