@@ -1,10 +1,10 @@
-name: Scrape Stake Changed Infos 
+name: Scrape Stake Changed Infos
 
 on:
-  # “Once a day at 00:00.”
-  # https://crontab.guru/once-a-day
+  # Every 2 hours.
+  # https://crontab.guru/#0_*/2_*_*_*
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 */2 * * *"
 
 jobs:
   scrape_stake_changed_infos:
