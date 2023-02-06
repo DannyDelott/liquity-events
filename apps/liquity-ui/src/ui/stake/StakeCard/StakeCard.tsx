@@ -60,7 +60,7 @@ export function StakeCard({ account }: StakeCardProps): ReactElement {
           </div>
           <div className="w-full flex justify-between mb-4 px-8">
             <div>
-              APR (7d Average)
+              APR (7d)
               <div className="font-bold flex gap-2">
                 {apy ? `${(apy * 100).toFixed(2)}%` : <Skeleton width={64} />}
               </div>
