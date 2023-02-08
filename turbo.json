@@ -6,7 +6,7 @@
     "liquity-ui#build": {
       "dependsOn": ["^build"],
       "outputs": [".next/**"],
-      "env": ["NEXT_PUBLIC_MAINNET_ALCHEMY_KEY"]
+      "env": ["NODE_ENV", "NEXT_PUBLIC_MAINNET_ALCHEMY_KEY"]
     },
     "liquity#scrape-borrow-event": {
       "env": [

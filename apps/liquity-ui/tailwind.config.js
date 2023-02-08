@@ -13,5 +13,5 @@ module.exports = {
     prefix: "daisy-",
     theme: ["winter"],
   },
-  plugins: [require("daisyui")],
+  plugins: [require("tailwindcss-debug-screens"), require("daisyui")],
 };

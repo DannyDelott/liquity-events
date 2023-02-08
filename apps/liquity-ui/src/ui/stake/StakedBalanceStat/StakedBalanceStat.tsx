@@ -6,7 +6,7 @@ import { useLQTYStakedForAccount } from "src/ui/stake/useLQTYStakedForAccount";
 import { useTotalLQTYStaked } from "src/ui/stake/useTotalLQTYStaked";
 import { WithdrawLQTYButton } from "src/ui/stake/WithdrawLQTYModal/WithdrawLQTYButton";
 
-export function StakedBalanceStat({ account }: { account: string; }) {
+export function StakedBalanceStat({ account }: { account: string }) {
   const { data: lqtyStaked } = useLQTYStakedForAccount(account);
   const formattedStakedBalance = formatLQTYOrLUSDLabel(lqtyStaked);
 
@@ -25,11 +25,12 @@ export function StakedBalanceStat({ account }: { account: string; }) {
         <div className="daisy-stat-title text-neutral-focus text-center ">
           Staked Balance
         </div>
-        <div className="daisy-stat-value text-2xl md:text-4xl flex gap-2 justify-center">
+        <div className="daisy-stat-value text-2xl md:text-4xl flex gap-1 md:gap-2 justify-center">
           <CryptoIcon
             icon={IconName.LQTY}
             size={IconSize.SMALL}
-            className={"flex-shrink-0"} />
+            className={"flex-shrink-0"}
+          />
           {formattedStakedBalance}
         </div>
         <div className="daisy-stat-desc text-neutral mt-1 text-base">

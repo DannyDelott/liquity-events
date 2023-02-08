@@ -20,27 +20,19 @@ export function Header(): ReactElement {
   // small screens have a sub nav
   if (isSmallScreen) {
     return (
-      <Fragment>
-        <div className="daisy-navbar px-4 bg-white border-b-[1px]">
-          <div className="flex w-full justify-between">
-            <HeaderTitle />
-            <Navigation />
-          </div>
+      <div className="daisy-navbar px-4 bg-white shadow">
+        <div className="flex w-full justify-between">
+          <HeaderTitle />
+          <Navigation />
         </div>
-        <div className="daisy-navbar bg-slate-50 shadow">
-          <div className="flex gap-8 justify-center w-full">
-            <PriceWidget tokenAddress={LUSD_TOKEN_ADDRESS} />
-            <PriceWidget tokenAddress={LQTY_TOKEN_ADDRESS} />
-          </div>
-        </div>
-      </Fragment>
+      </div>
     );
   }
   return (
     <div className="daisy-navbar px-8 bg-white shadow">
       <div className="daisy-navbar-start lg:gap-14">
         <HeaderTitle />
-        <div className="flex gap-8">
+        <div className="gap-8 hidden 2xl:flex">
           <PriceWidget tokenAddress={LUSD_TOKEN_ADDRESS} />
           <PriceWidget tokenAddress={LQTY_TOKEN_ADDRESS} />
         </div>
@@ -49,7 +41,7 @@ export function Header(): ReactElement {
         <Navigation />
       </div>
       <div className="daisy-navbar-end gap-4">
-        <div className="flex gap-8">
+        <div className="gap-8 hidden 2xl:flex">
           {lusdBalance ? (
             <div className="flex gap-1.5 items-center text-lg">
               <CryptoIcon icon={IconName.LUSD} size={IconSize.SMALL} />

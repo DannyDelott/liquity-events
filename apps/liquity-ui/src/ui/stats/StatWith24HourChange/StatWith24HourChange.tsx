@@ -22,7 +22,7 @@ export function StatWith24HourChange({
   return (
     <div className="daisy-stat">
       <div className="daisy-stat-title text-neutral text-center">{label}</div>
-      <div className="daisy-stat-value flex gap-2 justify-center">
+      <div className="daisy-stat-value flex gap-1 md:gap-2 justify-center">
         {icon}
         <Stat
           isLoading={isLoading}
