@@ -2,7 +2,10 @@ import { formatEther } from "ethers/lib/utils.js";
 import { ReactElement } from "react";
 import Skeleton from "react-loading-skeleton";
 import { BLOCKS_PER_DAY } from "src/base/ethereum";
-import { formatLQTYOrLUSDLabel } from "src/ui/base/format";
+import {
+  formatLQTYOrLUSDLabel,
+  formatWholeNumberLabel,
+} from "src/ui/base/format";
 import { CryptoIcon, IconName, IconSize } from "src/ui/crypto/CryptoIcon";
 import { ClaimRewardsButton } from "src/ui/stake/StakeCard/ClaimRewardsButton";
 import { StakedBalanceStat } from "src/ui/stake/StakedBalanceStat/StakedBalanceStat";
@@ -45,7 +48,7 @@ export function StakeCard({ account }: StakeCardProps): ReactElement {
     { enabled: !!blockNumber, keepPreviousData: true }
   );
 
-  const formattedTotalStaked = formatLQTYOrLUSDLabel(totalLQTYStaked);
+  const formattedTotalStaked = formatWholeNumberLabel(totalLQTYStaked);
 
   return (
     <div className="daisy-card bg-base-100 shadow-xl w-full max-w-[350px] md:min-w-[400px] md:max-w-[500px]">
@@ -67,7 +70,7 @@ export function StakeCard({ account }: StakeCardProps): ReactElement {
             </div>
             <div>
               Total LQTY Staked
-              <div className="font-bold flex gap-1">
+              <div className="font-bold flex gap-1 justify-end">
                 <CryptoIcon
                   icon={IconName.LQTY}
                   size={IconSize.EXTRA_SMALL}

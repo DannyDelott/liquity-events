@@ -13,6 +13,21 @@ export function formatPoolShare(poolShare?: number) {
   }
   return `${(poolShare * 100).toFixed(4)}%`;
 }
+export function formatWholeNumberLabel(amount?: BigNumber | string): string {
+  if (!amount) {
+    return "0";
+  }
+
+  let amountAsBigNumber: BigNumber = BigNumber.from(0);
+  if (typeof amount === "string") {
+    amountAsBigNumber = parseEther(amount);
+  } else {
+    amountAsBigNumber = amount;
+  }
+
+  const commified = commify((+formatEther(amountAsBigNumber)).toFixed());
+  return commified;
+}
 
 export function formatLQTYOrLUSDLabel(amount?: BigNumber | string): string {
   if (!amount) {
