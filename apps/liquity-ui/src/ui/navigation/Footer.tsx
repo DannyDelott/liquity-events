@@ -1,11 +1,8 @@
 export function Footer() {
   return (
-    <footer className="flex justify-between items-center p-4 bg-transparent">
-      <div className="daisy-badge daisy-badge-lg daisy-badge-ghost">
-        Made with ❤️ by delott.eth
-      </div>
+    <footer className="flex justify-end items-center p-4 bg-transparent">
       <a
-        className="hover:cursor-pointer"
+        className="hover:cursor-pointer "
         href="https://twitter.com/DannyDelott"
       >
         <svg
