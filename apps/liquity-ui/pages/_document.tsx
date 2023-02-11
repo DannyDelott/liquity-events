@@ -5,6 +5,7 @@ export default function Document() {
   return (
     <Html data-theme="winter">
       <Head />
+      <title>Liquity.events</title>
       <body className={showTailwindDebugScreens ? "debug-screens" : ""}>
         <Main />
         <NextScript />
