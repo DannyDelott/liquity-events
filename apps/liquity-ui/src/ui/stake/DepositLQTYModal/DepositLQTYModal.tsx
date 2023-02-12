@@ -7,7 +7,7 @@ import { formatLQTYOrLUSDLabel } from "src/ui/base/format";
 import { CryptoIcon, IconName, IconSize } from "src/ui/crypto/CryptoIcon";
 import { DEPOSIT_LQTY_MODAL_ID } from "src/ui/stake/DepositLQTYModal/modalId";
 import { useDepositLQTY } from "src/ui/stake/useDepositLQTY";
-import { useTokenBalance } from "src/wallet/useTokenBalance";
+import { useTokenBalance } from "src/ui/wallet/useTokenBalance";
 import { useAccount } from "wagmi";
 
 export function DepositLQTYModal(): ReactElement {

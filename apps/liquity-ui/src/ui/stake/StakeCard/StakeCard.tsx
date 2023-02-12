@@ -1,5 +1,5 @@
 import { formatEther } from "ethers/lib/utils.js";
-import { ReactElement } from "react";
+import { Fragment, ReactElement } from "react";
 import Skeleton from "react-loading-skeleton";
 import { BLOCKS_PER_DAY } from "src/base/ethereum";
 import {
@@ -14,10 +14,11 @@ import { usePendingLUSDGain } from "src/ui/stake/usePendingLUSDGain";
 import { useStakingAPY } from "src/ui/stake/useStakingAPY";
 import { useTotalLQTYStaked } from "src/ui/stake/useTotalLQTYStaked";
 import { StatWith24HourChange } from "src/ui/stats/StatWith24HourChange/StatWith24HourChange";
+import { ConnectButton } from "src/ui/wallet/ConnectButton";
 import { useBlockNumber } from "wagmi";
 
 interface StakeCardProps {
-  account: string;
+  account: string | undefined;
 }
 
 export function StakeCard({ account }: StakeCardProps): ReactElement {
@@ -84,64 +85,101 @@ export function StakeCard({ account }: StakeCardProps): ReactElement {
       </figure>
 
       <div className="daisy-card-body items-center md:gap-6">
-        <StakedBalanceStat account={account} />
+        {account ? (
+          <Fragment>
+            <StakedBalanceStat account={account} />
 
-        <div className="flex flex-col md:gap-4">
-          <div className="daisy-stats daisy-stats-vertical md:daisy-stats-horizontal">
-            <StatWith24HourChange
-              label="Pending LUSD Gain"
-              icon={
-                <CryptoIcon
-                  icon={IconName.LUSD}
-                  size={IconSize.SMALL}
-                  className={"flex-shrink-0"}
+            <div className="flex flex-col md:gap-4">
+              <div className="daisy-stats daisy-stats-vertical md:daisy-stats-horizontal">
+                <StatWith24HourChange
+                  label="Pending LUSD Gain"
+                  icon={
+                    <CryptoIcon
+                      icon={IconName.LUSD}
+                      size={IconSize.SMALL}
+                      className={"flex-shrink-0"}
+                    />
+                  }
+                  statValue={
+                    currentPendingLUSDGain
+                      ? formatEther(currentPendingLUSDGain)
+                      : undefined
+                  }
+                  yesterdayStatValue={
+                    yesterdayPendingLUSDGain
+                      ? formatEther(yesterdayPendingLUSDGain)
+                      : undefined
+                  }
+                  statValuePrecision={2}
+                  isLoading={[
+                    currentPendingLUSDGainStatus,
+                    yesterdayPendingLUSDGainStatus,
+                  ].includes("loading")}
                 />
-              }
-              statValue={
-                currentPendingLUSDGain
-                  ? formatEther(currentPendingLUSDGain)
-                  : undefined
-              }
-              yesterdayStatValue={
-                yesterdayPendingLUSDGain
-                  ? formatEther(yesterdayPendingLUSDGain)
-                  : undefined
-              }
-              statValuePrecision={2}
-              isLoading={[
-                currentPendingLUSDGainStatus,
-                yesterdayPendingLUSDGainStatus,
-              ].includes("loading")}
-            />
 
-            <StatWith24HourChange
-              label="Pending ETH Gain"
-              icon={
-                <CryptoIcon
-                  icon={IconName.ETH}
-                  size={IconSize.EXTRA_SMALL}
-                  className={"flex-shrink-0"}
+                <StatWith24HourChange
+                  label="Pending ETH Gain"
+                  icon={
+                    <CryptoIcon
+                      icon={IconName.ETH}
+                      size={IconSize.EXTRA_SMALL}
+                      className={"flex-shrink-0"}
+                    />
+                  }
+                  statValue={
+                    currentPendingETHGain
+                      ? formatEther(currentPendingETHGain)
+                      : undefined
+                  }
+                  yesterdayStatValue={
+                    yesterdayPendingETHGain
+                      ? formatEther(yesterdayPendingETHGain)
+                      : undefined
+                  }
+                  statValuePrecision={4}
+                  isLoading={[
+                    currentPendingETHGainStatus,
+                    yesterdayPendingETHGainStatus,
+                  ].includes("loading")}
                 />
-              }
-              statValue={
-                currentPendingETHGain
-                  ? formatEther(currentPendingETHGain)
-                  : undefined
-              }
-              yesterdayStatValue={
-                yesterdayPendingETHGain
-                  ? formatEther(yesterdayPendingETHGain)
-                  : undefined
-              }
-              statValuePrecision={4}
-              isLoading={[
-                currentPendingETHGainStatus,
-                yesterdayPendingETHGainStatus,
-              ].includes("loading")}
-            />
+              </div>
+              <ClaimRewardsButton account={account} />
+            </div>
+          </Fragment>
+        ) : (
+          <div className="flex flex-col justify-center items-center gap-8">
+            <div className="flex flex-col justify-center items-center ">
+              <span>Connect your wallet</span>
+            </div>
+            <div className="flex flex-col justify-center items-center gap-4 w-full ">
+              <span>or paste in an address below </span>
+
+              <div className="daisy-input-group">
+                <input
+                  type="text"
+                  placeholder="Enter an address or ENS name…"
+                  className="daisy-input daisy-input-bordered w-full"
+                />
+                <button className="daisy-btn daisy-btn-square daisy-btn-primary daisy-btn-outline">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="h-6 w-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
           </div>
-          <ClaimRewardsButton account={account} />
-        </div>
+        )}
       </div>
     </div>
   );

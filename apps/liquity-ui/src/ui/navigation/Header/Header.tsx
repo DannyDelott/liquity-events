@@ -1,15 +1,15 @@
 import { Fragment, ReactElement } from "react";
 import { LQTY_TOKEN_ADDRESS, LUSD_TOKEN_ADDRESS } from "liquity";
-import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useRouter } from "next/router";
 import { CryptoIcon, IconName, IconSize } from "src/ui/crypto/CryptoIcon";
-import { useTokenBalance } from "src/wallet/useTokenBalance";
+import { useTokenBalance } from "src/ui/wallet/useTokenBalance";
 import { useAccount } from "wagmi";
 import { formatLQTYOrLUSDLabel } from "src/ui/base/format";
 import { PriceWidget } from "src/ui/price/PriceWidget";
 import { useIsTailwindSmallScreen } from "src/ui/base/tailwindBreakpoints";
 import { Navigation } from "src/ui/navigation/Navigation";
 import { HeaderTitle } from "./HeaderTitle";
+import { ConnectButton } from "src/ui/wallet/ConnectButton";
 
 export function Header(): ReactElement {
   const { address } = useAccount();
@@ -56,7 +56,7 @@ export function Header(): ReactElement {
           ) : null}
         </div>
 
-        <ConnectButton accountStatus={"full"} showBalance={false} />
+        <ConnectButton />
       </div>
     </div>
   );
