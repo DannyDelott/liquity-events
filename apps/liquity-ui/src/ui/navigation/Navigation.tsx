@@ -16,6 +16,7 @@ export function Navigation() {
   const { openConnectModal } = useConnectModal();
   const { openAccountModal } = useAccountModal();
   const { address: account } = useAccount();
+
   if (isSmallScreen) {
     return (
       <div className="daisy-dropdown daisy-dropdown-bottom daisy-dropdown-end">
