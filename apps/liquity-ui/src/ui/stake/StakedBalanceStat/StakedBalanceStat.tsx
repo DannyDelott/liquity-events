@@ -38,8 +38,8 @@ export function StakedBalanceStat({ account }: { account: string }) {
         </div>
 
         <div className="daisy-stat-actions gap-2 flex mt-2 justify-center">
-          <DepositLQTYButton />
-          <WithdrawLQTYButton />
+          <DepositLQTYButton account={account} />
+          <WithdrawLQTYButton account={account} />
         </div>
       </div>
     </div>

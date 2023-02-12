@@ -4,6 +4,7 @@ import { ReactElement } from "react";
 import { usePendingETHGain } from "src/ui/stake/usePendingETHGain";
 import { usePendingLUSDGain } from "src/ui/stake/usePendingLUSDGain";
 import { useWithdrawLQTY } from "src/ui/stake/useWithdrawLQTY";
+import { useAccount } from "wagmi";
 
 interface ClaimRewardsButtonProps {
   account: string | undefined;
@@ -25,8 +26,10 @@ export function ClaimRewardsButton({
 
   const isClaimPending = isClaimPendingWalletAction || isClaimTxProcessing;
 
+  const { address: connectedAccount } = useAccount();
   const isClaimButtonDisabled = getIsClaimRewardsButtonDisabled(
     account,
+    connectedAccount,
     pendingETHGain,
     pendingLUSDGain,
     isClaimPendingWalletAction,
@@ -50,6 +53,7 @@ export function ClaimRewardsButton({
 
 function getIsClaimRewardsButtonDisabled(
   address: string | undefined,
+  connectedAddress: string | undefined,
   pendingETHGain: BigNumber | undefined,
   pendingLUSDGain: BigNumber | undefined,
   isWalletPendingWalletAction: boolean,
@@ -58,6 +62,7 @@ function getIsClaimRewardsButtonDisabled(
   const hasRewardsToClaim = pendingETHGain?.gt(0) || pendingLUSDGain?.gt(0);
   return (
     !address || // not connected
+    address !== connectedAddress || // viewing as another address
     !hasRewardsToClaim || // no rewards to claim
     isWalletPendingWalletAction || // a withdraw tx was sent to the user's wallet and is waiting their signature
     isWithdrawTxProcessing // the withdraw has been sent to the mempool and is awaiting confirmation
