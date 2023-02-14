@@ -1,10 +1,6 @@
-import { Fragment, ReactElement } from "react";
+import { ReactElement } from "react";
 import { LQTY_TOKEN_ADDRESS, LUSD_TOKEN_ADDRESS } from "liquity";
-import { useRouter } from "next/router";
-import { CryptoIcon, IconName, IconSize } from "src/ui/crypto/CryptoIcon";
-import { useTokenBalance } from "src/ui/wallet/useTokenBalance";
 import { useAccount } from "wagmi";
-import { formatLQTYOrLUSDLabel } from "src/ui/base/format";
 import { PriceWidget } from "src/ui/price/PriceWidget";
 import { useIsTailwindSmallScreen } from "src/ui/base/tailwindBreakpoints";
 import { Navigation } from "src/ui/navigation/Navigation";
@@ -13,8 +9,6 @@ import { ConnectButton } from "src/ui/wallet/ConnectButton";
 
 export function Header(): ReactElement {
   const { address } = useAccount();
-  const { data: lusdBalance } = useTokenBalance(address, LUSD_TOKEN_ADDRESS);
-  const { data: lqtyBalance } = useTokenBalance(address, LQTY_TOKEN_ADDRESS);
   const isSmallScreen = useIsTailwindSmallScreen();
 
   // small screens have a sub nav
@@ -41,21 +35,6 @@ export function Header(): ReactElement {
         <Navigation />
       </div>
       <div className="daisy-navbar-end gap-4">
-        <div className="gap-8 hidden 2xl:flex">
-          {lusdBalance ? (
-            <div className="flex gap-1.5 items-center text-lg">
-              <CryptoIcon icon={IconName.LUSD} size={IconSize.SMALL} />
-              <span>{formatLQTYOrLUSDLabel(lusdBalance.formatted)}</span>
-            </div>
-          ) : null}
-          {lqtyBalance ? (
-            <div className="flex gap-1.5 items-center text-lg">
-              <CryptoIcon icon={IconName.LQTY} size={IconSize.SMALL} />
-              <span>{formatLQTYOrLUSDLabel(lqtyBalance.formatted)}</span>
-            </div>
-          ) : null}
-        </div>
-
         <ConnectButton />
       </div>
     </div>
