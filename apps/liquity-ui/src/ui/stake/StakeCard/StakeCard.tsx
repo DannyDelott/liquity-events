@@ -52,7 +52,7 @@ export function StakeCard({ account }: StakeCardProps): ReactElement {
   const formattedTotalStaked = formatWholeNumberLabel(totalLQTYStaked);
 
   return (
-    <div className="daisy-card bg-base-100 shadow-xl w-full max-w-[350px] md:min-w-[400px] md:max-w-[500px]">
+    <div className="daisy-card bg-base-100 shadow-xl shadow-card-shadow w-full max-w-[350px] md:min-w-[400px] md:max-w-[500px]">
       <figure className="bg-[#D2D6DC14] border-b-2 flex w-full">
         <div className="mt-8 flex flex-col gap-3 md:gap-8 w-full">
           <div className="flex flex-col justify-center items-center w-full md:w-96 text-center m-auto">

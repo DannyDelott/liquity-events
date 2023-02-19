@@ -6,6 +6,10 @@ module.exports = {
       colors: {
         "liquity-blue": "#2Eb6EA",
         "liquity-purple": "#745DDF",
+        // TODO: come up with a better name for this, this is the color of the
+        // app background. The background is a gradient that passes through this
+        // color.
+        "card-shadow": "#dad4ec",
       },
     },
   },

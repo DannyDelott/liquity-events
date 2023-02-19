@@ -14,7 +14,7 @@ export function Header(): ReactElement {
   // small screens have a sub nav
   if (isSmallScreen) {
     return (
-      <div className="daisy-navbar px-4 bg-white shadow">
+      <div className="daisy-navbar px-4 bg-white shadow shadow-card-shadow">
         <div className="flex w-full justify-between">
           <HeaderTitle />
           <Navigation />

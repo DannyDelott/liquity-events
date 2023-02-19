@@ -28,12 +28,6 @@ export function Navigation() {
           className="daisy-menu daisy-dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52"
         >
           <li>
-            <Link href={HOME_ROUTE}>
-              <HomeIcon height={20} width={20} />
-              Home
-            </Link>
-          </li>
-          <li>
             <Link href={HISTORY_ROUTE}>
               <HistoryIcon height={20} width={20} />
               History
@@ -43,6 +37,12 @@ export function Navigation() {
             <Link href={STATS_ROUTE}>
               <StatsIcon height={20} width={20} />
               Stats
+            </Link>
+          </li>
+          <li>
+            <Link href={HOME_ROUTE}>
+              <HomeIcon height={20} width={20} />
+              Profile
             </Link>
           </li>
           {account ? (
@@ -66,17 +66,15 @@ export function Navigation() {
   return (
     <div className="daisy-tabs">
       <Link
-        href={HOME_ROUTE}
+        href={STATS_ROUTE}
         className={classNames(
           "daisy-tab gap-1",
           isSmallScreen ? "daisy-tab-sm" : "daisy-tab-lg",
-          {
-            ["daisy-tab-active"]: pathname === HOME_ROUTE,
-          }
+          { ["daisy-tab-active"]: pathname === STATS_ROUTE }
         )}
       >
-        <HomeIcon height={20} width={20} />
-        Home
+        <StatsIcon height={20} width={20} />
+        APR
       </Link>
       <Link
         href={HISTORY_ROUTE}
@@ -87,18 +85,20 @@ export function Navigation() {
         )}
       >
         <HistoryIcon height={20} width={20} />
-        History
+        Activity
       </Link>
       <Link
-        href={STATS_ROUTE}
+        href={HOME_ROUTE}
         className={classNames(
           "daisy-tab gap-1",
           isSmallScreen ? "daisy-tab-sm" : "daisy-tab-lg",
-          { ["daisy-tab-active"]: pathname === STATS_ROUTE }
+          {
+            ["daisy-tab-active"]: pathname === HOME_ROUTE,
+          }
         )}
       >
-        <StatsIcon height={20} width={20} />
-        Stats
+        <HomeIcon height={20} width={20} />
+        Profile
       </Link>
     </div>
   );
