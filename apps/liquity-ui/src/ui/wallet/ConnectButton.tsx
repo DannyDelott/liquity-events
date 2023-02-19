@@ -33,7 +33,7 @@ export function ConnectButton() {
           <button
             onClick={openAccountModal}
             type="button"
-            className="daisy-btn daisy-btn-ghost gap-1.5 text-lg"
+            className="daisy-btn daisy-btn-ghost gap-1.5 text-lg normal-case"
           >
             <Jazzicon
               diameter={28}
