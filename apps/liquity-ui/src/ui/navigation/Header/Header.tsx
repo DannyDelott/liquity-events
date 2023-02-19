@@ -26,8 +26,7 @@ export function Header(): ReactElement {
     <div className="daisy-navbar px-8 bg-white shadow">
       <div className="daisy-navbar-start lg:gap-14">
         <HeaderTitle />
-        <div className="gap-8 hidden 2xl:flex">
-          <PriceWidget tokenAddress={LUSD_TOKEN_ADDRESS} />
+        <div className="gap-8 hidden lg:flex">
           <PriceWidget tokenAddress={LQTY_TOKEN_ADDRESS} />
         </div>
       </div>
