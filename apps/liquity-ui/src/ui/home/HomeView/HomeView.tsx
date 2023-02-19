@@ -24,6 +24,14 @@ function useSetConnectedAccountInRoute() {
   const router = useRouter();
   const { pathname, replace } = router;
   useEffect(() => {
+    // Nothing to sync if there's no connected account
+    if (!account) {
+      return;
+    }
+
+    // Don't replace the current account in the route (users might be viewing
+    // other wallets), but if there isn't one in the route yet we should sync
+    // the connected account.
     if (!router.query.account) {
       replace({ query: { account } });
     }
